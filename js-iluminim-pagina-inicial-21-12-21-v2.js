@@ -10,7 +10,7 @@ var PaginaInicial = {
 
       if(target.length > 0){
 
-         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2021/12/LED-CHRISTMAS-BANNER-PRINCIPAL-10-12-21.gif';
+         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2021/11/LED-FRIDAY-6.gif';
          target.attr('src', bannerChamada);
 
       }
@@ -255,7 +255,8 @@ var PaginaInicial = {
                      nome: 'Frete Grátis',
                      //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/Banner_Vertical_Frete_Gratis_PRECOS_IMBATIVEIS-02-09-21.png',
                      // https://cdn.awsli.com.br/257/257163/arquivos/banner_vertical_frete_gratis_home_imbativel-15-09-21.png
-                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner_vertical_frete_gratis_home_imbativel_06-10-21.png',
+                     //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner_vertical_frete_gratis_home_imbativel_06-10-21.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner_vertical_frete_gratis_home_LED_FRIDAY_6.0-21-10-21-21-10-21.png',
                      link: '/frete-gratis?sort=mais_vendidos',
                   },
                   {
