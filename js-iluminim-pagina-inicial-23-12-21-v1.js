@@ -10,7 +10,7 @@ var PaginaInicial = {
 
       if(target.length > 0){
 
-         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2021/11/LED-FRIDAY-6.gif';
+         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2021/12/led-ofertas-precos-imbativeis-new-2022.gif';
          target.attr('src', bannerChamada);
 
       }
