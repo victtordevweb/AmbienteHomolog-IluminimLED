@@ -1525,7 +1525,7 @@ var TodasAsPaginas = {
             <a href="/ofertadasemana?sort=mais_vendidos">
                <img width="1280" height="45" alt="LED Friday 6.0 Frete Grátis para Todo o Brasil" 
                title="LED Friday 6.0 Frete Grátis para Todo o Brasil" 
-               src="https://blog.iluminim.com.br/wp-content/uploads/2021/10/Tarja-topo-LED-FRIDAY-1280x45-29-10-21.gif">
+               src="https://blog.iluminim.com.br/wp-content/uploads/2021/12/tarja_topo_24-12-21.gif">
             </a>
          </div>
       `);
@@ -3623,7 +3623,7 @@ var TodasAsPaginas = {
       this.cepCabecalho();
       this.pontosDeRetirada();
       this.aoFocarNaBusca();
-      //this.tarjaTopo();
+      this.tarjaTopo();
       this.acoesWindowScroll();
       this.mensagemCarrinhoVazio();
       this.menuSuperiorMenuLateral();

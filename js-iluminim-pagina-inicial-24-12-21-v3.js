@@ -256,7 +256,7 @@ var PaginaInicial = {
                      //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/Banner_Vertical_Frete_Gratis_PRECOS_IMBATIVEIS-02-09-21.png',
                      // https://cdn.awsli.com.br/257/257163/arquivos/banner_vertical_frete_gratis_home_imbativel-15-09-21.png
                      //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner_vertical_frete_gratis_home_imbativel_06-10-21.png',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner_vertical_frete_gratis_home_LED_FRIDAY_6.0-21-10-21-21-10-21.png',
+                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner_vertical_frete_gratis_home_imbativel_06-10-21.png',
                      link: '/frete-gratis?sort=mais_vendidos',
                   },
                   {
@@ -405,122 +405,15 @@ var PaginaInicial = {
       
             let objeto = [
                {
-                  nome: 'Luminárias LED a partir de R$ 8,09',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-wire-luminarias-08SET21.png',
-                  link: '/plafon-led-friday?sort=mais_vendidos',
-               },
-               {
                   nome: 'Refletores LED com até 83% de desconto com até 12x sem juros',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/REFLETORES_ATE_xx_OFF___12x_SEM_JUROS_imagem_090921.png',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/refletores_wide_wire_24-12-21.png',
                   link: '/refletor-led-friday?sort=mais_vendidos',
                },
-               /*{
-                  nome: 'Spots LED com até 83% de desconto com até 12x sem juros',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/SPOTS_ATE_xx_OFF-09-11-21.png',
-                  link: '/spot-led-friday?sort=mais_vendidos',
-               },
                {
-                  nome: 'Fitas LED com até 83% de desconto com até 12x sem juros',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/FITAS_LED_A_PARTIR_DE-09-11-21.png',
-                  link: '/fita-led-friday?sort=mais_vendidos',
-               },*/
-            ]
-
-            return objeto;
-      
-         },
-      
-         gerarHTML(){
-      
-               let objeto = this.gerarObjeto();
-      
-               let htmlList = objeto.map(item=> {
-      
-                  return `
-                     <div>
-                           <a href="${item.link}" onclick="ga('send', 'event', 'Wire Mini Home', 'click', '${item.nome}')">
-                              <img alt="${item.nome}" title="${item.nome}" src="${item.imagem}" width="1280" height="325">
-                           </a>
-                     </div>
-                  `;
-      
-               }).join('');
-      
-               return `
-                  <div class="banners-personalizados">
-                     <div class="lista-banners-personalizados carousel-target">
-                           ${htmlList}
-                     </div>
-                  </div>
-               `;
-      
-         },
-      
-         renderizar(){
-      
-               let html = this.gerarHTML();
-      
-               $('.bloco-triplo-personalizado').after(html);
-
-               this.ativarCarousel();
-      
-         }
-      
-      }
-      
-      BannersPersonalizados.renderizar();
-
-   },
-
-   carrouselBannersPersonalizadosChristmas(){
-
-      if(ILUMINIM_UTILS.screen.isMobile()){
-         return;
-      }
-
-      const BannersPersonalizados = {
-
-         ativarCarousel(){
-
-               $('.banners-personalizados .carousel-target').owlCarousel({
-                  loop:false,
-                  margin:0,
-                  autoHeight: false,
-                  nav:true,
-                  dots: false,
-                  navText: ['<i class="icon-angle-left"></i>', '<i class="icon-angle-right"></i>'],
-                  responsive:{
-                     0: {
-                           items:1
-                     }
-                  }
-               });
-
-         },
-      
-         gerarObjeto(){
-      
-            let objeto = [
-               {
-                  nome: 'Luminárias LED',
-                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-personalizado-luminarias-led-10-12-21.png',
+                  nome: 'Luminárias LED a partir de R$ 8,09',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/luminarias_wide_wire_24-12-21.png',
                   link: '/plafon-led-friday?sort=mais_vendidos',
-               },
-               {
-                  nome: 'Refletores LED',
-                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-personalizado-refletores-led-10-12-21.png',
-                  link: '/refletor-led-friday?sort=mais_vendidos',
-               },
-               /*{
-                  nome: 'Spots LED com até 83% de desconto com até 12x sem juros',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/SPOTS_ATE_xx_OFF-09-11-21.png',
-                  link: '/spot-led-friday?sort=mais_vendidos',
-               },
-               {
-                  nome: 'Fitas LED com até 83% de desconto com até 12x sem juros',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/FITAS_LED_A_PARTIR_DE-09-11-21.png',
-                  link: '/fita-led-friday?sort=mais_vendidos',
-               },*/
+               }
             ]
 
             return objeto;
@@ -568,6 +461,7 @@ var PaginaInicial = {
       BannersPersonalizados.renderizar();
 
    },
+
 
    cronometroLEDOfertas(){
 
@@ -603,40 +497,6 @@ var PaginaInicial = {
 
    },
 
-   cronometroLEDOfertasChristmas(){
-
-      if(ILUMINIM_UTILS.screen.isMobile()){
-         return;
-      }
-
-      $('#listagemProdutos').append(`
-         <div class="cronometro-led-ofertas">
-               <div class="cronometro-led-ofertas-conteudo">
-               
-                  <div class="cronometro-led-ofertas-conteudo-textos">
-                     <div class="cronometro-led-ofertas-conteudo-texto-1">SÓ HOJE: LED CHRISTMAS</div>
-                     <div class="cronometro-led-ofertas-conteudo-texto-2">Ofertas <b>super exclusivas</b> para você, <b>compre antes que acabe!</b></div>
-                  </div>
-
-                  <div class="cronometro-led-ofertas-conteudo-cronometro">
-                     <div class="cronometro-led-ofertas-conteudo-cronometro-icone">
-                        ${ILUMINIM_UTILS.icones.relogio_2}
-                     </div>
-                     <ul class="countdown-target"></ul>
-                  </div>
-
-               </div>
-         </div>
-      `);
-
-
-      $('.cronometro-led-ofertas .countdown-target').yuukCountDown({
-         starttime: '2016/11/12 00:00:00',
-         endtime: '2030/12/30 00:00:00',
-      });
-
-   },
-
    miniBanners(){
 
       if(ILUMINIM_UTILS.screen.isMobile()){
@@ -650,88 +510,17 @@ var PaginaInicial = {
             let banners = [
                {
                   nome: 'Refletores LED com até 84% de desconto!',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/refletores_led_mini_wireframe_01SET2021.png',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/refletores_wire_v2_24-12-21.png',
                   link: '/refletores-de-led?sort=mais_vendidos',
                },
                {
                   nome: 'Lançamentos LED com até 64% de desconto!',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/LANCAMENTOS_NOVA_PROPOSTA_V3.png',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/lancamentos_wire_v2_24-12-21.png',
                   link: '/lancamentos-led?sort=ultimos_produtos',
                },
                {
                   nome: 'Oferta da Semana com até 78% de desconto',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/oferta_semana_led_mini_wireframe_01SET2021.png',
-                  link: '/ofertadasemana?sort=mais_vendidos',
-               }
-            ]
-
-            return banners;
-      
-         },
-      
-         gerarHTML(){
-      
-               let objeto = this.gerarObjeto();
-      
-               let htmlList = objeto.map(banner=> {
-                  return `
-                     <li>
-                           <a href="${banner.link}" onclick="ga('send', 'event', 'Wire Mini Home', 'click', 'Mini Banner ${banner.nome}')">
-                              <img class="lazyload" alt="${banner.nome}" title="${banner.nome}" src="${banner.imagem}" width="407" height="279">
-                           </a>
-                     </li>
-                  `; 
-               }).join('');
-
-
-               return `
-                  <div class="mini-banners">
-                     <ul class="lista-mini-banners">
-                           ${htmlList}
-                     </ul>
-                  </div>
-               `;
-      
-         },
-      
-         renderizar(){
-
-            let html = this.gerarHTML();
-
-            $('.banners-personalizados').after(html);
-      
-         }
-      
-      }
-      
-      MiniBanners.renderizar();
-
-   },
-
-   miniBannersChristmas(){
-
-      if(ILUMINIM_UTILS.screen.isMobile()){
-         return;
-      }
-
-      const MiniBanners = {
-      
-         gerarObjeto(){
-      
-            let banners = [
-               {
-                  nome: 'Refletores LED',
-                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/REFLETORES-LED-MINI-BANNER-LED-CHRISTMAS-10-12-21.png',
-                  link: '/refletores-de-led?sort=mais_vendidos',
-               },
-               {
-                  nome: 'Lançamentos LED',
-                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/LANCAMENTOS-LED-MINI-BANNER-LED-CHRISTMAS-10-12-21.png',
-                  link: '/lancamentos-led?sort=ultimos_produtos',
-               },
-               {
-                  nome: 'Oferta da Semana',
-                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/OFERTAS-DA-SEMANA-MINI-BANNER-LED-CHRISTMAS-10-12-21.png',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/oferta_da_semana_wire_v2_24-12-21.png',
                   link: '/ofertadasemana?sort=mais_vendidos',
                }
             ]
@@ -1467,7 +1256,7 @@ var PaginaInicial = {
          </div>
       `);
 
-   },*/
+   },
 
    gifTarjaMobile(){
 
@@ -1978,7 +1767,7 @@ var PaginaInicial = {
          <div class="duplo-bloco-vitrine">
             <div class="bloco-vitrine-1">
                <a href="/led-friday?sort=mais_vendidos">
-                  <img src="https://cdn.awsli.com.br/930/930730/arquivos/BANNER_OFERTAS_LED_CHRISTMAS-17-12-21.png">
+                  <img src="https://cdn.awsli.com.br/930/930730/arquivos/banner_video_24-12-21.png">
                </a>
             </div>
 
@@ -2010,8 +1799,7 @@ var PaginaInicial = {
          a.titulo-categoria.borda-principal.cor-principal.vitrine-3874806
       `).appendTo('div#listagemProdutos');
 
-      //this.cronometroLEDOfertas();
-      this.cronometroLEDOfertasChristmas();
+      this.cronometroLEDOfertas();
 
       //LUMINÁRIAS LED
       $(`
@@ -2057,11 +1845,9 @@ var PaginaInicial = {
 
       this.bannerTarja(); //MANTER ORDEM
       this.blocoTriplo(); //MANTER ORDEM
-      //this.carrouselBannersPersonalizados(); //MANTER ORDEM
-      this.carrouselBannersPersonalizadosChristmas(); //LED CHRISTMAS //MANTER ORDEM
+      this.carrouselBannersPersonalizados(); //MANTER ORDEM
       
-      //this.miniBanners(); //MANTER ORDEM
-      this.miniBannersChristmas(); //LED CHRISTMAS
+      this.miniBanners(); //MANTER ORDEM
 
       //ILUMINIM_UTILS.renderizarCategoriasFlutuante();
       ILUMINIM_UTILS.renderizarBotaoVoltarAoTopo();
@@ -2085,7 +1871,7 @@ var PaginaInicial = {
       
       this.palavrasBuscadasTopoMobile();
       //this.tarjaTopoMobile();
-      this.gifTarjaMobile();
+      //this.gifTarjaMobile();
       //this.bannerYoutubeMobile();
       //this.bannerBaixeNossoAppMobile();
       this.historicoDeNavegacaoMobile();

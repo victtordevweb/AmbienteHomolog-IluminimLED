@@ -8332,7 +8332,8 @@
           width: 800px !important;
           position: static !important;
           margin: -50px auto 0 auto;
-          background: url(https://cdn.awsli.com.br/257/257163/arquivos/box-newslleter-_precos_imbativeis-26-05-21.png) center center no-repeat !important;
+          background: url(https://cdn.awsli.com.br/930/930730/arquivos/news_ofertas_imbativeis_24-12-21.png) center center no-repeat !important;
+          /* background: url(https://cdn.awsli.com.br/257/257163/arquivos/box-newslleter-_precos_imbativeis-26-05-21.png) center center no-repeat !important; */
           height: 280px !important;
           border-radius: 3px;
           box-shadow: 0px 0px 14px 0px rgb(0 0 0 / 43%);
@@ -9773,6 +9774,10 @@
           color: #ffff;
           text-align: center;
           padding: 10px 0 15px 0;
+      }
+
+      .bloco-triplo-personalizado .bloco-personalizado.bloco-produtos-peronalizados .topo-bloco-produtos-peronalizados {
+         background: url(https://cdn.awsli.com.br/930/930730/arquivos/bg_ofertas_exclusivas_24-12-21.png) !important;
       }
    
       .bloco-triplo-personalizado .bloco-personalizado.bloco-produtos-peronalizados div#smartfront__app+.lista-produtos-bloco-personalizado {
@@ -23793,31 +23798,6 @@ div#OfertaSemanaCustomizada .listagem-item {
     }
     
 }
-
-}
-
-
-
-/* AJUSTES CAMPANHA LED CHRISTMAS */
-@media screen {
-    
-    body.pagina-categoria.pagina-personalizada-oferta-da-semana.pagina-led-friday .progress-countdown-line {
-        background: linear-gradient(to bottom, #91100d 0%, #80362d 53%, #5f514f 100%);
-    }
-
-    @media (min-width: 767px){
-
-        .bloco-triplo-personalizado .bloco-personalizado.bloco-produtos-peronalizados .topo-bloco-produtos-peronalizados {
-            background: url(https://cdn.awsli.com.br/930/930730/arquivos/bg-ofertas-exclusivas-07-12-21.png);
-        }
-
-        div#menu .menu__nivel-um .menu__item--oferta-da-semana > a svg {
-            margin: 0px -12px 0 9px;
-        }
-
-    }
-
-
 
 }
 
