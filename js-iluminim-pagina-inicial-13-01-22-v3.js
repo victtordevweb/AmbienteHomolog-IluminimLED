@@ -518,12 +518,12 @@ var PaginaInicial = {
                },
                {
                   nome: 'Lançamentos LED com até 64% de desconto!',
-                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/lancamentos_wire_v2_24-12-21.png',
+                  imagem: 'https://cdn.awsli.com.br/1234/1234739/arquivos/LANCAMENTOS_plafon-13-01-22.png',
                   link: '/lancamentos-led?sort=ultimos_produtos',
                },
                {
                   nome: 'Oferta da Semana com até 78% de desconto',
-                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/oferta_da_semana_wire_v2_24-12-21.png',
+                  imagem: 'https://cdn.awsli.com.br/1234/1234739/arquivos/OFERTAS_DA_SEMANA_refletor-13-01-22.png',
                   link: '/ofertadasemana?sort=mais_vendidos',
                }
             ]
