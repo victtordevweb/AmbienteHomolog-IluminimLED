@@ -235,17 +235,20 @@ var PaginaInicial = {
                bloco_1: [
                   {
                      nome: 'Fitas LED',
-                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banners_verticais_carrossel_home_FITAS_LED_06-10-21.png',
+                     //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banners_verticais_carrossel_home_FITAS_LED_06-10-21.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/FITAS_VERTICAIS_HOME_13-01-2022-v1.png',
                      link: '/fitas-de-led?sort=mais_vendidos',
                   },
                   {
                      nome: 'Lâmpadas LED',
-                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banners_verticais_carrossel_home_lampadas_06-10-21.png',
+                     //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banners_verticais_carrossel_home_lampadas_06-10-21.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/LAMPADAS_VERTICAIS_HOME_13-01-2022-v1.png',
                      link: '/lampada-led?sort=mais_vendidos',
                   },
                   {
                      nome: 'Spots LED',
-                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banners_verticais_carrossel_home_spots_06-10-21.png',
+                     //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banners_verticais_carrossel_home_spots_06-10-21.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/SPOTS_VERTICAIS_HOME_13-01-2022-v1.png',
                      link: '/spots?sort=mais_vendidos',
                   },
                ],
