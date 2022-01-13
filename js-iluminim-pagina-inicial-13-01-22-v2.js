@@ -259,7 +259,7 @@ var PaginaInicial = {
                      //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/Banner_Vertical_Frete_Gratis_PRECOS_IMBATIVEIS-02-09-21.png',
                      // https://cdn.awsli.com.br/257/257163/arquivos/banner_vertical_frete_gratis_home_imbativel-15-09-21.png
                      //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner_vertical_frete_gratis_home_imbativel_06-10-21.png',
-                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner_vertical_frete_gratis_home_imbativel_06-10-21.png',
+                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-vertical-frete-gratis-10-01-21.png',
                      link: '/frete-gratis?sort=mais_vendidos',
                   },
                   {
