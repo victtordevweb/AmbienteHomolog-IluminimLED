@@ -1521,12 +1521,12 @@ var TodasAsPaginas = {
       }
 
       $('#cabecalho').before(`
-         <div class="gif-topo">
-            <a href="/ofertadasemana?sort=mais_vendidos">
-               <img width="1280" height="45" alt="LED Friday 6.0 Frete Grátis para Todo o Brasil" 
-               title="LED Friday 6.0 Frete Grátis para Todo o Brasil" 
-               src="https://blog.iluminim.com.br/wp-content/uploads/2021/12/tarja_topo_24-12-21.gif">
-            </a>
+         <div id="tarja_topo">
+            <div class="container">
+               <a href="/ofertadasemana?sort=mais_vendidos">
+                  <img src="https://blog.iluminim.com.br/wp-content/uploads/2021/12/tarja-topo-ofertas-imbativeis-black.gif">
+               </a>
+            </div>
          </div>
       `);
 
@@ -2585,6 +2585,7 @@ var TodasAsPaginas = {
       }
 
       let produtos = [
+         { sku: 'RSPM-200WBF-P90', link: 'jo9O3gHgsZs' },
          { sku: 'PG-Q18WBF-KIT12', link: 'jo9O3gHgsZs' },
          { sku: 'PS-Q18WBF-KIT20', link: 's5aG_mFcm1w' },
          { sku: 'PS-Q25WBF-KIT10', link: 'SuMT4NporPA' },
@@ -2860,7 +2861,7 @@ var TodasAsPaginas = {
          { sku: 'XL-5050BM', link: 'OVyjwfZgbP4' }
       ];
 
-      if (ILUMINIM_UTILS.pagina.isHome() || ILUMINIM_UTILS.pagina.isCategory() || ILUMINIM_UTILS.pagina.isSearch()) {
+      /*if (ILUMINIM_UTILS.pagina.isHome() || ILUMINIM_UTILS.pagina.isCategory() || ILUMINIM_UTILS.pagina.isSearch()) {
 
          $('.listagem-item').each(function () {
 
@@ -2891,7 +2892,7 @@ var TodasAsPaginas = {
 
          });
 
-      }
+      }*/
 
       if (ILUMINIM_UTILS.pagina.isProduct()) {
 
@@ -3637,7 +3638,7 @@ var TodasAsPaginas = {
       this.carouselCustomListagem();
       this.adicionarClassFreteGratisListagem();
       this.adicionarWattsETamanhoNasLampadas();
-      //this.oucaDica();
+      this.oucaDica();
       //this.vejaVideo();
       this.abrirMidiaListagem();
       //this.depoimentosProdutosListagem();

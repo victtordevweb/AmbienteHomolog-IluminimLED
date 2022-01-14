@@ -36,6 +36,7 @@ var PaginaProduto = {
       `);
    },
 
+
    //<li><span>${ILUMINIM_UTILS.icones.bandeira.mercado_pago}</span></li>
 
    adicionarBandeiraBoletoBlocoParcelas(){
@@ -3433,6 +3434,26 @@ var PaginaProduto = {
 
    },
 
+   adaptacaoAcoesProduto(){
+
+      if(!ILUMINIM_UTILS.screen.isDesktop()){
+         return;
+      }
+      
+      $('.produto .produto-compartilhar').insertBefore('.produto .conteiner-imagem');
+
+      $('.produto .produto-compartilhar').prepend(`
+         <div class="estrelas-avaliacao">
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+         </div>
+      `);
+
+   },
+
    iniciar(){ //INICIAR SCRIPTS DA PÁGINA;
 
          ILUMINIM_UTILS.adicionaTextoModalCompraSegura();
@@ -3472,7 +3493,8 @@ var PaginaProduto = {
          this.botaoNaoSeiMeuCEP();
          this.autoPreencherCEP();
          this.modalContinuarComprando();
-
+         this.adaptacaoAcoesProduto();
+         
          this.criarLocaisDeAplicacoesDinamicas(); //MANTER NO FINAL
          this.adaptacoesAcoesFlutuante(); //MANTER NO FINAL
 

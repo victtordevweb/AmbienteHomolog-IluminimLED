@@ -6,7 +6,7 @@ var PaginaInicial = {
          return;
       }
 
-      let target = $('.secao-banners .banner.cheio img[alt="Banner Chamada Campanha - @gif"]');
+      let target = $('.secao-banners .banner.cheio img[alt="Banner chamada"]');
 
       if(target.length > 0){
 

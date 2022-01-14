@@ -1280,6 +1280,7 @@
            display: none !important;
        }
     
+
        .borda-alpha, .borda-alpha * {
            border-color: #ddd !important;
        }
@@ -26198,6 +26199,49 @@
             margin-bottom: 20px;
         }
 
+    }
+
+}
+
+
+
+
+
+
+/* ADAPTAÇÕES ACOES PRODUTOS */
+@media (min-width: 767px){
+
+    .produto .produto-compartilhar .estrelas-avaliacao i {
+        font-size: 20px;
+        margin: 0 -1px 0 0;
+        color: #ffc240;
+    }
+    
+    .produto .produto-compartilhar .estrelas-avaliacao {
+    }
+    
+    .produto .produto-compartilhar {
+        margin: 21px 0 30px 0;
+    }
+    
+    .produto .produto-compartilhar:after {
+        display: none;
+    }
+    
+    
+    .produto .produto-compartilhar > * {
+        margin: 0 21px 0 0 !important;
+    }
+
+}
+
+
+
+/* TEMPORARIO */
+@media screen {
+
+    div#smartfront__app.smartfront__smartfrontapps-variacao-por-disponibilidade {
+        display: none;
     }
 
 }
