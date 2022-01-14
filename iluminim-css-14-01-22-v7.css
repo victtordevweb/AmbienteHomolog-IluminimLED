@@ -11817,13 +11817,13 @@
     /* CSS TAG CAMPANHA */
     @media screen {
 
-        .listagem-item.produto-tag-campanha:before {
+        /*.listagem-item.produto-tag-campanha:before {
             content: url(https://cdn.awsli.com.br/257/257163/arquivos/tag-campanha-29-12-21.png);
             position: absolute;
             right: 12px;
             top: 12px;
             z-index: 1;
-        }
+        }*/
         
        
         

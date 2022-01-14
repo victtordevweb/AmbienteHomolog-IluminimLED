@@ -2658,7 +2658,7 @@ var PaginaInicial = {
       //this.naveguePorCategoria();
       this.removerBotaoProdutoAdicionado();
 
-      this.tagCampanhaListagemApenasClasse();
+      //this.tagCampanhaListagemApenasClasse();
 
       this.reposicionarListagens(); //MANTER FINAL
 
