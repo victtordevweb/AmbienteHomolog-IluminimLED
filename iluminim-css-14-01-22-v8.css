@@ -11563,6 +11563,7 @@
            color: transparent !important;*/
            position: absolute;
            background: #34af6f;
+           border-radius: 7px !important;
        }
     
        .listagem-item span.bandeira-frete-gratis svg {
@@ -11782,7 +11783,29 @@
            background: #00b63e !important;
        }
     
-    
+       .listagem-item .bandeiras-produto .bandeira-promocao {
+            border-radius: 7px !important;
+        }
+
+        .listagem-item .bandeiras-produto .bandeira-promocao:after {
+            content: "";
+            border-left: 9px solid transparent;
+            border-right: 9px solid transparent;
+            border-top: 10px solid #ffffff;
+            left: 13px;
+            bottom: 8px;
+            display: block;
+            position: absolute;
+        }
+        
+        .listagem-item .bandeiras-produto .bandeira-promocao > span:first-child {
+            display: none;
+        }
+        
+        .listagem-item .bandeiras-produto .bandeira-promocao span {
+            margin: 9px 0 0 0 !important;
+            display: block;
+        }
     
        @media (min-width: 767px){
            
@@ -12380,7 +12403,7 @@
             background: #fff;
             border-radius: 4px;
             width: 72%;
-            padding: 1px 22px;
+            padding: 1px 40px;
             box-sizing: border-box;
             margin: 0 0 0 2px;
             flex-wrap: wrap;
