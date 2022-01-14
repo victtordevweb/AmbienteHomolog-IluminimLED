@@ -3637,11 +3637,11 @@ var TodasAsPaginas = {
       this.carouselCustomListagem();
       this.adicionarClassFreteGratisListagem();
       this.adicionarWattsETamanhoNasLampadas();
-      this.oucaDica();
-      this.vejaVideo();
+      //this.oucaDica();
+      //this.vejaVideo();
       this.abrirMidiaListagem();
-      this.depoimentosProdutosListagem();
-      this.tagEconomizeListagemProduto();
+      //this.depoimentosProdutosListagem();
+      //this.tagEconomizeListagemProduto();
       this.creditosRodape();
       this.deixeSeuFeedback();
       this.whatsappFlutuante();

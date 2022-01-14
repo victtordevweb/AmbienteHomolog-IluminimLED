@@ -1,12 +1,12 @@
 var PaginaInicial = {
 
-   bannerChamadaDesktop(){
+   bannerChamadaDesktop(){ //VOLTAR APOS BLACK
 
       if(!ILUMINIM_UTILS.screen.isDesktop()){
          return;
       }
 
-      let target = $('.secao-banners .banner.cheio img[alt="Banner chamada"]');
+      let target = $('.secao-banners .banner.cheio img[alt="Banner Chamada Campanha - @gif"]');
 
       if(target.length > 0){
 
@@ -17,14 +17,55 @@ var PaginaInicial = {
       
    },
 
+   bannerChamadaDesktopChristmas(){ //REMOVERO APS BLACK
+
+      if(!ILUMINIM_UTILS.screen.isDesktop()){
+         return;
+      }
+
+      let target = $('.secao-banners .banner.cheio img[alt="Full Banner Home LED Christmas - CHAMADA"]');
+
+      if(target.length > 0){
+
+         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2021/12/LED-CHRISTMAS-BANNER-PRINCIPAL-10-12-21.gif';
+         target.attr('src', bannerChamada);
+
+      }
+      
+   },
+
+
    bannerChamadaMobile(){
 
       if(!ILUMINIM_UTILS.screen.isMobile()){
          return;
       }
 
-      let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2021/03/Banner-Principal-500x488-do-consumidor-1.gif';
-      $('.secao-banners .banner.cheio img[alt="Banner Chamada @MOBILE"]').attr('src', bannerChamada);
+      //let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2021/03/Banner-Principal-500x488-do-consumidor-1.gif';
+      //$('.secao-banners .banner.cheio img[alt="Banner Chamada @MOBILE"]').attr('src', bannerChamada);
+
+   },
+
+   cronometroBannerHome(){
+
+      $(`
+         .banner.cheio .slides img[alt="Categoria -> /spots - Banner Oferta Relâmpago Spots LED"],
+         .banner.cheio .slides img[alt="Categoria -> /spots - Banner Oferta Relâmpago Spots LED - @mobile"]
+      `).after(`
+         <div class="cronometro-banner">
+            <ul class="countdown-target"></ul>
+         </div>
+      `);
+
+      $('.cronometro-banner .countdown-target').yuukCountDown({
+            starttime: '2016/11/11 00:00:00',
+            endtime: '2030/12/30 00:00:00'
+      });
+
+      $(`
+         .banner.cheio .slides img[alt="Categoria -> /spots - Banner Oferta Relâmpago Spots LED"],
+         .banner.cheio .slides img[alt="Categoria -> /spots - Banner Oferta Relâmpago Spots LED - @mobile"]
+      `).after(ILUMINIM_UTILS.gerarBarraProgresso());
 
    },
 
@@ -60,7 +101,7 @@ var PaginaInicial = {
                         <div class="item-tarja-icone">
                            ${ILUMINIM_UTILS.icones.relogio_3}                           
                         </div>
-                        <span><strong>Entrega Expressa</strong>Garantimos a entrega rápida do seu produto</span>
+                        <span><strong>Entrega a Jato</strong>Garantimos a entrega rápida do seu produto</span>
                   </a>
                   <div class="item-tarja-dropdown">
                         <div class="conteudo-dropdown-tarja">
@@ -92,7 +133,7 @@ var PaginaInicial = {
                         <div class="item-tarja-icone">
                            ${ILUMINIM_UTILS.icones.mao_porcentagem}
                         </div>
-                        <span><strong>O melhor preço</strong>Garantimos os menores preços</span>
+                        <span><strong>O menor preço</strong>Garantimos os melhores preços do mercado</span>
                   </a>
                   <div class="item-tarja-dropdown">
                         <div class="conteudo-dropdown-tarja">
@@ -108,7 +149,7 @@ var PaginaInicial = {
                         <div class="item-tarja-icone">
                            ${ILUMINIM_UTILS.icones.medalha_2}
                         </div>
-                        <span><strong>10 anos no mercado</strong>Já são mais de 1.000.000 clientes satisfeitos</span>
+                        <span><strong>A maior do Brasil</strong>Já são mais de 1 milhão de clientes satisfeitos e 10 anos</span>
                   </a>
                   <div class="item-tarja-dropdown">
                         <div class="conteudo-dropdown-tarja">
@@ -124,7 +165,7 @@ var PaginaInicial = {
                         <div class="item-tarja-icone">
                            ${ILUMINIM_UTILS.icones.loja}
                         </div>
-                        <span><strong>Encontre a Iluminim</strong>Lojas Físicas e Pontos de Retirada no Brasil</span>
+                        <span><strong>Encontre a Iluminim</strong>Lojas Físicas e Pontos de Retirada por todo Brasil</span>
                   </a>
                   <div class="item-tarja-dropdown">
                         <div class="conteudo-dropdown-tarja">
@@ -189,7 +230,7 @@ var PaginaInicial = {
 
    },
 
-   blocoTriplo(){ //WIREFRAME
+   blocoTriplo(){ // VOLTAR APOS BLACK
 
       const BlocoTriplo = {
 
@@ -200,7 +241,9 @@ var PaginaInicial = {
                   $('.bloco-triplo-personalizado > div .carousel-target').each(function(){
 
                      $(this).owlCarousel({
-                           loop:false,
+                           loop:true,
+                           autoplay:true,
+                           autoplayTimeout:15000,
                            margin:0,
                            autoHeight: false,
                            nav:true,
@@ -230,63 +273,58 @@ var PaginaInicial = {
       
          gerarObjeto(){
       
-            let objeto = {
+               let objeto = {
                   
-               bloco_1: [
-                  {
-                     nome: 'Fitas LED',
-                     //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banners_verticais_carrossel_home_FITAS_LED_06-10-21.png',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/FITAS_VERTICAIS_HOME_13-01-2022-v1.png',
-                     link: '/fitas-de-led?sort=mais_vendidos',
-                  },
-                  {
-                     nome: 'Lâmpadas LED',
-                     //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banners_verticais_carrossel_home_lampadas_06-10-21.png',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/LAMPADAS_VERTICAIS_HOME_13-01-2022-v1.png',
-                     link: '/lampada-led?sort=mais_vendidos',
-                  },
-                  {
-                     nome: 'Spots LED',
-                     //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banners_verticais_carrossel_home_spots_06-10-21.png',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/SPOTS_VERTICAIS_HOME_13-01-2022-v1.png',
-                     link: '/spots?sort=mais_vendidos',
-                  },
-               ],
+                  bloco_1: [
+                     {
+                        nome: 'Fitas LED',
+                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banners_verticais_carrossel_home_FITAS_LED_06-10-21.png',
+                        link: '/fitas-de-led?sort=mais_vendidos',
+                     },
+                     {
+                        nome: 'Lâmpadas LED',
+                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banners_verticais_carrossel_home_lampadas_06-10-21.png',
+                        link: '/lampada-led?sort=mais_vendidos',
+                     },
+                     {
+                        nome: 'Spots LED',
+                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banners_verticais_carrossel_home_spots_06-10-21.png',
+                        link: '/spots?sort=mais_vendidos',
+                     },
+                  ],
 
-               bloco_3: [
-                  {
-                     nome: 'Frete Grátis',
-                     //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/Banner_Vertical_Frete_Gratis_PRECOS_IMBATIVEIS-02-09-21.png',
-                     // https://cdn.awsli.com.br/257/257163/arquivos/banner_vertical_frete_gratis_home_imbativel-15-09-21.png
-                     //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner_vertical_frete_gratis_home_imbativel_06-10-21.png',
-                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-vertical-frete-gratis-10-01-21.png',
-                     link: '/frete-gratis?sort=mais_vendidos',
-                  },
-                  {
-                     nome: 'Frete Grátis KIT 10 Refletor',
-                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner_vertical_frete_gratis_home_RSPM-200WBF-KIT5-16-09-21.png',
-                     link: '/kit-5-refletor-holofote-microled-slim-200w-branco-frio',
-                  },
-                  {
-                     nome: 'Frete Grátis KIT 10 Luminária',
-                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner_vertical_frete_gratis_home_PG-Q18WBF-KIT10-16-09-21.png',
-                     link: '/kit-10-luminaria-plafon-18w-led-sobrepor-branco-frio-',
-                  },
-                  {
-                     nome: 'Frete Grátis KIT 20 Tubular',
-                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner_vertical_frete_gratis_home_LUM-120BF-KIT20-16-09-21-v2.png',
-                     link: '/kit-20-tubular-led-sobrepor-completa-36w-120m-branco-frio',
-                  },
-                  {
-                     nome: 'Frete Grátis KIT 50 Luminária Emergência',
-                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner_vertical_frete_gratis_home_23597-KIT50-16-09-21.png',
-                     link: '/kit-50-luminaria-de-emergencia-30-leds-slim',
-                  },
-               ]
+                  bloco_3: [
+                     {
+                        nome: 'Frete Grátis',
+                        //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner_vertical_frete_gratis_home_LED_FRIDAY_6.0-01-11-21.png',
+                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-vertical-frete-gratis-10-01-21.png',
+                        link: '/frete-gratis?sort=mais_vendidos',
+                     },
+                     {
+                        nome: 'Frete Grátis Refletor',
+                        imagem: 'https://cdn.awsli.com.br/1234/1234739/arquivos/10-01-2022-banner-vertical-RSPM-200WBF-KIT10.png',
+                        link: '/kit-10-refletor-holofote-microled-slim-200w-branco-frio',
+                     },
+                     {
+                        nome: 'Frete Grátis Luminária',
+                        imagem: 'https://cdn.awsli.com.br/1234/1234739/arquivos/10-01-2022-banner-vertical-PS-Q25WBF-KIT20.png',
+                        link: '/kit-20-luminaria-plafon-25w-led-embutir-branco-frio',
+                     },
+                     {
+                        nome: 'Frete Grátis Tubular',
+                        imagem: 'https://cdn.awsli.com.br/1234/1234739/arquivos/10-01-2022-banner-vertical-LUM-120BF-KIT20.png',
+                        link: '/kit-20-tubular-led-sobrepor-completa-36w-120m-branco-frio',
+                     },
+                     {
+                        nome: 'Frete Grátis Luminária Emergência',
+                        imagem: 'https://cdn.awsli.com.br/1234/1234739/arquivos/10-01-2022-banner-vertical-23597-KIT50.png',
+                        link: '/kit-50-luminaria-de-emergencia-30-leds-slim',
+                     },
+                  ]
 
-            }
+               }
 
-            return objeto;
+               return objeto;
       
          },
       
@@ -389,6 +427,95 @@ var PaginaInicial = {
          ativarCarousel(){
 
                $('.banners-personalizados .carousel-target').owlCarousel({
+                  loop:true,
+                  autoplay:true,
+                  autoplayTimeout:10000,
+                  margin:0,
+                  autoHeight: false,
+                  nav:true,
+                  dots: false,
+                  navText: ['<i class="icon-angle-left"></i>', '<i class="icon-angle-right"></i>'],
+                  responsive:{
+                     0: {
+                           items:1
+                     }
+                  }
+               });
+
+         },
+      
+         gerarObjeto(){
+      
+               let objeto = [
+                  {
+                     nome: 'Refletores LED com até 83% de desconto com até 12x sem juros',
+                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/refletores_wide_wire_24-12-21.png',
+                     link: '/refletores-de-led?sort=mais_vendidos',
+                  },
+                  {
+                     nome: 'Luminárias LED a partir de R$ 8,09',
+                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/luminarias_wide_wire_24-12-21.png',
+                     link: '/luminarias-led?sort=mais_vendidos',
+                  },
+               ]
+
+               return objeto;
+      
+         },
+      
+         gerarHTML(){
+      
+               let objeto = this.gerarObjeto();
+      
+               let htmlList = objeto.map(item=> {
+      
+                  return `
+                     <div>
+                           <a href="${item.link}" onclick="ga('send', 'event', 'Wire Mini Home', 'click', '${item.nome}')">
+                              <img alt="${item.nome}" title="${item.nome}" src="${item.imagem}" width="1280" height="325">
+                           </a>
+                     </div>
+                  `;
+      
+               }).join('');
+      
+               return `
+                  <div class="banners-personalizados">
+                     <div class="lista-banners-personalizados carousel-target">
+                           ${htmlList}
+                     </div>
+                  </div>
+               `;
+      
+         },
+      
+         renderizar(){
+      
+               let html = this.gerarHTML();
+      
+               $('.bloco-triplo-personalizado').after(html);
+
+               this.ativarCarousel();
+      
+         }
+      
+      }
+      
+      BannersPersonalizados.renderizar();
+
+   },
+
+   carrouselBannersPersonalizadosChristmas(){
+
+      if(ILUMINIM_UTILS.screen.isMobile()){
+         return;
+      }
+
+      const BannersPersonalizados = {
+
+         ativarCarousel(){
+
+               $('.banners-personalizados .carousel-target').owlCarousel({
                   loop:false,
                   margin:0,
                   autoHeight: false,
@@ -408,15 +535,25 @@ var PaginaInicial = {
       
             let objeto = [
                {
-                  nome: 'Refletores LED com até 83% de desconto com até 12x sem juros',
-                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/refletores_wide_wire_24-12-21.png',
+                  nome: 'Refletores LED',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-personalizado-refletores-led-10-12-21.png',
                   link: '/refletor-led-friday?sort=mais_vendidos',
                },
                {
-                  nome: 'Luminárias LED a partir de R$ 8,09',
-                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/luminarias_wide_wire_24-12-21.png',
+                  nome: 'Luminárias LED',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-personalizado-luminarias-led-10-12-21.png',
                   link: '/plafon-led-friday?sort=mais_vendidos',
-               }
+               },
+               /*{
+                  nome: 'Spots LED com até 83% de desconto com até 12x sem juros',
+                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/SPOTS_ATE_xx_OFF-09-11-21.png',
+                  link: '/spot-led-friday?sort=mais_vendidos',
+               },
+               {
+                  nome: 'Fitas LED com até 83% de desconto com até 12x sem juros',
+                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/FITAS_LED_A_PARTIR_DE-09-11-21.png',
+                  link: '/fita-led-friday?sort=mais_vendidos',
+               },*/
             ]
 
             return objeto;
@@ -465,7 +602,6 @@ var PaginaInicial = {
 
    },
 
-
    cronometroLEDOfertas(){
 
       if(ILUMINIM_UTILS.screen.isMobile()){
@@ -474,10 +610,44 @@ var PaginaInicial = {
 
       $('#listagemProdutos').append(`
          <div class="cronometro-led-ofertas">
-               <div class="cronometro-led-ofertas-conteudo">
+               <a href="/ofertadasemana?sort=mais_vendidos" class="cronometro-led-ofertas-conteudo">
                
                   <div class="cronometro-led-ofertas-conteudo-textos">
-                     <div class="cronometro-led-ofertas-conteudo-texto-1">SÓ HOJE: LED OFERTAS</div>
+                     <div class="cronometro-led-ofertas-conteudo-texto-1">LED OFERTAS IMBATÍVEIS</div>
+                     <div class="cronometro-led-ofertas-conteudo-texto-2">Ofertas <b>super exclusivas</b> para você, <b>compre antes que acabe!</b></div>
+                  </div>
+
+                  <div class="cronometro-led-ofertas-conteudo-cronometro">
+                     <div class="cronometro-led-ofertas-conteudo-cronometro-icone">
+                        ${ILUMINIM_UTILS.icones.relogio_2}
+                     </div>
+                     <ul class="countdown-target"></ul>
+                  </div>
+
+               </a>
+         </div>
+      `);
+
+
+      $('.cronometro-led-ofertas .countdown-target').yuukCountDown({
+         starttime: '2016/11/12 00:00:00',
+         endtime: '2030/12/30 00:00:00',
+      });
+
+   },
+
+   cronometroLEDOfertasChristmas(){
+
+      if(ILUMINIM_UTILS.screen.isMobile()){
+         return;
+      }
+
+      $('#listagemProdutos').append(`
+         <div class="cronometro-led-ofertas">
+               <div class="cronometro-led-ofertas-conteudo">
+
+                  <div class="cronometro-led-ofertas-conteudo-textos">
+                     <div class="cronometro-led-ofertas-conteudo-texto-1">SÓ HOJE: LED Ofertas</div>
                      <div class="cronometro-led-ofertas-conteudo-texto-2">Ofertas <b>super exclusivas</b> para você, <b>compre antes que acabe!</b></div>
                   </div>
 
@@ -492,15 +662,88 @@ var PaginaInicial = {
          </div>
       `);
 
-
       $('.cronometro-led-ofertas .countdown-target').yuukCountDown({
          starttime: '2016/11/12 00:00:00',
          endtime: '2030/12/30 00:00:00',
       });
 
    },
-
+   
    miniBanners(){
+
+      if(ILUMINIM_UTILS.screen.isMobile()){
+         return;
+      }
+
+      const MiniBanners = {
+      
+         gerarObjeto(){
+      
+               let banners = [
+                  {
+                     nome: 'Refletores LED com até 84% de desconto!',
+                     //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/mini-banner-refletores-led-12-01-21.png',
+                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/refletores_wire_v2_24-12-21.png',
+                     link: '/refletores-de-led?sort=mais_vendidos',
+                  },
+                  {
+                     nome: 'Lançamentos LED com até 64% de desconto!',
+                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/lancamentos_wire_v2_24-12-21.png',
+                     //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/mini-banner-lancamentos-led-12-01-21.png',
+                     link: '/lancamentos-led?sort=ultimos_produtos',
+                  },
+                  {
+                     nome: 'Oferta da Semana com até 78% de desconto',
+                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/oferta_da_semana_wire_v2_24-12-21.png',
+                     //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/mini-banner-ofertas-da-semana-12-01-21.png',
+                     link: '/ofertadasemana?sort=mais_vendidos',
+                  }
+               ]
+
+               return banners;
+      
+         },
+      
+         gerarHTML(){
+      
+               let objeto = this.gerarObjeto();
+      
+               let htmlList = objeto.map(banner=> {
+                  return `
+                     <li>
+                           <a href="${banner.link}" onclick="ga('send', 'event', 'Wire Mini Home', 'click', 'Mini Banner ${banner.nome}')">
+                              <img class="lazyload" alt="${banner.nome}" title="${banner.nome}" src="${banner.imagem}" width="407" height="279">
+                           </a>
+                     </li>
+                  `; 
+               }).join('');
+
+
+               return `
+                  <div class="mini-banners">
+                     <ul class="lista-mini-banners">
+                           ${htmlList}
+                     </ul>
+                  </div>
+               `;
+      
+         },
+      
+         renderizar(){
+
+            let html = this.gerarHTML();
+
+            $('.banners-personalizados').after(html);
+      
+         }
+      
+      }
+      
+      MiniBanners.renderizar();
+
+   },
+
+   miniBannersChristmas(){
 
       if(ILUMINIM_UTILS.screen.isMobile()){
          return;
@@ -512,18 +755,18 @@ var PaginaInicial = {
       
             let banners = [
                {
-                  nome: 'Refletores LED com até 84% de desconto!',
-                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/refletores_wire_v2_24-12-21.png',
+                  nome: 'Refletores LED',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/REFLETORES-LED-MINI-BANNER-LED-CHRISTMAS-10-12-21.png',
                   link: '/refletores-de-led?sort=mais_vendidos',
                },
                {
-                  nome: 'Lançamentos LED com até 64% de desconto!',
-                  imagem: 'https://cdn.awsli.com.br/1234/1234739/arquivos/LANCAMENTOS_plafon-13-01-22.png',
+                  nome: 'Lançamentos LED',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/LANCAMENTOS-LED-MINI-BANNER-LED-CHRISTMAS-10-12-21.png',
                   link: '/lancamentos-led?sort=ultimos_produtos',
                },
                {
-                  nome: 'Oferta da Semana com até 78% de desconto',
-                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/OFERTAS_DA_SEMANA_kit10-14-01.png',
+                  nome: 'Oferta da Semana',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/OFERTAS-DA-SEMANA-MINI-BANNER-LED-CHRISTMAS-10-12-21.png',
                   link: '/ofertadasemana?sort=mais_vendidos',
                }
             ]
@@ -571,13 +814,14 @@ var PaginaInicial = {
 
    },
 
+
    verTodosNasListagens(){
 
-      $('#listagemProdutos a.titulo-categoria').append('<span class="ver-todos animation-blinking">Ver Todos <i class="icon-list-ul"></i></span>');
+      $('#listagemProdutos a.titulo-categoria').append('<span class="ver-todos">Ver Todos <i class="icon-list-ul"></i></span>');
 
    },
 
-   bannersDesconto(){
+   bannersDesconto(){ //ATIVAR APOS BLACK
       
       if(ILUMINIM_UTILS.screen.isMobile()){
          return;
@@ -668,7 +912,7 @@ var PaginaInicial = {
 
          ativarCarousel(){
 
-            $('.banners-com-desconto .lista-banners-com-desconto.carousel-target').owlCarousel({
+            $('.banners-com-desconto.banners-com-produtos .lista-banners-com-desconto.carousel-target').owlCarousel({
                loop:false,
                margin:0,
                autoHeight: false,
@@ -714,12 +958,12 @@ var PaginaInicial = {
             }).join('');
 
             return`
-               <div class="banners-com-desconto">
+               <div class="banners-com-desconto banners-com-produtos">
                   <div class="banners-com-desconto-titulo">
                      <strong>Navegue por mais departamentos</strong>
                   </div>
                   <ul class="lista-banners-com-desconto carousel-target">
-                        ${html}
+                     ${html}
                   </ul>
                </div>
             `;
@@ -742,8 +986,8 @@ var PaginaInicial = {
 
    },
 
-   /*bannersDesconto(){
-
+   bannersDescontoBlack(){ //REMOVER APOS BLACK
+      
       if(ILUMINIM_UTILS.screen.isMobile()){
          return;
       }
@@ -752,103 +996,152 @@ var PaginaInicial = {
 
          gerarObjeto(){
 
-               let banners = [
-                  {
-                     nome: 'Refletores Micro LED SMD',
-                     link: '/refletor-microled?sort=mais_vendidos',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/refletor-banner-desconto-08-02-2021-v2.png',
-                     desconto: '64',
-                     width: '116',
-                     height: '143'
-                  },
-                  {
-                     nome: 'Plafon LED Garantia Total',
-                     link: '/plafon-led-sobrepor?sort=mais_vendidos!',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/refletor-banner-desconto-luminarias-rgb-23-03-2021.png',
-                     desconto: '64',
-                     width: '119',
-                     height: '132'
-                  },
-                  {
-                     nome: "Fita LED A prova d'agua",
-                     link: '/fita-de-led?sort=mais_vendidos!',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/refletor-banner-desconto-fita-23-03-2021.png',
-                     desconto: '64',
-                     width: '113',
-                     height: '113'
-                  },
-                  {
-                     nome: 'Fonte Chaveada Automática Bivolt',
-                     link: '/fonte-chaveada-led?sort=mais_vendidos',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/refletor-banner-desconto-fonte-23-03-2021.png',
-                     desconto: '44',
-                     width: '142',
-                     height: '111'
-                  },
-                  {
-                     nome: 'Lâmpadas LED RGB Estilo e cor',
-                     link: '/lampada-led-rgb?sort=mais_vendidos',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/refletor-banner-desconto-lampada-rgb-23-03-2021.png',
-                     desconto: '84',
-                     width: '115',
-                     height: '143'
-                  },
-                  {
-                     nome: 'Balizadores LED Impermeáveis',
-                     link: '/balizador-led?sort=mais_vendidos',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/refletor-banner-desconto-balizador-23-03-2021.png',
-                     desconto: '44',
-                     width: '127',
-                     height: '134'
-                  }
-               ];
+            let banners = [
+               {
+                  nome: 'Refletores LED',
+                  link: '/refletor-microled?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/npmd-25-10-21-refletor.png',
+                  desconto: '64',
+               },
+               {
+                  nome: 'Plafons LED',
+                  link: '/plafon-led?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/npmd-25-10-21-plafons.png',
+                  desconto: '64',
+               },
+               {
+                  nome: "Spots LED",
+                  link: '/spots?sort=mais_vendidos!',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/npmd-25-10-21-SPOTS.png',
+                  desconto: '64',
+               },
+               {
+                  nome: 'Fitas LED',
+                  link: '/fita-de-led?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/npmd-25-10-21-fitas.png',
+                  desconto: '44',
+               },
+               {
+                  nome: 'Lâmpadas LED',
+                  link: '/lampada-led?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/npmd-25-10-21-lampadas.png',
+                  desconto: '84',
+               },
+               {
+                  nome: 'Acessórios LED',
+                  link: '/acessorios-para-leds?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/npmd-25-10-21-acessorios.png',
+                  desconto: '44',
+               },
+               {
+                  nome: 'Kits LED',
+                  link: '/kits-led?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/npmd-25-10-21-Kits-LED.png',
+                  desconto: '84',
+               },
+               {
+                  nome: 'Lustres LED',
+                  link: '/lustre?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/npmd-25-10-21-Lustres.png',
+                  desconto: '70',
+               },
+               {
+                  nome: 'Pendentes LED',
+                  link: '/pendente?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/npmd-25-10-21-Pendentes.png',
+                  desconto: '76',
+               },
+               {
+                  nome: 'Luminárias LED',
+                  link: '/luminarias-led?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/npmd-25-10-21-Luminarias.png',
+                  desconto: '84',
+               },
+               {
+                  nome: 'Lançamentos LED',
+                  link: '/lancamentos-led?sort=ultimos_produtos',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/npmd-25-10-21-lancamentos.png',
+                  desconto: '75',
+               },
+               {
+                  nome: 'Ofertas da Semana',
+                  link: '/ofertadasemana?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/npmd-25-10-21-Ofertas da semana.png',
+                  desconto: '80',
+               }
+            ];
 
-               return banners;
+            return banners;
+
+         },
+
+         ativarCarousel(){
+
+            $('.banners-com-desconto.banners-com-produtos .lista-banners-com-desconto.carousel-target').owlCarousel({
+               loop:false,
+               margin:0,
+               autoHeight: false,
+               nav:true,
+               dots: false,
+               navText: ['<i class="icon-angle-left"></i>', '<i class="icon-angle-right"></i>'],
+               responsive:{
+                  0: {
+                     items:2
+                  },
+                  
+                  767: {
+                     items:4
+                  },
+                  1024: {
+                     items: 6
+                  }
+               }
+            });
 
          },
 
          gerarHTML(){
 
-               let objeto = this.gerarObjeto();
+            let objeto = this.gerarObjeto();
 
-               let html = objeto.map(banner=> {
+            let html = objeto.map(banner => {
 
-                  return `
-                     <li class="banner-desconto" data-nome-banner-desconto="${banner.nome}">
-                           <a href="${banner.link}" onclick="ga('send', 'event', 'Porcentagem Categorias Home','click', '${banner.nome}')">
-                              <div class="banner-desconto-textos">
-                                 <div class="banner-desconto-nome">${banner.nome}</div>
-                                 <div class="banner-desconto-textos-desconto">
-                                       <div>com até</div>
-                                       <div class="banner-desconto-texto-desconto">${banner.desconto}%</div>
-                                       <div>de desconto</div>
-                                 </div>
-                              </div>
+               return `
+                  <li class="banner-desconto">
+                        <a href="${banner.link}" onclick="ga('send', 'event', 'Porcentagem Categorias Home','click', '${banner.nome}')">
+                           
+                           <div class="banner-desconto-texto-desconto">-${banner.desconto}%</div>
+                           <div class="banner-desconto-imagem">
+                              <img alt="${banner.nome}" title="${banner.nome}" src="${banner.imagem}">
+                           </div>
+                           <div class="banner-desconto-nome">${banner.nome}</div>
 
-                              <div class="banner-desconto-imagem">
-                                 <img alt="${banner.nome}" title="${banner.nome}" src="${banner.imagem}" width="${banner.width}" height="${banner.height}">
-                              </div>
-                           </a>
-                     </li>
-                  `;
-
-               }).join('');
-
-               return`
-                  <div class="banners-com-desconto">
-                     <ul class="lista-banners-com-desconto">
-                           ${html}
-                     </ul>
-                  </div>
+                        </a>
+                  </li>
                `;
+
+            }).join('');
+
+            return`
+               <div class="banners-com-desconto banners-com-produtos">
+                  <div class="banners-com-desconto-titulo">
+                     <strong>Navegue por mais departamentos</strong>
+                  </div>
+                  <ul class="lista-banners-com-desconto carousel-target">
+                     ${html}
+                  </ul>
+               </div>
+            `;
 
          },
 
          renderizar(){
 
-               let html = this.gerarHTML();
+            let html = this.gerarHTML();
 
-               $('#listagemProdutos a.titulo-categoria.vitrine-3217078').before(html);
+            $('#listagemProdutos').append(html);
+
+            this.ativarCarousel();
 
          }
 
@@ -856,8 +1149,276 @@ var PaginaInicial = {
       
       BannersDesconto.renderizar();
 
-   },*/
+   },
+
+   bannersKitsDesconto(){ //ATIVAR APOS BLACK
+      
+      if(ILUMINIM_UTILS.screen.isMobile()){
+         return;
+      }
+
+      const BannersDesconto = {
+
+         gerarObjeto(){
+
+            let banners = [
+               {
+                  nome: 'Kit 5',
+                  link: '/kit-led-5-unidades?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/04-11-21-KIT-5.png',
+                  desconto: '40',
+               },
+               {
+                  nome: 'Kit 10',
+                  link: '/kit-led-10-unidades?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/04-11-21-KIT-10.png',
+                  desconto: '50',
+               },
+               {
+                  nome: 'Kit 12',
+                  link: '/kit-led-12-unidades?sort=mais_vendidos!',
+                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/04-11-21-KIT-12.png',
+                  desconto: '60',
+               },
+               {
+                  nome: 'Kit 20',
+                  link: '/kit-led-20-unidades?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/04-11-21-KIT-20.png',
+                  desconto: '70',
+               },
+               {
+                  nome: 'Kit 30',
+                  link: '/kit-led-30-unidades?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/04-11-21-KIT-30.png',
+                  desconto: '80',
+               },
+               {
+                  nome: 'TODOS KITS',
+                  link: '/kits-led?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/todos-kits-04-11-21.png',
+                  desconto: '90',
+               },
+            ];
+
+            return banners;
+
+         },
+
+         ativarCarousel(){
+
+            $('.banners-com-desconto.banners-com-kits .lista-banners-com-desconto.carousel-target').owlCarousel({
+               loop:false,
+               margin:0,
+               autoHeight: false,
+               nav:true,
+               dots: false,
+               navText: ['<i class="icon-angle-left"></i>', '<i class="icon-angle-right"></i>'],
+               responsive:{
+                  0: {
+                     items:2
+                  },
                   
+                  767: {
+                     items:4
+                  },
+                  1024: {
+                     items: 6
+                  }
+               }
+            });
+
+         },
+
+         gerarHTML(){
+
+            let objeto = this.gerarObjeto();
+
+            let html = objeto.map(banner => {
+
+               return `
+                  <li class="banner-desconto">
+                        <a href="${banner.link}" onclick="ga('send', 'event', 'Porcentagem Categorias Home','click', '${banner.nome}')">
+                           
+                           <div class="banner-desconto-texto-desconto">-${banner.desconto}%</div>
+                           <div class="banner-desconto-imagem">
+                              <img alt="${banner.nome}" title="${banner.nome}" src="${banner.imagem}">
+                           </div>
+                           <div class="banner-desconto-nome">${banner.nome}</div>
+
+                        </a>
+                  </li>
+               `;
+
+            }).join('');
+
+            return`
+               <div class="banners-com-desconto banners-com-kits">
+                  <div class="banners-com-desconto-titulo">
+                     <strong>Descontos Progressivos</strong>
+                  </div>
+                  <ul class="lista-banners-com-desconto carousel-target">
+                     ${html}
+                  </ul>
+               </div>
+            `;
+
+         },
+
+         renderizar(){
+
+            let html = this.gerarHTML();
+
+            $('#listagemProdutos').append(html);
+
+            this.ativarCarousel();
+
+         }
+
+      }
+      
+      BannersDesconto.renderizar();
+
+   },
+
+   bannersKitsDescontoBlack(){ //REMOVER APOS BLACK
+      
+      if(ILUMINIM_UTILS.screen.isMobile()){
+         return;
+      }
+
+      const BannersDesconto = {
+
+         gerarObjeto(){
+
+            let banners = [
+               {
+                  nome: 'Kit 5',
+                  link: '/kit-led-5-unidades?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/14-11-21-KIT-5.png',
+                  desconto: '40',
+               },
+               {
+                  nome: 'Kit 10',
+                  link: '/kit-led-10-unidades?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/14-11-21-KIT-10.png',
+                  desconto: '50',
+               },
+               {
+                  nome: 'Kit 12',
+                  link: '/kit-led-12-unidades?sort=mais_vendidos!',
+                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/14-11-21-KIT-12.png',
+                  desconto: '60',
+               },
+               {
+                  nome: 'Kit 20',
+                  link: '/kit-led-20-unidades?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/14-11-21-KIT-20.png',
+                  desconto: '70',
+               },
+               {
+                  nome: 'Kit 30',
+                  link: '/kit-led-30-unidades?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/25-11-21-kit-30-v2.png',
+                  desconto: '80',
+               },
+               {
+                  nome: 'TODOS KITS',
+                  link: '/kits-led?sort=mais_vendidos',
+                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/todos-kits-14-11-21.png',
+                  desconto: '90',
+               },
+            ];
+
+            return banners;
+
+         },
+
+         ativarCarousel(){
+
+            $('.banners-com-desconto.banners-com-kits .lista-banners-com-desconto.carousel-target').owlCarousel({
+               loop:false,
+               margin:0,
+               autoHeight: false,
+               nav:true,
+               dots: false,
+               navText: ['<i class="icon-angle-left"></i>', '<i class="icon-angle-right"></i>'],
+               responsive:{
+                  0: {
+                     items:2
+                  },
+                  
+                  767: {
+                     items:4
+                  },
+                  1024: {
+                     items: 6
+                  }
+               }
+            });
+
+         },
+
+         gerarHTML(){
+
+            let objeto = this.gerarObjeto();
+
+            let html = objeto.map(banner => {
+
+               return `
+                  <li class="banner-desconto">
+                        <a href="${banner.link}" onclick="ga('send', 'event', 'Porcentagem Categorias Home','click', '${banner.nome}')">
+                           
+                           <div class="banner-desconto-texto-desconto">-${banner.desconto}%</div>
+                           <div class="banner-desconto-imagem">
+                              <img alt="${banner.nome}" title="${banner.nome}" src="${banner.imagem}">
+                           </div>
+                           <div class="banner-desconto-nome">${banner.nome}</div>
+
+                        </a>
+                  </li>
+               `;
+
+            }).join('');
+
+            return`
+               <div class="banners-com-desconto banners-com-kits">
+                  <div class="banners-com-desconto-titulo">
+                     <strong>Descontos Progressivos</strong>
+                  </div>
+                  <ul class="lista-banners-com-desconto carousel-target">
+                     ${html}
+                  </ul>
+               </div>
+            `;
+
+         },
+
+         renderizar(){
+
+            let html = this.gerarHTML();
+
+            $('#listagemProdutos').append(html);
+
+            this.ativarCarousel();
+
+         }
+
+      }
+      
+      BannersDesconto.renderizar();
+
+   },
+
+   videosNaHome(){
+
+      $('#listagemProdutos').append(`
+         <div class="videos-vitrine">
+            <iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="235" src="https://www.youtube.com/embed/Pw_F4czZLxY" width="427"></iframe><iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="235" src="https://www.youtube.com/embed/n7nuMceIbZ8" width="427"></iframe>
+         </div>
+      `);
+
+   },
+             
    visualizacaoRapida(){
 
       if(!ILUMINIM_UTILS.screen.isDesktop()){
@@ -1090,38 +1651,126 @@ var PaginaInicial = {
       
          gerarObjeto(){
       
-            let objeto = [
-               {
-                  nome: 'Refletores Micro LED Super Oferta!',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/carrossel-banners-home-pequenos-refletores-24-05-21.png',
-                  link: '/refletor-micro-led-slim?sort=mais_vendidos',
-                  width: '300',
-                  height: '237'
-               },
-               {
-                  nome: 'Decoração Lâmpada Vintage',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/decoracao_vintage-25-05-21-v2.png',
-                  link: '/led-retro?sort=mais_vendidos',
-                  width: '300',
-                  height: '237'
-               },
-               {
-                  nome: 'Plafons LED Até 65% OFF',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/carrossel-banners-home-pequenos-plafon-24-05-21.png',
-                  link: '/plafon-led?sort=mais_vendidos',
-                  width: '300',
-                  height: '237'
-               },
-               {
-                  nome: 'Spot LED Melhores Ofertas!',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/spot_led-25-05-21-v2.png',
-                  link: '/spots?sort=mais_vendidos',
-                  width: '300',
-                  height: '237'
-               }
-            ]
+               let objeto = [
+                  {
+                     nome: 'Refletores Micro LED Super Oferta!',
+                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/carrossel-banners-home-pequenos-refletores-24-05-21.png',
+                     link: '/refletor-micro-led-slim?sort=mais_vendidos',
+                     width: '300',
+                     height: '237'
+                  },
+                  {
+                     nome: 'Decoração Lâmpada Vintage',
+                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/decoracao_vintage-25-05-21-v2.png',
+                     link: '/led-retro?sort=mais_vendidos',
+                     width: '300',
+                     height: '237'
+                  },
+                  {
+                     nome: 'Plafons LED Até 65% OFF',
+                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/carrossel-banners-home-pequenos-plafon-24-05-21.png',
+                     link: '/plafon-led?sort=mais_vendidos',
+                     width: '300',
+                     height: '237'
+                  },
+                  {
+                     nome: 'Spot LED Melhores Ofertas!',
+                     //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/spot_led-25-05-21-v2.png',
+                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/compre_por_ambiente-29-12-21.png',
+                     //link: '/spots?sort=mais_vendidos',
+                     link: '/compre-por-ambiente?sort=mais_vendidos',
+                     width: '300',
+                     height: '237'
+                  }
+               ]
 
-            return objeto;
+               return objeto;
+      
+         },
+      
+         gerarHTML(){
+      
+               let objeto = this.gerarObjeto();
+      
+               let htmlList = objeto.map(banner=> {
+      
+                  return `
+                     <li>
+                           <a href="${banner.link}" onclick="ga('send', 'event', 'Oportunidades Especiais Home','click', '${banner.nome}')">
+                              <img alt="${banner.nome}" title="${banner.nome}" src="${banner.imagem}" width="${banner.width}" height="${banner.height}">
+                           </a>
+                     </li>
+                  `;
+      
+               }).join('');
+      
+               return `
+                  <div class="banners-oportunidades-especiais">
+                     <ul class="lista-banners-oportunidades-especiais">
+                        ${htmlList}
+                     </ul>
+                  </div>
+               `;
+      
+         },
+      
+         renderizar(){
+      
+               let html = this.gerarHTML();
+      
+               $('#listagemProdutos').append(html);
+      
+         }
+      
+      }
+      
+      OportunidadesEspeciais.renderizar();
+
+
+   },
+
+   oportunidadesEspeciaisBlack(){
+
+      if(ILUMINIM_UTILS.screen.isMobile()){
+         return;
+      }
+
+      const OportunidadesEspeciais = {
+      
+         gerarObjeto(){
+      
+               let objeto = [
+                  {
+                     nome: 'Refletores Micro LED Super Oferta!',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Refletores_Black-21-10-21.png',
+                     link: '/refletor-micro-led-slim?sort=mais_vendidos',
+                     width: '300',
+                     height: '237'
+                  },
+                  {
+                     nome: 'Decoração Lâmpada Vintage',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Decoracao_Vintage_Black-21-10-21.png',
+                     link: '/led-retro?sort=mais_vendidos',
+                     width: '300',
+                     height: '237'
+                  },
+                  {
+                     nome: 'Plafons LED Até 65% OFF',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Plafons_Black-21-10-21.png',
+                     link: '/plafon-led?sort=mais_vendidos',
+                     width: '300',
+                     height: '237'
+                  },
+                  {
+                     nome: 'Spot LED Melhores Ofertas!',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Spots_Black-21-10-21.png',
+                     link: '/spots?sort=mais_vendidos',
+                     width: '300',
+                     height: '237'
+                  }
+               ]
+
+               return objeto;
       
          },
       
@@ -1218,7 +1867,9 @@ var PaginaInicial = {
       $(`
          .titulo-categoria.borda-principal.cor-principal.vitrine-mas-vendido+ul .listagem-item,
          a.titulo-categoria.borda-principal.cor-principal.vitrine-877731+ul .listagem-item,
-         a.titulo-categoria.borda-principal.cor-principal.vitrine-881697+ul .listagem-item
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-881697+ul .listagem-item,
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-2756184+ul .listagem-item,
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-881062+ul .listagem-item
       `).addClass('produto-tag-campeao-de-vendas');
 
       //$('.titulo-categoria.borda-principal.cor-principal.vitrine-mas-vendido+ul .listagem-item').each(function(){
@@ -1259,7 +1910,7 @@ var PaginaInicial = {
          </div>
       `);
 
-   },
+   },*/
 
    gifTarjaMobile(){
 
@@ -1764,21 +2415,119 @@ var PaginaInicial = {
 
    },
 
+   bannerDuploBlackFriday(){
+
+      $('#listagemProdutos').append(`
+         <div class="banner-duplo-black-friday">
+            <a href="/led-friday?sort=mais_vendidos">
+               <img src="https://cdn.awsli.com.br/257/257163/arquivos/banner-ofertas-black-friday-26-11-21.png">
+            </a>
+            
+            <a href="/pagina/mais-vendidos-black-friday.html">
+               <img src="https://cdn.awsli.com.br/257/257163/arquivos/banner-produtos-mais-vendidos-black-friday-26-11.png">
+            </a>
+         </div>
+      `);
+
+   },
+
    duploBlocoVitrine(){
 
       $('#listagemProdutos').append(`
          <div class="duplo-bloco-vitrine">
             <div class="bloco-vitrine-1">
-               <a href="/led-friday?sort=mais_vendidos">
-                  <img src="https://cdn.awsli.com.br/930/930730/arquivos/banner_video_24-12-21.png">
+               <a href="/pagina/led-ofertas-imbativeis.html">
+                  <img src="https://cdn.awsli.com.br/257/257163/arquivos/BANNER_OFERTAS-HOME-10-01-22.png">
                </a>
             </div>
 
             <div class="bloco-vitrine-2">
-               <iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="235" src="https://www.youtube.com/embed/Tgav0FeEPbI" width="427"></iframe>
+               <iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="235" src="https://www.youtube.com/embed/bPxHsH_dryw" width="427"></iframe>
             </div>
          </div>
       `);
+
+   },
+
+   loginMobileVitrine(){
+
+      if(!ILUMINIM_UTILS.screen.isMobile()) return;
+
+      if(ILUMINIM_UTILS.usuario.logado()) return;
+
+      $('div#corpo > .conteiner').prepend(`
+         <div class="login-mobile">
+         
+            <div class="login-mobile-conteudo">
+
+               <div class="login-mobile-icone">
+                     <svg width="40" height="25" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-user fa-w-14"><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z" class=""></path></svg>
+               </div>
+               <div class="login-mobile-textos">
+                     <div>Olá, confira nossas promoções exclusivas!</div>
+                     <span>Entre e veja condições e ofertas pensadas para você. Aproveite!</span>
+               </div>
+            </div>
+         
+            <div class="login-mobile-conteudo-botao">
+               <a href="/conta/login">Entrar</a>
+            </div>
+         </div>
+      `);
+   },
+
+   baixarAppMobile(){
+
+      let validaCookie = ILUMINIM_UTILS.pegarCookie("download_app");
+
+      if(!ILUMINIM_UTILS.screen.isMobile()) return;
+
+      if(!ILUMINIM_UTILS.mobileDevice.Android()) return;
+
+      if(validaCookie == "true") return;
+
+      $(`<div id="download_app" class="version_android">
+            <div class="close_app">X</div>
+            <div class="image_app"><img src="https://cdn.awsli.com.br/257/257163/arquivos/icon_download_app.png"/></div>
+            <div class="text_app">
+               <a href="https://play.google.com/store/apps/details?id=com.iluminimled.iluminim" target="_blank">
+                  <p class="title_app">Iluminim: LED Ofertas</p>
+                  <span class="action_app">OBTER - Na Play Store</span>
+               </a>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.iluminimled.iluminim" class="call_action_app" target="_blank">Ver</a>
+      </div>`).insertBefore(`.palavras-buscadas-topo-mobile`);
+
+      $("#download_app .close_app").on("click", function(){
+         ILUMINIM_UTILS.setarCookie("download_app", "true", 24);
+         $("#download_app").remove();
+      });
+   },
+
+   cronometroProdutosListagem(){
+
+      $('.titulo-categoria.borda-principal.cor-principal.vitrine-mas-vendido+ul .listagem-item, a.titulo-categoria.borda-principal.cor-principal.vitrine-3217133+ul .listagem-item, a.titulo-categoria.borda-principal.cor-principal.vitrine-3874806+ul .listagem-item').addClass('produto-com-cronometro');
+      
+      $('.listagem-item.produto-com-cronometro').each(function(){
+
+         $(this).append(`
+            <div class="cronometro-produto">
+               <ul class="countdown-target"></ul>
+            </div>
+         `);
+   
+         $(this).find('.cronometro-produto .countdown-target').yuukCountDown({
+            starttime: '2016/11/12 00:00:00',
+            endtime: '2030/12/30 00:00:00',
+         });
+     
+      });
+
+   },
+
+   tagCampanhaListagemApenasClasse(){
+
+      $('.listagem-item').addClass('produto-tag-campanha');
 
    },
 
@@ -1792,49 +2541,57 @@ var PaginaInicial = {
 
       //KITS ESPECIAIS
       $(`
-         a.titulo-categoria.borda-principal.cor-principal.vitrine-3217133+ul, 
-         a.titulo-categoria.borda-principal.cor-principal.vitrine-3217133
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-1355586+ul, 
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-1355586
       `).appendTo('div#listagemProdutos');
+
 
       //REFLETORES LED
       $(`
-         a.titulo-categoria.borda-principal.cor-principal.vitrine-3874806+ul, 
-         a.titulo-categoria.borda-principal.cor-principal.vitrine-3874806
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-877731+ul, 
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-877731
       `).appendTo('div#listagemProdutos');
 
       this.cronometroLEDOfertas();
+      //this.cronometroLEDOfertasChristmas();
 
       //LUMINÁRIAS LED
       $(`
-         a.titulo-categoria.borda-principal.cor-principal.vitrine-3217072+ul, 
-         a.titulo-categoria.borda-principal.cor-principal.vitrine-3217072
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-881697+ul, 
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-881697
       `).appendTo('div#listagemProdutos');
 
-      this.bannersDesconto();
+      //this.bannersDesconto();
+      //this.bannersDescontoBlack(); //REMOVER APOS BLACK
+
+      this.bannersKitsDesconto();
+      //this.bannersKitsDescontoBlack();
 
       //LANÇAMENTOS LED
       $(`
          .titulo-categoria.borda-principal.cor-principal.vitrine-lancamento+ul, 
          .titulo-categoria.borda-principal.cor-principal.vitrine-lancamento
       `).appendTo('div#listagemProdutos');
-
-      this.duploBlocoVitrine(); 
+      
+      //this.videosNaHome();
+      this.duploBlocoVitrine();
 
       //SPOT LED
       $(`
-         a.titulo-categoria.borda-principal.cor-principal.vitrine-3874696+ul, 
-         a.titulo-categoria.borda-principal.cor-principal.vitrine-3874696
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-881062+ul, 
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-881062
       `).appendTo('div#listagemProdutos');
 
       //this.blocoUsuarioComProdutos();
 
-      //EMERGENCIA LED
+      //LÂMPADAS LED
       $(`
-         a.titulo-categoria.borda-principal.cor-principal.vitrine-16397775+ul, 
-         a.titulo-categoria.borda-principal.cor-principal.vitrine-16397775
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-881065+ul, 
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-881065
       `).appendTo('div#listagemProdutos');
    
-      this.oportunidadesEspeciais();
+      this.oportunidadesEspeciais(); //ATIVAR APOS BLACK
+      //this.oportunidadesEspeciaisBlack(); //REMOVER APOS BLACK
 
       //FITAS LED
       $(`
@@ -1842,39 +2599,58 @@ var PaginaInicial = {
          a.titulo-categoria.borda-principal.cor-principal.vitrine-881696
       `).appendTo('div#listagemProdutos');
 
+      //KIT PENDENTES LED
+      $(`
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-2756184+ul, 
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-2756184
+      `).appendTo('div#listagemProdutos');
+
+
    },
 
    iniciar(){ //INICIAR SCRIPTS DA PÁGINA;
 
       this.bannerTarja(); //MANTER ORDEM
+
       this.blocoTriplo(); //MANTER ORDEM
+      this.loginMobileVitrine(); //MANTER ORDEM
+
       this.carrouselBannersPersonalizados(); //MANTER ORDEM
-      
-      this.miniBanners(); //MANTER ORDEM
+      //this.carrouselBannersPersonalizadosChristmas();
+
+      this.miniBanners(); //VOLTAR APOS BLACK //MANTER ORDEM
+      //this.miniBannersChristmas(); //REMOVER APOS CHRISTMAS //MANTER ORDEM
 
       //ILUMINIM_UTILS.renderizarCategoriasFlutuante();
       ILUMINIM_UTILS.renderizarBotaoVoltarAoTopo();
       //ILUMINIM_UTILS.newsletterFlutuante();
 
       this.bannerChamadaDesktop();
+      //this.bannerChamadaDesktopChristmas(); //REMOVER APOS BLACK
+      //this.bannerChamadaDesktopLedFriday(); //REMOVER APOS BLACK
+
       //this.bannerChamadaMobile();
 
+      this.cronometroBannerHome();
       this.tagLancamentoListagemProduto();
       this.tagCampeaoDeVendasListagemProduto();
       this.visualizacaoRapida();
-      
+      this.cronometroProdutosListagem();
+
+      ILUMINIM_UTILS.botaoAdicionarCarrinhoListagem();
+
       this.verTodosNasListagens();
       this.tarjaInformacoesRodape();
       this.textoSeoAvaliacoes();
       
       this.entrarOuCadastrarListagem();
       this.aplicarDescontoPrimeiraCompra();
-
       //this.bannersEmAba();
       
       this.palavrasBuscadasTopoMobile();
+      this.baixarAppMobile();
       //this.tarjaTopoMobile();
-      //this.gifTarjaMobile();
+      this.gifTarjaMobile();
       //this.bannerYoutubeMobile();
       //this.bannerBaixeNossoAppMobile();
       this.historicoDeNavegacaoMobile();
@@ -1882,6 +2658,7 @@ var PaginaInicial = {
       //this.naveguePorCategoria();
       this.removerBotaoProdutoAdicionado();
 
+      this.tagCampanhaListagemApenasClasse();
 
       this.reposicionarListagens(); //MANTER FINAL
 
