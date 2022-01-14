@@ -11388,6 +11388,7 @@
     
        .listagem-item .imagem-produto {
            max-height: 180px !important;
+           margin-top: 15px !important;
        }
     
        .listagem-item .preco-produto .preco-venda {
@@ -26275,7 +26276,12 @@
     }
     
     .produto .produto-compartilhar .estrelas-avaliacao {
+        padding: 0 35px;
+        margin: 0 -35px !important;
+        border-left: 1px solid #ddd !important;
+        border-right: 1px solid #ddd !important;
     }
+        
     
     .produto .produto-compartilhar {
         margin: 21px 0 30px 0;
@@ -26292,7 +26298,7 @@
         position: relative;
     }
 
-    .produto .produto-compartilhar .estrelas-avaliacao:before,
+    /*.produto .produto-compartilhar .estrelas-avaliacao:before,
     .produto .produto-compartilhar .estrelas-avaliacao:after {
         content: "";
         height: 24px;
@@ -26310,8 +26316,20 @@
 
     .produto .produto-compartilhar .estrelas-avaliacao:before {
         right: -254px;
+    }*/
+
+    .produto .produto-compartilhar .adicionar-produto-lista-desejo.lista-desejo {
+        display: none;
     }
     
+    .produto .produto-compartilhar .tag-produto-certificado {
+        position: static !important;
+    }
+    
+    .produto .produto-compartilhar .tag-produto-certificado .tag-produto-certificado-icone svg {
+        height: 17px !important;
+        margin: 0 -2px 0 -1px;
+    }
 
 }
 
@@ -26336,4 +26354,8 @@
         border-radius: 7px !important;
     }
 
+    div#smartfront__app.smartfront__smartfrontapps-grid-produtos-personalizados {
+        display: none;
+    }
+    
 }
