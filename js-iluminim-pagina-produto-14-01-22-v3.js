@@ -3442,8 +3442,6 @@ var PaginaProduto = {
       
       $('.produto .produto-compartilhar').insertBefore('.produto .conteiner-imagem');
 
-      $('.produto .produto-compartilhar .midia-produto').insertBefore('.produto .produto-compartilhar .estrelas-avaliacao');
-
       $('.produto .produto-compartilhar').prepend(`
          <div class="estrelas-avaliacao">
             <i class="icon-star"></i>
@@ -3462,6 +3460,8 @@ var PaginaProduto = {
             </div>
          </div>
       `);
+
+      $('.produto .produto-compartilhar .midia-produto').insertBefore('.produto .produto-compartilhar .estrelas-avaliacao');
 
    },
 
