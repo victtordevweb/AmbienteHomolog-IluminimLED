@@ -26222,16 +26222,39 @@
     
     .produto .produto-compartilhar {
         margin: 21px 0 30px 0;
+        justify-content: center;
+        gap: 90px;
     }
     
     .produto .produto-compartilhar:after {
         display: none;
     }
-    
-    
+
     .produto .produto-compartilhar > * {
-        margin: 0 21px 0 0 !important;
+        margin: 0 !important;
+        position: relative;
     }
+
+    .produto .produto-compartilhar .estrelas-avaliacao:before,
+    .produto .produto-compartilhar .estrelas-avaliacao:after {
+        content: "";
+        height: 24px;
+        width: 1px;
+        display: block;
+        position: absolute;
+        background: #dddddd;
+        top: -2px;
+        
+    }
+
+    .produto .produto-compartilhar .estrelas-avaliacao:after {
+        right: -47px;
+    }
+
+    .produto .produto-compartilhar .estrelas-avaliacao:before {
+        right: -254px;
+    }
+    
 
 }
 
