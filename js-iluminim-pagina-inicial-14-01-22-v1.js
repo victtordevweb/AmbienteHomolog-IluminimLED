@@ -523,7 +523,7 @@ var PaginaInicial = {
                },
                {
                   nome: 'Oferta da Semana com até 78% de desconto',
-                  imagem: 'https://cdn.awsli.com.br/1234/1234739/arquivos/OFERTAS_DA_SEMANA_refletor-13-01-22.png',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/OFERTAS_DA_SEMANA_kit10-14-01.png',
                   link: '/ofertadasemana?sort=mais_vendidos',
                }
             ]
