@@ -5445,22 +5445,22 @@
        }
 
        .pagina-inicial .bloco-personalizado.bloco-produtos-peronalizados.bloco-2 .product-application--tags:after{
-        content: "Últimas Unid.";
-            width: 40px;
+            content: "Últimas Unid.";
+            width: 41px;
             font-size: 9px;
             text-transform: uppercase;
             color: var(--cor-secundaria);
             font-weight: 700;
             letter-spacing: -0.5px;
-            height: 34px;
+            height: 38px;
             display: flex;
             align-items: center;
             position: absolute;
-            left: 0px;
-            top: 50px;
+            left: 52px;
+            top: 1px;
             text-align: center;
             border-radius: 4px;
-            padding: 1px 0px;
+            padding: 2px 0px 0 0;
             border: 2px solid var(--cor-secundaria) !important;
         }
         
@@ -10695,7 +10695,7 @@
            line-height: 20px;
        }
     
-       .bloco-triplo-personalizado .bloco-personalizado.bloco-produtos-peronalizados .product-application--name:after {
+       /*.bloco-triplo-personalizado .bloco-personalizado.bloco-produtos-peronalizados .product-application--name:after {
             content: "\f005 \f005 \f005 \f005 \f005";
             display: block;
             margin: -6px 0 0px 0;
@@ -10703,7 +10703,7 @@
             font-size: 19px;
             letter-spacing: 2px;
             color: #ffc240;
-        }
+        }*/
        
        .bloco-triplo-personalizado > .bloco-personalizado > ul {
            margin: 0;
@@ -11515,6 +11515,8 @@
            background: #34af6f;
            font-size: 13px;
            position: absolute;
+           border-radius: 7px !important;
+           opacity: 1 !important;
        }
        
        .listagem-item:hover .bandeiras-produto span.bandeira-watts {
@@ -11564,6 +11566,7 @@
            position: absolute;
            background: #34af6f;
            border-radius: 7px !important;
+           opacity: 1 !important;
        }
     
        .listagem-item span.bandeira-frete-gratis svg {
@@ -12258,23 +12261,40 @@
         }
 
        .listagem-item.produto-tag-lancamento .adicionar-lista-desejo {
-           top: 50px;
+            top: 80px !important;
        }
     
        .listagem-item .tag-lancamento {
-           top: 12px;
+           top: 40px;
            right: 12px;
            background: #34af6f;
            line-height: 32px;
            font-size: 12px;
            color: #fff;
-           border-radius: 5px;
+           border-radius: 4px;
            font-style: italic;
            text-transform: uppercase;
            text-align: center;
            padding: 0 10px 0 10px;
        }
     
+       .listagem-item:before {
+            content: "\f005 \f005 \f005 \f005 \f005";
+            display: block;
+            margin: 0 0 2px 0;
+            font-family: 'FontAwesome';
+            font-size: 20px;
+            letter-spacing: 3px;
+            color: #ffc240;
+            position: absolute;
+            right: 8px;
+            z-index: 1;
+            top: 12px;
+        }
+        
+        .listagem-item .adicionar-lista-desejo {
+            top: 41px !important;
+        }
     
        .listagem-item.produto-tag-campeao-de-vendas .info-produto {
            padding-top: 5px;
@@ -12285,13 +12305,14 @@
            margin: 10px 0 0 0;
        }
 
-        .pagina-inicial div#smartfront__app .body-app--product-listing-carousel .content--product-application > a:after {
+        /*.pagina-inicial div#smartfront__app .body-app--product-listing-carousel .content--product-application > a:after {
             content: url(https://cdn.awsli.com.br/257/257163/arquivos/tag-campanha-29-12-21.png);
             position: absolute;
             right: 12px;
             top: 12px;
             z-index: 1;
-        }
+        }*/
+
         .pagina-inicial div#menu .menu__nivel-um ul li.menu__item.menu__item--oferta-da-semana .content--product-application>a:after {
             display: none !important;
         }
@@ -23532,7 +23553,7 @@
            height: 54px;
        }
 
-       body div#smartfront__app .content--product-application .product-application--name:after {
+       /*body div#smartfront__app .content--product-application .product-application--name:after {
             content: "\f005 \f005 \f005 \f005 \f005";
             display: block;
             margin: 0px 0 2px 0px;
@@ -23540,6 +23561,19 @@
             font-size: 20px;
             letter-spacing: 3px;
             color: #ffc240;
+        }*/
+
+        body div#smartfront__app .content--product-application > a:before {
+            content: "\f005 \f005 \f005 \f005 \f005";
+            display: block;
+            margin: -6px 0 0px 0;
+            font-family: 'FontAwesome';
+            font-size: 19px;
+            letter-spacing: 2px;
+            color: #ffc240;
+            position: absolute;
+            right: 10px;
+            top: 20px;
         }
        
        body div#smartfront__app .product-application--informations {
@@ -26296,6 +26330,10 @@
 
     a.veja-quem-recomendou {
         margin: 3px 0 0 0;
+    }
+
+    body div#smartfront__app .product-application--tags .tags--tag.tag-discount {
+        border-radius: 7px !important;
     }
 
 }
