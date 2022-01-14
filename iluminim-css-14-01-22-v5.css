@@ -26244,4 +26244,12 @@
         display: none;
     }
 
+    a.avaliacao-dos-clientes {
+        display: none;
+    }
+
+    a.veja-quem-recomendou {
+        margin: 3px 0 0 0;
+    }
+
 }
