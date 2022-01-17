@@ -15900,10 +15900,10 @@
                 font-weight: 900;
                 border-radius: 60px;
                 position: absolute;
-                top: 0;
+                top: 6px;
                 padding: 0 0 1px 1px;
                 box-sizing: border-box;
-                left: -20px;
+                left: 5px;
             }
             
             .banners-com-desconto .banner-desconto-nome {
@@ -15920,10 +15920,16 @@
             
             .banners-com-desconto .lista-banners-com-desconto .banner-desconto > a {
                 display: table;
-                padding-top: 30px;
                 position: relative;
                 text-decoration: none;
                 margin: 0 auto;
+                padding: 40px 25px 10px 25px;
+                border-radius: 5px;
+                border: 2px solid transparent !important;
+            }
+
+            .banners-com-desconto .lista-banners-com-desconto .banner-desconto > a:hover {
+                border-color: var(--cor-secundaria) !important;
             }
             
             .banners-com-desconto .lista-banners-com-desconto .banner-desconto > a:hover .banner-desconto-imagem {
@@ -18754,6 +18760,27 @@
                 max-height: 180px;
             }
      
+            div#smartfront__app .body-app--product-listing .content--product-application .product-application--image .image--link {
+                margin-top: 26px !important;
+            }
+
+            div#smartfront__app.smartfrontapps-compre-junto .content--product-application:before {
+                content: "\f005 \f005 \f005 \f005 \f005" !important;
+                display: block !important;
+                margin: -6px 0 0px 0;
+                font-family: 'FontAwesome';
+                font-size: 19px;
+                letter-spacing: 2px;
+                color: #ffc240;
+                position: absolute;
+                right: 10px;
+                top: 20px;
+            }
+            
+            div#smartfront__app.smartfrontapps-compre-junto .content--product-application .product-application--image {
+                margin-top: 40px;
+            }
+            
             div#cabecalho .dropdown-conteudo-superior .conteudo-dropdown.dropdown-historico .dropdown-historico-titulo-conteudo {
                 display: flex;
                 align-items: center;
