@@ -1165,37 +1165,37 @@ var PaginaInicial = {
                {
                   nome: 'Kit 5',
                   link: '/kit-led-5-unidades?sort=mais_vendidos',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/04-11-21-KIT-5.png',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/17-01-22-KIT-5.png',
                   desconto: '40',
                },
                {
                   nome: 'Kit 10',
                   link: '/kit-led-10-unidades?sort=mais_vendidos',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/04-11-21-KIT-10.png',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/17-01-22-KIT-10.png',
                   desconto: '50',
                },
                {
                   nome: 'Kit 12',
                   link: '/kit-led-12-unidades?sort=mais_vendidos!',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/04-11-21-KIT-12.png',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/17-01-22-KIT-12.png',
                   desconto: '60',
                },
                {
                   nome: 'Kit 20',
                   link: '/kit-led-20-unidades?sort=mais_vendidos',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/04-11-21-KIT-20.png',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/17-01-22-KIT-20.png',
                   desconto: '70',
                },
                {
                   nome: 'Kit 30',
                   link: '/kit-led-30-unidades?sort=mais_vendidos',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/04-11-21-KIT-30.png',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/17-01-22-KIT-30.png',
                   desconto: '80',
                },
                {
                   nome: 'TODOS KITS',
                   link: '/kits-led?sort=mais_vendidos',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/todos-kits-04-11-21.png',
+                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/todos-kits-17-01-22.png',
                   desconto: '90',
                },
             ];
