@@ -2999,6 +2999,57 @@ var PaginaProduto = {
      alteraTituloPagina.iniciar();
    },
 
+   blocosDinamicosEmAbas(){
+
+      if(!ILUMINIM_UTILS.screen.isDesktop()){
+         return;
+      }
+
+      let target = $('.produto>.row-fluid:first-child');
+
+      target.after(`
+         <div class="blocos-dinamicos-em-abas">
+            <div class="blocos-dinamicos-abas">
+               <div class="bloco-dinamico-aba aba-ativa" data-bloco-nome="compre-junto"><span>Compre Junto</span></div>
+               <div class="bloco-dinamico-aba" data-bloco-nome="confira-os-kits"><span>Confira os Kits!</span></div>
+            </div>
+
+            <div class="blocos-dinamicos-abas-conteudo">
+
+               <div class="bloco-dinamico-aba-conteudo aba-conteudo-ativa" data-bloco-nome="compre-junto">
+                  <div id="aplicacao-dinamica-compre-junto">
+                     <div class="target"></div>
+                     <div class="iluminim-loading">${ ILUMINIM_UTILS.icones.loading }</div>
+                  </div>
+               </div>
+
+               <div class="bloco-dinamico-aba-conteudo" data-bloco-nome="confira-os-kits">
+                  <div id="aplicacao-dinamica-confira-os-kits">
+                     <div class="target"></div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      `);
+
+
+      $('.blocos-dinamicos-em-abas .blocos-dinamicos-abas .bloco-dinamico-aba').click(function(){
+
+         let referencia = $(this).attr('data-bloco-nome');
+     
+         $(this).parents('.blocos-dinamicos-abas').find('.bloco-dinamico-aba').removeClass('aba-ativa');
+     
+         $(this).addClass('aba-ativa');
+     
+         $(this).parents('.blocos-dinamicos-abas').siblings('.blocos-dinamicos-abas-conteudo').find('.bloco-dinamico-aba-conteudo').removeClass('aba-conteudo-ativa');
+     
+         $(this).parents('.blocos-dinamicos-abas').siblings('.blocos-dinamicos-abas-conteudo').find(`.bloco-dinamico-aba-conteudo[data-bloco-nome="${referencia}"]`).addClass('aba-conteudo-ativa');
+     
+     });
+
+   },
+
    criarLocaisDeAplicacoesDinamicas(){
 
       let target = $('.produto>.row-fluid:first-child');
@@ -3011,17 +3062,25 @@ var PaginaProduto = {
 
       target.after(`
 
-         <div id="aplicacao-dinamica-compre-junto">
-            <div class="target"></div>
-         </div>
+         ${ ILUMINIM_UTILS.screen.isMobile() ? `
+         
+            <div id="aplicacao-dinamica-compre-junto">
+               <div class="target"></div>
+            </div>
+
+         ` : `` }
 
          <div id="aplicacao-dinamica-compre-junto-espelhado">
             <div class="target"></div>
          </div>
 
-         <div id="aplicacao-dinamica-confira-os-kits">
-            <div class="target"></div>
-         </div>
+         ${ ILUMINIM_UTILS.screen.isMobile() ? `
+         
+            <div id="aplicacao-dinamica-confira-os-kits">
+               <div class="target"></div>
+            </div>
+
+         ` : `` }
 
          <div id="aplicacao-dinamica-produtos-para-voce">
             <div class="target"></div>
@@ -3506,7 +3565,9 @@ var PaginaProduto = {
          this.modalContinuarComprando();
          this.adaptacaoAcoesProduto();
          
-         this.criarLocaisDeAplicacoesDinamicas(); //MANTER NO FINAL
+         
+         this.criarLocaisDeAplicacoesDinamicas(); //MANTER ORDEM
+         this.blocosDinamicosEmAbas(); //MANTER ORDEM
          this.adaptacoesAcoesFlutuante(); //MANTER NO FINAL
 
    }
