@@ -3604,6 +3604,35 @@ var TodasAsPaginas = {
 
    },
 
+   mensagemBusca(){
+
+      if(!ILUMINIM_UTILS.screen.isDesktop()){
+         return;
+      }
+
+      $('input#auto-complete').after(`
+         <div class="informacao-busca">
+            <div class="conteudo-informacao-busca">
+               <div class="titulo-informacao-busca">
+                  <strong>quer economizar?</strong>
+                  <span class="fechar-informacao-busca">✕</span>
+               </div>
+
+               <div class="texto-informacao-busca">
+                  <span>busque os itens aqui, compare</span>
+                  <span>preços entre mercados e finalize a</span>
+                  <span>cesta com a melhor opção para você.</span>
+               </div>
+            </div>
+         </div>
+      `);
+
+      $('.informacao-busca .fechar-informacao-busca').click(function(){
+         $(this).parents('.informacao-busca').fadeOut(300);
+      });
+
+   },
+
    iniciar() { //INICIAR SCRIPTS DA PÁGINA;
 
       this.removeLocalStoragesAntigos();
@@ -3654,6 +3683,7 @@ var TodasAsPaginas = {
       //this.adicionarRedesRodapeDesktop();
       //this.adicionarRedesRodapeMobile();
       this.palavrasBuscadasRodapeMobile();
+      this.mensagemBusca();
       
       this.paginaNaoEncontrada();
       this.removerNewsletterMobile();
