@@ -36,7 +36,6 @@ var PaginaProduto = {
       `);
    },
 
-
    //<li><span>${ILUMINIM_UTILS.icones.bandeira.mercado_pago}</span></li>
 
    adicionarBandeiraBoletoBlocoParcelas(){
@@ -149,7 +148,7 @@ var PaginaProduto = {
    adicionarPorcentagemDesconto(){
 
       function setarHTMLDesconto(){
-         $('.produto .conteiner-imagem').prepend(`
+         $('.produto .produto-compartilhar').append(`
                <div class="desconto-produto">
                   <span class="porcentagem-desconto">${ILUMINIM_UTILS.produto.desconto_porcentagem()}%</span>
                   <span class="texto-off">Off</span>
@@ -165,9 +164,9 @@ var PaginaProduto = {
 
       $(document).on('click', '.atributos ul li a', function(){
          
-         if($('.produto .conteiner-imagem .porcentagem-desconto').length > 0){
+         if($('.porcentagem-desconto').length > 0){
                
-               $('.produto .conteiner-imagem .porcentagem-desconto').html(`${ILUMINIM_UTILS.produto.desconto_porcentagem()}%`);
+               $('.porcentagem-desconto').html(`${ILUMINIM_UTILS.produto.desconto_porcentagem()}%`);
 
          }else {
 
@@ -220,7 +219,7 @@ var PaginaProduto = {
                </div>
 
                <div class="selo-produto">
-                  ${ILUMINIM_UTILS.icones.selo.ebit}
+                  ${ILUMINIM_UTILS.icones.selo.ebit_diamante}
                </div>
 
                <div class="selo-produto">
@@ -365,7 +364,7 @@ var PaginaProduto = {
                   <div class="desconto-boleto-texto-negrito"><strong>Só hoje!</strong></div>
                   <div>Ganhe</div>
                   <div class="desconto-boleto-texto-negrito texto-desconto"><strong>10% de desconto</strong></div>
-                  <div>no boleto</div>
+                  <div>no boleto ou pix</div>
                </div>
 
                ${ valor_economizado !== 'NaN' ? `
@@ -384,7 +383,7 @@ var PaginaProduto = {
       $('.produto .codigo-produto').append(`
          <div class="linha-avaliacao">
                <a href="#!" class="avaliacao-dos-clientes">
-                  <div class="titulo-avaliacao">Avaliação dos clientes:</div>
+                  <div class="titulo-avaliacao">Avaliação Máxima:</div>
                   <div class="estrelas-avaliacao">
                      <i class="icon-star"></i>
                      <i class="icon-star"></i>
@@ -394,13 +393,48 @@ var PaginaProduto = {
                   </div>
                </a>
 
-               <a href="#!" class="veja-quem-recomendou">
+               <a href=#comentarios" class="veja-quem-recomendou">
                   <i class="icon-thumbs-up"></i>
                   <div class="titulo-veja-quem-recomendou">Veja quem recomendou</div>
                   <i class="icon-angle-down"></i>
                </a>
          </div>
       `);
+
+   },
+
+   adicionarProdutoCertificado(){
+
+      $('.produto .codigo-produto > .cor-secundaria:first-child').after(`
+         <span class="cor-secundaria produto-certificado-texto">
+            <b>Produto Certificado</b>
+         </span>
+      `);
+
+      $('.produto .conteiner-imagem').prepend(`
+         <div class="tag-produto-certificado">
+            <div class="tag-produto-ceritificado-conteudo">
+                  <div class="tag-produto-certificado-icone">
+                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" x="0" y="0" style="enable-background:new 0 0 512 512;width: 18px;height: 20px;" xml:space="preserve" class="" viewBox="17.11 0 180.05 214.27"><g><g xmlns="http://www.w3.org/2000/svg">	<path d="M196.926,55.171c-0.11-5.785-0.215-11.25-0.215-16.537c0-4.142-3.357-7.5-7.5-7.5c-32.075,0-56.496-9.218-76.852-29.01   c-2.912-2.832-7.546-2.831-10.457,0c-20.354,19.792-44.771,29.01-76.844,29.01c-4.142,0-7.5,3.358-7.5,7.5   c0,5.288-0.104,10.755-0.215,16.541c-1.028,53.836-2.436,127.567,87.331,158.682c0.796,0.276,1.626,0.414,2.456,0.414   c0.83,0,1.661-0.138,2.456-0.414C199.36,182.741,197.954,109.008,196.926,55.171z M107.131,198.812   c-76.987-27.967-75.823-89.232-74.79-143.351c0.062-3.248,0.122-6.396,0.164-9.482c30.04-1.268,54.062-10.371,74.626-28.285   c20.566,17.914,44.592,27.018,74.634,28.285c0.042,3.085,0.102,6.231,0.164,9.477C182.961,109.577,184.124,170.844,107.131,198.812   z" fill="#000000" data-original="#000000" style="" class=""></path>	<path d="M132.958,81.082l-36.199,36.197l-15.447-15.447c-2.929-2.928-7.678-2.928-10.606,0c-2.929,2.93-2.929,7.678,0,10.607   l20.75,20.75c1.464,1.464,3.384,2.196,5.303,2.196c1.919,0,3.839-0.732,5.303-2.196l41.501-41.5   c2.93-2.929,2.93-7.678,0.001-10.606C140.636,78.154,135.887,78.153,132.958,81.082z" fill="#000000" data-original="#000000" style="" class=""></path></g></g></svg>
+                  </div>
+                  <div class="tag-produto-certificado-texto">Produto Certificado</div>
+            </div>
+         </div>
+      `);
+
+   },
+
+   adicionarTextoGarantia(){
+
+      if(ILUMINIM_UTILS.produto.garantia()){
+         
+         $('.produto .codigo-produto > span.cor-secundaria:first-child').after(`
+            <span class="cor-secundaria">
+               <b>Garantia:</b> <span>${ILUMINIM_UTILS.produto.garantia()}</span>
+            </span>
+         `);
+
+      }
 
    },
 
@@ -492,7 +526,7 @@ var PaginaProduto = {
 
    },
 
-   cronometroCompreAntesQueAcabe(){
+   /*cronometroCompreAntesQueAcabe(){
 
       if(ILUMINIM_UTILS.screen.isMobile()){
          return;
@@ -500,15 +534,51 @@ var PaginaProduto = {
 
       $('.produto .row-fluid > .span6:first-child').append(`
          <div class="cronometro-compre-antes-que-acabe">
-               <div class="conteudo-titulo-cronometro">Compre antes que acabe!</div>
+               <div class="conteudo-titulo-cronometro">LED FRIDAY: Última chance!</div>
                <div class="conteudo-cronometro">
-                  <div class="conteudo-icone-cronometro">${ILUMINIM_UTILS.icones.relogio}</div>
+                  <div class="conteudo-icone-cronometro">
+                     ${ILUMINIM_UTILS.icones.relogio_2}
+                  </div>
                   <ul class="countdown-target"></ul>
                </div>    
                <div class="conteudo-texto-cronometro">Promoções e condições válidas em ${new Date().toLocaleDateString()}</div>
          </div>
       `);
 
+
+      $('.cronometro-compre-antes-que-acabe .countdown-target').yuukCountDown({
+         starttime: '2016/11/12 00:00:00',
+         endtime: '2030/12/30 00:00:00',
+      });
+
+   },*/
+
+   cronometroCompreAntesQueAcabe(){
+
+      // com titulo anterior: <div class="conteudo-titulo">${porcentagemVendido}% vendido</div>
+
+      if(ILUMINIM_UTILS.screen.isMobile()){
+         return;
+      }
+
+      let porcentagemVendido = ILUMINIM_UTILS.gerarNumerosAleatorios(91, 94);
+
+      $('.produto .row-fluid > .span6:first-child').append(`
+         <div class="cronometro-compre-antes-que-acabe">
+               <div class="conteudo-titulo-cronometro">LED OFERTAS IMBATÍVEIS: Última chance!</div>
+
+               <div class="compre-antes-que-acabe-progress">
+                  ${ ILUMINIM_UTILS.gerarBarraProgresso({ porcentagem_fixa: porcentagemVendido }) }
+               </div>
+
+               <div class="conteudo-cronometro">
+                  <div class="conteudo-icone-cronometro">
+                     ${ILUMINIM_UTILS.icones.relogio_2}
+                  </div>
+                  <ul class="countdown-target"></ul>
+               </div>
+         </div>
+      `);
 
       $('.cronometro-compre-antes-que-acabe .countdown-target').yuukCountDown({
          starttime: '2016/11/12 00:00:00',
@@ -547,6 +617,7 @@ var PaginaProduto = {
 
       $('div#descricao img[src="https://cdn.awsli.com.br/257/257163/arquivos/itensTITULO.png"]').parent().replaceWith(`
          <div class="descricao-titulo" data-referencia="Itens Inclusos">
+               <span class="descricao-icone">${ILUMINIM_UTILS.icones.descricao_produto.itens_inclusos}</span>
                <span>Itens Inclusos</span>
          </div>
       `);
@@ -554,6 +625,7 @@ var PaginaProduto = {
 
       $('div#descricao img[src="https://cdn.awsli.com.br/257/257163/arquivos/caracteristicasTITULO.png"]').parent().replaceWith(`
          <div class="descricao-titulo descricao-titulo-caracteristicas-tecnicas" data-referencia="Características Técnicas">
+               <span class="descricao-icone">${ILUMINIM_UTILS.icones.descricao_produto.caracteristicas}</span>
                <span>Características Técnicas</span>
          </div>
       `);
@@ -561,6 +633,7 @@ var PaginaProduto = {
 
       $('div#descricao img[src="https://cdn.awsli.com.br/257/257163/arquivos/confiratitulo.png"]').parent().replaceWith(`
          <div class="descricao-titulo descricao-titulo-o-que-dizem-nossos-clientes" data-referencia="Confira o que dizem nossos clientes">
+               <span class="descricao-icone">${ILUMINIM_UTILS.icones.descricao_produto.nossos_clientes}</span>
                <span>Confira o que dizem nossos clientes</span>
          </div>
       `);            
@@ -602,13 +675,19 @@ var PaginaProduto = {
 
          }else if($('#descricao > div:first-child').length > 0){
             
-            /*$('#descricao > div:first-child ~ *').first().nextUntil('.descricao-conteudo-accordion').prevObject.prevObject.wrapAll(`
-               <div class="descricao-conteudo descricao"></div>
-            `);*/
+            if($('#descricao > div:first-child + *:empty').length == 0){
 
-            $('#descricao > div:first-child ~ *').first().nextUntil('.descricao-conteudo-accordion').wrapAll(`
-               <div class="descricao-conteudo descricao"></div>
-            `);
+               $('#descricao > div:first-child').first().nextUntil('.descricao-conteudo-accordion').wrapAll(`
+                  <div class="descricao-conteudo descricao"></div>
+               `);
+
+            }else {
+
+               $('#descricao > div:first-child ~ *').first().nextUntil('.descricao-conteudo-accordion').wrapAll(`
+                  <div class="descricao-conteudo descricao"></div>
+               `);
+
+            }
 
          }else{
 
@@ -616,9 +695,19 @@ var PaginaProduto = {
                <div class="descricao-conteudo descricao"></div>
             `);*/
 
-            $('#descricao > p').first().nextUntil('.descricao-conteudo-accordion').wrapAll(`
-               <div class="descricao-conteudo descricao"></div>
-            `);
+            if($('#descricao > div:first-child + *:empty').length == 0){
+
+               $('#descricao > p').first().nextUntil('.descricao-conteudo-accordion').prevObject.prevObject.wrapAll(`
+                  <div class="descricao-conteudo descricao"></div>
+               `);
+
+            } else {
+
+               $('#descricao > p').first().nextUntil('.descricao-conteudo-accordion').wrapAll(`
+                  <div class="descricao-conteudo descricao"></div>
+               `);
+
+            }
 
          }
    
@@ -626,6 +715,7 @@ var PaginaProduto = {
 
       $('#descricao > .descricao-conteudo.descricao').before(`
          <div class="descricao-titulo descricao-titulo-descricao">
+               <span class="descricao-icone">${ILUMINIM_UTILS.icones.descricao_produto.descricao}</span>
                <span>Descrição</span>
          </div>
       `);
@@ -661,7 +751,6 @@ var PaginaProduto = {
 
       $('#descricao .descricao-conteudo-accordion.accordion-descricao img[src*="pimgpsh_fullsize_distr"]').parent().remove(); //REMOVER TARJA FRETE LARANJA FRETE GRÁTIS
 
-
       $('#descricao *').each(function(){ //REMOVENDO ITENS VAZIO;
          var text = $(this).html();
          if(text == '&nbsp;'){
@@ -693,7 +782,24 @@ var PaginaProduto = {
 
       $('.descricao-conteudo').hide();
 
-      $(`
+      if( $('.descricao-conteudo.descricao').text() == '' ){
+      
+         $('.descricao-conteudo.descricao').parents('.descricao-conteudo-accordion.accordion-descricao').remove();
+      
+      }
+
+      /*if( ILUMINIM_UTILS.screen.isMobile() ){
+
+         $(`
+            .descricao-conteudo-accordion.accordion-descricao .descricao-titulo,
+            .descricao-conteudo-accordion[data-referencia="Itens Inclusos"] .descricao-titulo,
+            .descricao-conteudo-accordion[data-referencia="Características Técnicas"] .descricao-titulo,
+            .descricao-conteudo-accordion.compare-os-modelos .descricao-titulo
+         `).click();
+
+      } else {
+
+         $(`
          .descricao-conteudo-accordion.accordion-descricao .descricao-titulo,
          .descricao-conteudo-accordion.beneficios-led .descricao-titulo,
          .descricao-conteudo-accordion[data-referencia="Itens Inclusos"] .descricao-titulo,
@@ -703,6 +809,8 @@ var PaginaProduto = {
          .descricao-conteudo-accordion.cuidado-maximo-com-sua-encomenda .descricao-titulo
       `).click();
 
+      }*/
+
    },
 
    adicionarBeneficiosLED(){
@@ -711,6 +819,7 @@ var PaginaProduto = {
       $('.descricao-conteudo-accordion.accordion-descricao').after(`
          <div class="descricao-conteudo-accordion beneficios-led">
                <div class="descricao-titulo descricao-titulo-beneficios-led">
+                  <span class="descricao-icone">${ILUMINIM_UTILS.icones.descricao_produto.beneficios}</span>
                   <span>Você já conhece os benefícios do led?</span>
                </div>
                
@@ -806,6 +915,7 @@ var PaginaProduto = {
       $('#descricao').after(`
          <div class="descricao-conteudo-accordion cuidado-maximo-com-sua-encomenda">
                <div class="descricao-titulo descricao-titulo-cuidado-maximo-com-a-sua-encomenda">
+                  <span class="descricao-icone">${ILUMINIM_UTILS.icones.descricao_produto.cuidado_encomenda}</span>
                   <span>Cuidado máximo com a sua encomenda</span>
                </div>
                <div class="descricao-conteudo">
@@ -1226,6 +1336,7 @@ var PaginaProduto = {
                $('#descricao').after(`
                   <div class="descricao-conteudo-accordion duvidas-rapidas">
                      <div class="descricao-titulo duvidas-rapidas-titulo">
+                           <span class="descricao-icone">${ILUMINIM_UTILS.icones.descricao_produto.duvidas}</span>
                            <span>Dúvidas Rápidas</span>
                      </div>
                      <div class="descricao-conteudo duvidas-rapidas-conteudo">
@@ -1458,6 +1569,7 @@ var PaginaProduto = {
                $('#descricao').after(`
                   <div class="descricao-conteudo-accordion iluminim-led-explica">
                      <div class="descricao-titulo iluminim-led-explica-titulo">
+                           <span class="descricao-icone"><i class="fas fa-bars"></i></span>
                            <span>Iluminim LED Explica</span>
                            <a href="https://blog.iluminim.com.br/" target="_blank" rel="noopener">+ Veja outros conteúdos</a>
                      </div>
@@ -1483,6 +1595,7 @@ var PaginaProduto = {
       $('#descricao').after(`
          <div class="descricao-conteudo-accordion doacoes-realizadas">
                <div class="descricao-titulo descricao-titulo-cuidado-maximo-com-a-sua-encomenda">
+                  <span class="descricao-icone">${ILUMINIM_UTILS.icones.descricao_produto.doacoes}</span>
                   <span>Doações - 8.464 doações já realizadas</span>
                </div>
                <div class="descricao-conteudo">
@@ -1506,9 +1619,27 @@ var PaginaProduto = {
    precoValidoUltimasUnidades(){
 
       //<div class="conteudo-texto-cronometro">Promoções e condições válidas em ${new Date().toLocaleDateString()}</div>
+      /*$('.produto .principal .acoes-produto .comprar > a').after(`
+         <div class="informacoes-produto">
+            <div class="preco-valido-limitado">Preço válido para o dia ${new Date().toLocaleDateString()}</div>
+            <div class="ultimas-unidades">últimas unidades</div>
+         </div>
+      `);*/
+
       $('.produto .principal .acoes-produto .comprar > a').after(`
          <div class="informacoes-produto">
-               <div class="preco-valido-limitado">Preço válido para o dia ${new Date().toLocaleDateString()}</div>
+            <div class="ultimas-unidades">últimas unidades</div>
+         </div>
+      `);
+   
+   },
+
+   precoValidoUltimasUnidadesBlack(){
+
+      //<div class="conteudo-texto-cronometro">Promoções e condições válidas em ${new Date().toLocaleDateString()}</div>
+      $('.produto .principal .acoes-produto .comprar > a').after(`
+         <div class="informacoes-produto">
+               <div class="preco-valido-limitado">Preço válido para LED Ofertas</div>
                <div class="ultimas-unidades">últimas unidades</div>
          </div>
       `);
@@ -1517,11 +1648,20 @@ var PaginaProduto = {
 
    adicionarTextOfertaRecomendadaModal(){
 
-      $('.produto .breadcrumbs ul.lista-custom-breadcrumbs').append(`
+      /*$('.produto .breadcrumbs ul.lista-custom-breadcrumbs').append(`
          <li class="oferta-recomendada">
                <a href="#!" data-toggle="modal" data-target="#modal_oferta_recomendada" class="oferta-recomendada-conteudo">
                   <div class="oferta-recomendada-conteudo-texto-oferta">Oferta</div>
                   <div class="oferta-recomendada-conteudo-texto-recomendada">Recomendada!</div>
+               </a>
+         </li>
+      `);*/
+
+      $('.produto .breadcrumbs ul.lista-custom-breadcrumbs').append(`
+         <li class="oferta-recomendada">
+               <a href="#!" data-toggle="modal" data-target="#modal_oferta_recomendada" class="oferta-recomendada-conteudo">
+                  <div class="oferta-recomendada-conteudo-texto-oferta"></div>
+                  <div class="oferta-recomendada-conteudo-texto-recomendada">COMPRE ANTES QUE ACABE!</div>
                </a>
          </li>
       `);
@@ -1898,7 +2038,7 @@ var PaginaProduto = {
                   produtos: [
                      {
                         comparacaoValues: ['Fácil Instalação', '3 Anos', 'Sobrepor', '3 CM', 'BIVOLT'],
-                        imagem: "https://cdn.awsli.com.br/100x100/257/257163/produto/8046510/0393d991ed.jpg",
+                        imagem: "https://cdn.awsli.com.br/100x100/257/257163/produto/8046511/0bd5d321d6.jpg",
                         link: "/luminaria-plafon-18w-led-sobrepor-branco-quente-redondo",
                         nome: "Luminária Plafon 18w LED Sobrepor Branco Quente",
                      },
@@ -2739,6 +2879,56 @@ var PaginaProduto = {
                      },
                   ]
                },
+
+               {
+                  comparacao: ['Área de abrangência', 'Autonomia', 'Luminaria', 'Modelo', 'Luz'],
+                  aplicacoes: ['23597', '24080', '27025', '25684', '25113', '25114', '25923', '25922', '24707', '24530', '24777', '25919', '24699', '25682', '25685', '25593', '26568', '25328'],
+                  produtos: [
+                     {
+                        comparacaoValues: ['25m²', '3/6h', 'Móvel', 'Slim', 'Fixa'],
+                        imagem: "https://cdn.awsli.com.br/300x300/257/257163/produto/16905459/661eca8fb9.jpg",
+                        link: "/luminaria-de-emergencia-30-leds-slim",
+                        nome: "Luminária de Emergência 30 LEDs | Slim",
+                     },
+                     {
+                        comparacaoValues: ['450m²', '3h', 'Móvel', '2 Farois', 'Direcionavel'],
+                        imagem: "https://cdn.awsli.com.br/300x300/257/257163/produto/26997410/054fb1551b.jpg",
+                        link: "/luminaria-de-emergencia-led-2200-lumens-2-farois",
+                        nome: "Luminária de Emergência LED 2.200 Lúmens | 2 Faróis",
+                     },
+                     {
+                        comparacaoValues: ['120m²', '3h', 'Móvel | Fixa', '2 Farois | Premium', 'Fixa'],
+                        imagem: "https://cdn.awsli.com.br/300x300/257/257163/produto/41252542/e6d821c231.jpg",
+                        link: "/luminaria-de-emergencia-400-lumens-premium",
+                        nome: "Luminária de Emergência 400 Lúmens | Premium",
+                     },
+                  ]
+               },
+
+               {
+                  comparacao: ['Ângulo de iluminação', 'Potência', 'Vida útil', 'Modelo'],
+                  aplicacoes: ['LT-', 'LUM-', 'T5C-30-'],
+                  produtos: [
+                     {
+                        comparacaoValues: ['120º', '9W', '50.000 Horas', 'Tubular T8'], //LT-60BF
+                        imagem: "https://cdn.awsli.com.br/300x300/257/257163/produto/8046561/a8bee3584e.jpg",
+                        link: "/lampada-led-tubular-t8-9w",
+                        nome: "Lampada LED Tubular T8 9w - 60cm - Branco Frio | Inmetro",
+                     },
+                     {
+                        comparacaoValues: ['120º', '9W', '40.000 Horas', 'Tubular T8 Com Calha'], //LTC-60-9W-L-BF
+                        imagem: "https://cdn.awsli.com.br/300x300/257/257163/produto/16243221/29cb0812cc.jpg",
+                        link: "/lampada-led-tubular-t8-9w-60cm-com-calha-branco-frio",
+                        nome: "Lampada LED Tubular T8 9w 60cm c/ Calha - Branco Frio",
+                     },
+                     {
+                        comparacaoValues: ['120º', '9W', '35.000 Horas', 'Ultra LED Tubular T5'], // T5C-60-9W-L-BF
+                        imagem: "https://cdn.awsli.com.br/300x300/257/257163/produto/42501063/cfd9341cab.jpg",
+                        link: "/lampada-led-tubular-t5-9w-60m-c-calha-branco-frio-inmetro",
+                        nome: "Lampada LED Tubular T5 9w - 60cm c/ Calha - Branco Frio | Inmetro",
+                     },
+                  ]
+               },
             
             ];
 
@@ -2748,20 +2938,33 @@ var PaginaProduto = {
 
          gerarHTML(){
 
-            let prodSku = ILUMINIM_UTILS.produto.sku()
+            let prodSku = ILUMINIM_UTILS.produto.sku();
 
             let objeto = this.gerarObjeto();
             
             let itemFiltrado = objeto.filter(item=> {
 
                let produtoFiltrado = item.aplicacoes.filter(sku=> {
-                  
-                  if(prodSku == sku || (prodSku.includes(`${sku}-KIT`) || prodSku.includes(`${sku}-60X60`) || prodSku.includes(`${sku}-62X62`)) ){
-                     
-                     return item;
+
+                  if( ['LT-', 'LUM-', 'T5C-30-'].includes(sku) ){
+
+                     if(ILUMINIM_UTILS.produto.nome().includes('Tubular')){
+
+                        return item;
+
+                     }
+
+               
+                  }else {
+
+                     if(prodSku == sku || (prodSku.includes(`${sku}-KIT`) || prodSku.includes(`${sku}-60X60`) || prodSku.includes(`${sku}-62X62`)) ){
+                        
+                        return item;
+
+                     }
 
                   }
-               
+
                });
       
                if(produtoFiltrado.length > 0){
@@ -2815,6 +3018,7 @@ var PaginaProduto = {
             return `
                <div class="descricao-conteudo-accordion compare-os-modelos">
                   <div class="descricao-titulo descricao-titulo-compare-os-modelos">
+                  <span class="descricao-icone">${ILUMINIM_UTILS.icones.descricao_produto.compare_modelos}</span>
                      <span>Compare os Modelos</span>
                   </div>
                   <div class="descricao-conteudo">
@@ -2965,40 +3169,6 @@ var PaginaProduto = {
 
    },
 
-   alterarTituloSairDaPagina(){
-      const alteraTituloPagina = {
-
-         tituloPadrao: $('title').text(),
-         novoTitulo: "Ei, volte! Está quase acabando a promoção!",
-         intervalo: null,
-         tempoIntervalo: 500,
-        
-         trocarTitulo(){
-                 alteraTituloPagina.intervalo = setInterval(() => {
-                     let tituloAtual = $('title').text();
-     
-                     if(tituloAtual === alteraTituloPagina.novoTitulo){
-                         $('title').text(alteraTituloPagina.tituloPadrao);
-                     }else{
-                         $('title').text(alteraTituloPagina.novoTitulo);
-                     }
-                 }, alteraTituloPagina.tempoIntervalo);
-         },
-     
-         pararTrocarTitulo(){
-             clearInterval(alteraTituloPagina.intervalo);
-             $('title').text(alteraTituloPagina.tituloPadrao);
-         },
-     
-        iniciar(){
-            $(window).on('blur', alteraTituloPagina.trocarTitulo);
-            $(window).on('focus', alteraTituloPagina.pararTrocarTitulo);
-        }
-     
-     }
-     alteraTituloPagina.iniciar();
-   },
-
    blocosDinamicosEmAbas(){
 
       if(!ILUMINIM_UTILS.screen.isDesktop()){
@@ -3010,22 +3180,22 @@ var PaginaProduto = {
       target.after(`
          <div class="blocos-dinamicos-em-abas">
             <div class="blocos-dinamicos-abas">
-               <div class="bloco-dinamico-aba aba-ativa" data-bloco-nome="compre-junto"><span>Compre Junto</span></div>
-               <div class="bloco-dinamico-aba" data-bloco-nome="confira-os-kits"><span>Confira os Kits!</span></div>
+               <div class="bloco-dinamico-aba" data-bloco-nome="compre-junto"><span>Compre Junto</span></div>
+               <div class="bloco-dinamico-aba aba-ativa" data-bloco-nome="confira-os-kits"><span>Confira os Kits!</span></div>
             </div>
 
             <div class="blocos-dinamicos-abas-conteudo">
 
-               <div class="bloco-dinamico-aba-conteudo aba-conteudo-ativa" data-bloco-nome="compre-junto">
+               <div class="bloco-dinamico-aba-conteudo" data-bloco-nome="compre-junto">
                   <div id="aplicacao-dinamica-compre-junto">
                      <div class="target"></div>
-                     <div class="iluminim-loading">${ ILUMINIM_UTILS.icones.loading }</div>
                   </div>
                </div>
 
-               <div class="bloco-dinamico-aba-conteudo" data-bloco-nome="confira-os-kits">
+               <div class="bloco-dinamico-aba-conteudo aba-conteudo-ativa" data-bloco-nome="confira-os-kits">
                   <div id="aplicacao-dinamica-confira-os-kits">
                      <div class="target"></div>
+                     <div class="iluminim-loading">${ ILUMINIM_UTILS.icones.loading }</div>
                   </div>
                </div>
 
@@ -3049,7 +3219,7 @@ var PaginaProduto = {
      });
 
    },
-
+   
    criarLocaisDeAplicacoesDinamicas(){
 
       let target = $('.produto>.row-fluid:first-child');
@@ -3108,37 +3278,9 @@ var PaginaProduto = {
 
    },
 
-   adaptacoesAcoesFlutuante(){
+   acoesFlutuante(){
 
-      const AdaptacoesAcoesFlutuante = {
-
-         removerBotaoFechar(){
-            
-            $('.produto .acoes-flutuante a.close_float').remove();
-
-         },
-
-         acoplarElementos(){
-
-            $('.produto .acoes-flutuante .image, .produto .acoes-flutuante .nome-produto').wrapAll(`
-               <div class="conteudo-flutuante-1"></div>
-            `);
-
-            $('.produto .acoes-flutuante .acoes-produto').wrapAll(`
-               <div class="conteudo-flutuante-2"></div>
-            `);
-
-            $('.produto .acoes-flutuante .conteudo-flutuante-2').append(`
-               <div class="botao-voltar-ao-topo">
-                  <a href="javascript:void(0);" onclick="ILUMINIM_UTILS.scrollTo(0);">Voltar ao topo</a>
-               </div>
-            `);
-      
-            $('.acoes-flutuante .conteudo-flutuante-1, .acoes-flutuante .conteudo-flutuante-2').wrapAll(`
-               <div class="acoes-flutuante-conteudo conteiner"></div>
-            `);
-
-         },
+      const AcoesFlutuante = {
 
          renderizarAtalhosFlutuante(){
 
@@ -3196,6 +3338,96 @@ var PaginaProduto = {
 
          },
 
+         mostrarAtalhosFlutuante(){
+            
+            $(document).on('click', '.acoes-flutuante .acoes-botao', function(){
+
+               $(this).toggleClass('active')
+               $('body').toggleClass('atalhos-flutuante-ativo');
+
+            });
+
+         },
+
+         iniciar(){
+
+            this.renderizarAtalhosFlutuante();
+            this.mostrarAtalhosFlutuante();
+
+         }
+
+      }
+
+      AcoesFlutuante.iniciar();
+      
+   },
+
+   botaoComprarFlutuanteMobile(){
+
+      if(!ILUMINIM_UTILS.screen.isMobile()){
+         return;
+      }
+
+      if( $('.produto .principal .atributos').length > 0 ){
+         return;
+      }
+     
+      $('body').append(`
+         <div class="comprar-flutuante">
+            <div class="comprar-flutuante-conteudo">
+
+               <div class="comprar-flutuante-precos"></div>
+
+               <div class="comprar-flutuante-botao"></div>
+            
+            </div>
+         </div>
+      `);
+
+      $('.produto .principal .preco-produto.destaque-preco.com-promocao').clone().appendTo('.comprar-flutuante-precos');
+      $('.produto .principal .acoes-produto .comprar > a').clone().appendTo('.comprar-flutuante-botao');
+      $('.comprar-flutuante-botao a').attr('onclick', `ga('send', 'event', 'Botão Comprar Flutuante Mobile','click', 'Produto -> ${ILUMINIM_UTILS.produto.sku()}')`);
+
+   },
+
+   adaptacoesProdutoFlutuante(){
+
+      if(!ILUMINIM_UTILS.screen.isDesktop()){
+         return;
+      }
+
+      const AdaptacoesProdutoFlutuante = {
+
+         removerBotaoFechar(){
+            
+            $('.produto .acoes-flutuante a.close_float').remove();
+
+         },
+
+         acoplarElementos(){
+
+            $('body').addClass('adaptacao-produto-flutuante');
+
+            $('.produto .acoes-flutuante .image, .produto .acoes-flutuante .nome-produto').wrapAll(`
+               <div class="conteudo-flutuante-1"></div>
+            `);
+
+            $('.produto .acoes-flutuante .acoes-produto').wrapAll(`
+               <div class="conteudo-flutuante-2"></div>
+            `);
+
+            $('.produto .acoes-flutuante .conteudo-flutuante-2').append(`
+               <div class="botao-voltar-ao-topo">
+                  <a href="javascript:void(0);" onclick="ILUMINIM_UTILS.scrollTo(0);">Voltar ao topo</a>
+               </div>
+            `);
+      
+            $('.acoes-flutuante .conteudo-flutuante-1, .acoes-flutuante .conteudo-flutuante-2').wrapAll(`
+               <div class="acoes-flutuante-conteudo conteiner"></div>
+            `);
+
+         },
+
          renderizarBotaoMostrarAtalhos(){
 
             $('.produto .acoes-flutuante .conteudo-flutuante-1').prepend(`
@@ -3212,31 +3444,18 @@ var PaginaProduto = {
 
          },
 
-         mostrarAtalhosFlutuante(){
-            
-            $(document).on('click', '.acoes-flutuante .acoes-botao', function(){
-
-               $(this).toggleClass('active')
-               $('body').toggleClass('atalhos-flutuante-ativo');
-
-            });
-
-         },
-
          iniciar(){
 
             this.removerBotaoFechar();
             this.acoplarElementos();
-            this.renderizarAtalhosFlutuante();
             this.renderizarBotaoMostrarAtalhos();
-            this.mostrarAtalhosFlutuante();
-
+            
          }
 
       }
 
-      AdaptacoesAcoesFlutuante.iniciar();
-      
+      AdaptacoesProdutoFlutuante.iniciar();
+
    },
 
    alertaFreteGratis(){
@@ -3355,6 +3574,10 @@ var PaginaProduto = {
    },
 
    alertaPessoasInteressadas(){
+
+      if(!ILUMINIM_UTILS.screen.isDesktop()){
+         return;
+      }
 
       const PessoasInteressadasAgora = {
          geraNumeroRandomico(){
@@ -3481,15 +3704,100 @@ var PaginaProduto = {
 
    seloRoHS(){
 
-      if(
-         ILUMINIM_UTILS.produto.nome().includes('Spot LED') && 
-         !ILUMINIM_UTILS.produto.nome().includes('Recuado') &&
-         !ILUMINIM_UTILS.produto.nome().includes('Trilho')
+      if( 
+         (ILUMINIM_UTILS.produto.nome().includes('Spot LED') && !ILUMINIM_UTILS.produto.nome().includes('Recuado') && !ILUMINIM_UTILS.produto.nome().includes('Trilho')) ||
+         ILUMINIM_UTILS.produto.nome().includes('Tubular')  
       ){
 
          $('body').addClass('produto-tag-rohs');
 
       }
+
+   },
+
+   produtoTagBaixou(){
+
+      const TagBaixou = {
+
+         produtos: [
+            'RSPM-200WBF-KIT10',
+            'PS-Q25WBF-KIT20',
+            'RSPM-300WBF-KIT10',
+            'PS-Q18WBF-KIT20',
+            'R-200WBF-KIT20',
+            'PG-Q25WBF',
+            'XL-5050RGB-KIT5',
+            'BULBO-9WBF-R',
+            'PG-Q18WBF',
+            'LUM-120BF-KIT20',
+            'RSPM-200WBF',
+            'RSPM-100WBF',
+            'PS-Q18WBF',
+            'SMD-Q7WBQ',
+            'PS-Q25WBF',
+            'LUM-120BF',
+            'BULBO-9WBF-PACK6',
+            'XL-3528BQ-KIT5',
+            'XL-5050BQ-KIT5',
+            'DPJ-A15-MACHO',
+         ],
+
+         gerarHTML(){
+
+            return `
+               <div class="produto-preco-baixou">
+                  <span class="preco-baixou-icone"><svg width="13" height="12" viewBox="0 0 12 12" fill="#fff"><path fill="inherit" d="M.813 5.647a.5.5 0 01.707 0L5.5 9.628V1.166a.5.5 0 111 0v8.461l3.98-3.98a.5.5 0 01.637-.057l.07.058a.5.5 0 010 .707l-4.833 4.832a.508.508 0 01-.019.018l-.027.022a.379.379 0 01-.044.031l-.03.017a.363.363 0 01-.08.034.398.398 0 01-.08.018.45.45 0 01-.063.006H5.99a.503.503 0 01-.061-.005l.072.005a.502.502 0 01-.151-.023l-.023-.008-.015-.006a.496.496 0 01-.048-.022l-.015-.01-.01-.004a.498.498 0 01-.051-.037l-.017-.015a.232.232 0 01-.025-.022L.813 6.354a.5.5 0 010-.707z"></path></svg></span>
+                  <span>baixou</span>
+               </div>
+            `;
+            
+         },
+
+         renderizar(){
+
+            //if(!this.produtos.includes(ILUMINIM_UTILS.produto.sku())) return;
+
+            $('body').addClass('produto-tag-baixou');
+
+            let html = this.gerarHTML();
+
+            if($('.principal .acoes-produto .preco-produto .preco-venda').length > 0){
+
+               $('.principal .acoes-produto .preco-produto .preco-venda').after(html);
+
+            }
+
+         },
+
+         iniciar(){
+            
+            this.renderizar();
+
+         }
+         
+      }
+
+      TagBaixou.iniciar();
+
+   },
+
+   bannerProdutoBlack(){ //REMOVER APOS BLACK
+
+      if(!ILUMINIM_UTILS.screen.isDesktop()){
+         return;
+      }
+
+      $('.produto .span6 > .principal').before(`
+         <div class="banner-produto-led-friday">
+            <img src="https://cdn.awsli.com.br/257/257163/arquivos/banner-produto-cronometro-27-12-21.png">
+            <ul class="countdown-target"></ul>
+         </div>
+      `);
+
+      $('.banner-produto-led-friday .countdown-target').yuukCountDown({
+         starttime: '2016/11/12 00:00:00',
+         endtime: '2030/12/30 00:00:00',
+      });
 
    },
 
@@ -3528,6 +3836,9 @@ var PaginaProduto = {
 
          ILUMINIM_UTILS.adicionaTextoModalCompraSegura();
          //ILUMINIM_UTILS.renderizarCategoriasFlutuante();
+         ILUMINIM_UTILS.alterarTituloSairDaPagina();
+
+         //TodasAsPaginas.oucaDica();
          
          //this.bannerOfertaRelampago();
          this.moverBreadcrumbs();
@@ -3545,30 +3856,40 @@ var PaginaProduto = {
          this.cronometroCompreAntesQueAcabe();
          this.adaptacaoVideoNativo();
          this.linhaAvaliacao();
+         //this.adicionarProdutoCertificado();
+         this.adicionarTextoGarantia();
          this.adicionarBlocoDuvidasTrustvox(); 
-         this.seloRoHS();
-
+         //this.seloRoHS();
+         this.produtoTagBaixou();
+         
+         //this.bannerProdutoBlack(); //REMOVER APOS BLACK
+         
          this.ajustarDescricao();
 
          //this.alertaFreteGratis();
          this.tagFreteGratis();
 
          this.fecharParcelasFormasPagamento();
+         
          this.precoValidoUltimasUnidades();
+         //this.precoValidoUltimasUnidadesBlack(); //REMOVER APOS BLACK
+
          this.adicionarTextOfertaRecomendadaModal();
          this.adaptacaoPaginaProdutoMobile();
          this.adaptarInformacoesFormasDeEnvio();
-         this.alterarTituloSairDaPagina();
+         
          this.alertaPessoasInteressadas();
          this.botaoNaoSeiMeuCEP();
          this.autoPreencherCEP();
          this.modalContinuarComprando();
+         this.adaptacoesProdutoFlutuante();
+         this.botaoComprarFlutuanteMobile();
          this.adaptacaoAcoesProduto();
          
-         
-         this.criarLocaisDeAplicacoesDinamicas(); //MANTER ORDEM
+         this.criarLocaisDeAplicacoesDinamicas(); //MANTER NO FINAL
          this.blocosDinamicosEmAbas(); //MANTER ORDEM
-         this.adaptacoesAcoesFlutuante(); //MANTER NO FINAL
+         this.acoesFlutuante(); //MANTER NO FINAL
+         
 
    }
 
