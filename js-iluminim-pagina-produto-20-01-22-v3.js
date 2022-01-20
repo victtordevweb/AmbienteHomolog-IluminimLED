@@ -811,6 +811,16 @@ var PaginaProduto = {
 
       }*/
 
+
+      $(`
+         .descricao-conteudo-accordion.accordion-descricao .descricao-titulo,
+         .descricao-conteudo-accordion.beneficios-led .descricao-titulo,
+         .descricao-conteudo-accordion[data-referencia="Itens Inclusos"] .descricao-titulo,
+         .descricao-conteudo-accordion[data-referencia="Características Técnicas"] .descricao-titulo,
+         .descricao-conteudo-accordion.duvidas-rapidas .descricao-titulo
+      `).click();
+
+      
    },
 
    adicionarBeneficiosLED(){

@@ -3619,9 +3619,9 @@ var TodasAsPaginas = {
                </div>
 
                <div class="texto-informacao-busca">
-                  <span>busque os itens aqui, compare</span>
-                  <span>preços entre mercados e finalize a</span>
-                  <span>cesta com a melhor opção para você.</span>
+                  <span>procure em mais de 140.000 produtos</span>
+                  <span>e compre com o menor preço na Iluminim,</span>
+                  <span>eleita a maior loja de leds do Brasil!</span>
                </div>
             </div>
          </div>
