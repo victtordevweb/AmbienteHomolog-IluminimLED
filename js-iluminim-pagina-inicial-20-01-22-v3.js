@@ -2531,6 +2531,34 @@ var PaginaInicial = {
 
    },
 
+   blocoLogin(){
+
+      if(ILUMINIM_UTILS.usuario.logado() || ILUMINIM_UTILS.screen.isMobile()){
+         return;
+      }
+
+      $('body').append(`
+        <div class="bloco-login">
+            <div class="bloco-login-conteudo">
+            
+               <div class="bloco-login-icone">
+                  <svg width="70" height="70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Camada_1" x="0px" y="0px" style="enable-background:new 0 0 500 500;" xml:space="preserve" viewBox="17.1 17.1 465.8 465.8"><style type="text/css">	.st0{fill:none;stroke:#D30000;stroke-width:16;stroke-miterlimit:10;}	.st1{fill:#D30000;stroke:#D30000;stroke-width:16;stroke-miterlimit:10;}	.st2{fill:#D30000;}</style><circle class="st0" cx="250" cy="250" r="224.9"></circle><path class="st1" d="M76.1,382.3c23.9-75.6,94.4-127.2,173.3-127c80.1,0.2,151.3,53.8,173.7,131.3c-6.2,8.1-69.8,88.3-178.1,85.2  C141,468.8,82.8,391.5,76.1,382.3z"></path><path class="st2" d="M249.7,238.9c7.1-0.5,21.2-2.6,35.2-12.1c12-8.3,18.2-18.2,21.2-23.3c14.9-24.7,29.8-78.7-0.9-110  c-19.7-20.1-47.9-20.3-55.6-20.4c-4.9,0-35.8-0.3-55.6,19.2c-24.6,24.2-26.3,73.1,1.7,115.8c3.6,5.4,11.8,16.2,26.5,23.6  C233.5,237.3,243.6,238.6,249.7,238.9z"></path></svg>
+               </div>
+   
+               <div class="bloco-login-texto">
+                  <span>Descubra a experiência personalizada que fizemos para você :)</span>
+               </div>
+
+               <div class="bloco-login-botao">
+                  <a href="/conta/login">Fazer login</a>
+               </div>
+
+            </div>
+        </div> 
+      `);
+
+   },
+
    reposicionarListagens(){
 
       //MAIS VENDIDOS
@@ -2657,6 +2685,7 @@ var PaginaInicial = {
       this.newsletterMobile();
       //this.naveguePorCategoria();
       this.removerBotaoProdutoAdicionado();
+      this.blocoLogin();
 
       //this.tagCampanhaListagemApenasClasse();
 

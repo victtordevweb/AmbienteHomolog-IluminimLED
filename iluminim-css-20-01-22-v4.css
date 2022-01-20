@@ -26606,3 +26606,61 @@
     
 
 }
+
+
+/* CSS BLOCO LOGIN */
+@media screen {
+    
+    .bloco-login {
+        margin-top: 40px;
+        display:
+    }
+
+    div#listagemProdutos .bloco-login {
+        display: block;
+    }
+    
+    .bloco-login .bloco-login-conteudo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 70px;
+    }
+    
+    .bloco-login .bloco-login-texto {
+        font-size: 22px;
+        letter-spacing: -0.5px;
+        max-width: 375px;
+    }
+    
+    .bloco-login .bloco-login-texto span {
+        line-height: 24px;
+        display: block;
+    }
+    
+    .bloco-login .bloco-login-botao a {
+        max-width: 100%;
+        font-weight: 700;
+        width: 240px;
+        font-size: 18px;
+        padding: 9px 21px 8px 20px;
+        text-transform: uppercase;
+        border-radius: 6px;
+        margin-left: 0;
+        border: none;
+        text-shadow: none;
+        background: #34AF6F;
+        transition: all 0.3s;
+        border-bottom: 3px solid #25945B !important;
+        box-sizing: border-box;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: -0.5px;
+    }
+    
+    .bloco-login .bloco-login-botao a:hover {
+        background: #25945b !important;
+        border-bottom-color: #1c7d4b !important;
+    }
+
+}
