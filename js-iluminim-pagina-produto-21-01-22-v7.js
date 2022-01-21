@@ -147,14 +147,6 @@ var PaginaProduto = {
 
    adicionarPorcentagemDesconto(){
 
-      function setarHTMLDescontoBlocoInformacoes(){
-         $('.bloco-produto-informacoes .bloco-desconto').replaceWith(`
-            <div class="bloco-desconto">
-               <div class="bloco-desconto-texto">Desconto de <span>${ILUMINIM_UTILS.produto.desconto_porcentagem()}</span>%</div>
-            </div>
-         `);
-      }
-
       function setarHTMLDesconto(){
          $('.produto .produto-compartilhar').append(`
                <div class="desconto-produto">
@@ -174,14 +166,11 @@ var PaginaProduto = {
          
          if($('.porcentagem-desconto').length > 0){
                
-               $('.porcentagem-desconto').html(`${ILUMINIM_UTILS.produto.desconto_porcentagem()}%`);
+            $('.porcentagem-desconto').html(`${ILUMINIM_UTILS.produto.desconto_porcentagem()}%`);
 
-               setarHTMLDescontoBlocoInformacoes();
-               
          }else {
 
-               setarHTMLDesconto();
-               setarHTMLDescontoBlocoInformacoes();
+            setarHTMLDesconto();
 
          }
       });
@@ -3842,25 +3831,6 @@ var PaginaProduto = {
                <div class="bloco-cronometro-numeros">
                   <ul class="countdown-target"></ul>
                </div>
-
-            </div>
-
-            <div class="bloco-desconto">
-
-               ${ILUMINIM_UTILS.produto.desconto_porcentagem() ? `
-
-                  <div class="bloco-desconto-texto">
-                     Desconto de <span>${ILUMINIM_UTILS.produto.desconto_porcentagem()}</span>%
-                  </div>
-
-               ` : `
-                  
-                  <div class="bloco-desconto-texto">
-                     Super Desconto
-                  </div>
-                  <div class="bloco-desconto-texto-confira">Confira</div>
-
-               ` }
 
             </div>
 
