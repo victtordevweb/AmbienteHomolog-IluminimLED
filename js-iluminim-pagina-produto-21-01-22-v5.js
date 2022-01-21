@@ -147,6 +147,15 @@ var PaginaProduto = {
 
    adicionarPorcentagemDesconto(){
 
+      function setarHTMLDescontoBlocoInformacoes(){
+         $('.bloco-produto-informacoes .bloco-desconto').replaceWith(`
+            <div class="bloco-desconto">
+               <div class="bloco-desconto-texto">Desconto de <span>${ILUMINIM_UTILS.produto.desconto_porcentagem()}</span>%</div>
+               <div class="bloco-desconto-texto-confira">Confira</div>
+            </div>
+         `);
+      }
+
       function setarHTMLDesconto(){
          $('.produto .produto-compartilhar').append(`
                <div class="desconto-produto">
@@ -168,9 +177,12 @@ var PaginaProduto = {
                
                $('.porcentagem-desconto').html(`${ILUMINIM_UTILS.produto.desconto_porcentagem()}%`);
 
+               setarHTMLDescontoBlocoInformacoes();
+               
          }else {
 
                setarHTMLDesconto();
+               setarHTMLDescontoBlocoInformacoes();
 
          }
       });
@@ -3811,6 +3823,61 @@ var PaginaProduto = {
 
    },
 
+   blocoProdutoInformacoes(){
+
+      if(!ILUMINIM_UTILS.screen.isDesktop()){
+         return;
+      }
+
+      $('.produto .span6 > .principal').before(`
+         <div class="bloco-produto-informacoes">
+
+            <div class="bloco-cronometro">
+
+               <div class="bloco-cronometro-texto">Termina em:</div>
+
+               <div class="bloco-cronometro-icone">
+                  ${ILUMINIM_UTILS.icones.relogio_2}
+               </div>
+
+               <div class="bloco-cronometro-numeros">
+                  <ul class="countdown-target"></ul>
+               </div>
+
+            </div>
+
+            <div class="bloco-desconto">
+
+               ${ILUMINIM_UTILS.produto.desconto_porcentagem() ? `
+
+                  <div class="bloco-desconto-texto">
+                     Desconto de <span>${ILUMINIM_UTILS.produto.desconto_porcentagem()}</span>%
+                  </div>
+                  <div class="bloco-desconto-texto-confira">Confira</div>
+
+               ` : `
+                  
+                  <div class="bloco-desconto-texto">
+                     Super Desconto
+                  </div>
+                  <div class="bloco-desconto-texto-confira">Confira</div>
+
+               ` }
+
+            </div>
+
+            <div class="bloco-texto">Garanta já esse produto led com o melhor preço do mercado!</div>
+            
+         </div>
+      `);
+
+      $('.bloco-produto-informacoes .countdown-target').yuukCountDown({
+         starttime: '2016/11/12 00:00:00',
+         endtime: '2030/12/30 00:00:00',
+      });
+
+   },
+
    adaptacaoAcoesProduto(){
 
       if(!ILUMINIM_UTILS.screen.isDesktop()){
@@ -3820,14 +3887,6 @@ var PaginaProduto = {
       $('.produto .produto-compartilhar').insertBefore('.produto .conteiner-imagem');
 
       $('.produto .produto-compartilhar').prepend(`
-         <div class="estrelas-avaliacao">
-            <i class="icon-star"></i>
-            <i class="icon-star"></i>
-            <i class="icon-star"></i>
-            <i class="icon-star"></i>
-            <i class="icon-star"></i>
-         </div>
-
          <div class="tag-produto-certificado">
             <div class="tag-produto-ceritificado-conteudo">
                   <div class="tag-produto-certificado-icone">
@@ -3895,6 +3954,7 @@ var PaginaProduto = {
          this.adaptacoesProdutoFlutuante();
          this.botaoComprarFlutuanteMobile();
          this.adaptacaoAcoesProduto();
+         this.blocoProdutoInformacoes();
          
          this.criarLocaisDeAplicacoesDinamicas(); //MANTER NO FINAL
          this.blocosDinamicosEmAbas(); //MANTER ORDEM

@@ -6075,6 +6075,16 @@
            z-index: 9;
         }
 
+        .produto .produto-compartilhar .desconto-produto {
+            border-radius: 4px;
+            background: #d00b11;
+            padding: 4px 10px;
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
        .tag-produto-certificado .tag-produto-ceritificado-conteudo {
             display: flex;
             align-items: center;
@@ -26613,7 +26623,6 @@
     
     .bloco-login {
         margin-top: 40px;
-        display:
     }
 
     div#listagemProdutos .bloco-login {
@@ -26661,6 +26670,122 @@
     .bloco-login .bloco-login-botao a:hover {
         background: #25945b !important;
         border-bottom-color: #1c7d4b !important;
+    }
+
+}
+
+
+
+
+/* BLOCO INFORMACOES PRODUTO */
+@media screen {
+
+    .bloco-produto-informacoes {
+        text-align: center;
+    }
+    
+    .bloco-produto-informacoes .bloco-desconto {
+        background: #888;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: -1.2px;
+        padding: 7px 0;
+    }
+    
+    .bloco-produto-informacoes .bloco-texto {
+        background: var(--cor-secundaria);
+        color: #fff;
+        padding: 13px 0 11px 0;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        font-weight: 700;
+    }
+    
+    .bloco-produto-informacoes .bloco-desconto .bloco-desconto-texto-confira {
+        font-size: 12px;
+        padding: 4px 8px;
+        display: block;
+        border-radius: 4px;
+        background: #34af6f;
+        font-weight: 700;
+        letter-spacing: 0;
+        margin-right: 15px;
+        cursor: default;
+    }
+    
+    .bloco-produto-informacoes .bloco-desconto .bloco-desconto-texto {
+        margin-right: -85px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .bloco-produto-informacoes .bloco-desconto .bloco-desconto-texto:before {
+        content: url(https://cdn.awsli.com.br/930/930730/arquivos/icone-desconto-21-01-2022.png);
+        display: inline-flex;
+        line-height: 22px;
+        margin-right: 16px;
+    }
+    
+    .bloco-produto-informacoes .bloco-desconto span {
+        margin-left: 6px;
+    }
+    
+    .bloco-produto-informacoes .bloco-cronometro {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 28px 20px 24px 20px;
+        background: #f7f7f7;
+    }
+    
+    .bloco-produto-informacoes .bloco-cronometro * {
+        color: var(--cor-secundaria);
+    }
+    
+    .bloco-produto-informacoes .bloco-cronometro .bloco-cronometro-texto {
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: -1.5px;
+        font-weight: 800;
+        margin: -4px 0 0 0px;
+    }
+    
+    .bloco-produto-informacoes .bloco-cronometro .bloco-cronometro-icone svg {
+        height: 34px;
+        filter: brightness(0.9);
+    }
+    
+    .bloco-produto-informacoes .bloco-cronometro ul.countdown-target {
+        margin: 0;
+    }
+    
+    .bloco-produto-informacoes .bloco-cronometro ul.countdown-target i {
+        font-size: 25px;
+    }
+    
+    .bloco-produto-informacoes .bloco-cronometro ul.countdown-target .blank {
+        font-size: 24px;
+    }
+    
+    
+    .bloco-produto-informacoes .bloco-cronometro ul.countdown-target {
+        width: 280px;
+        margin: 5px 0 0 0;
+    }
+    
+    .bloco-produto-informacoes .bloco-cronometro ul.countdown-target span {
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 600;
+        margin: -4px 0 0 0;
     }
 
 }
