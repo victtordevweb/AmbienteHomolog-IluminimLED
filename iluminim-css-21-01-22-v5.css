@@ -26682,6 +26682,7 @@
 
     .bloco-produto-informacoes {
         text-align: center;
+        margin: 0 0 15px 0;
     }
     
     .bloco-produto-informacoes .bloco-desconto {
@@ -26700,7 +26701,7 @@
     .bloco-produto-informacoes .bloco-texto {
         background: var(--cor-secundaria);
         color: #fff;
-        padding: 13px 0 11px 0;
+        padding: 13px 0 13px 0;
         font-size: 18px;
         text-transform: uppercase;
         letter-spacing: -1px;
