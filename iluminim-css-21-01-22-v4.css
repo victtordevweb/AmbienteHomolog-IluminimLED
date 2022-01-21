@@ -26707,7 +26707,7 @@
         font-weight: 700;
     }
     
-    .bloco-produto-informacoes .bloco-desconto .bloco-desconto-texto-confira {
+    /*.bloco-produto-informacoes .bloco-desconto .bloco-desconto-texto-confira {
         font-size: 12px;
         padding: 4px 8px;
         display: block;
@@ -26717,10 +26717,10 @@
         letter-spacing: 0;
         margin-right: 15px;
         cursor: default;
-    }
+    }*/
     
     .bloco-produto-informacoes .bloco-desconto .bloco-desconto-texto {
-        margin-right: -85px;
+        /*margin-right: -85px;*/
         width: 100%;
         display: flex;
         align-items: center;

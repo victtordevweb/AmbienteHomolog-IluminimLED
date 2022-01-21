@@ -151,7 +151,6 @@ var PaginaProduto = {
          $('.bloco-produto-informacoes .bloco-desconto').replaceWith(`
             <div class="bloco-desconto">
                <div class="bloco-desconto-texto">Desconto de <span>${ILUMINIM_UTILS.produto.desconto_porcentagem()}</span>%</div>
-               <div class="bloco-desconto-texto-confira">Confira</div>
             </div>
          `);
       }
@@ -3853,7 +3852,6 @@ var PaginaProduto = {
                   <div class="bloco-desconto-texto">
                      Desconto de <span>${ILUMINIM_UTILS.produto.desconto_porcentagem()}</span>%
                   </div>
-                  <div class="bloco-desconto-texto-confira">Confira</div>
 
                ` : `
                   
