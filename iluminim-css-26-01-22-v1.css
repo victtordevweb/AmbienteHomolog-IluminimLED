@@ -9467,7 +9467,6 @@
     
             div#menu {
                 margin-top: 0;
-                background: var(--cor-principal);
             }
     
            div#menu .menu__item a svg {
@@ -9701,6 +9700,28 @@
                /*border-top-left-radius: 5px;
                border-bottom-left-radius: 5px;*/
            }
+
+           
+
+           div#menu .menu__nivel-um > ul > li.menu__item.menu__item--oferta-da-semana, 
+            div#menu .menu__nivel-um > ul > li.menu__item.menu__item--oferta-da-semana a {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+
+            div#menu .menu__nivel-um > ul > li.menu__item:hover > a {
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            div#menu .menu__nivel-um > ul > li.menu__item--todos-os-departamentos > a {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+
+
     
             div#menu .menu__nivel-um > ul > li.menu__item--todos-os-departamentos:hover > a:after {
                 transform: rotate(180deg);
