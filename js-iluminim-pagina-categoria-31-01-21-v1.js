@@ -314,7 +314,7 @@ var PaginaCategoria = {
          },
 
          {
-            paginasURL: ['/luminarias-led'],
+            paginasURL: ['/luminarias-plafons-led'],
 
             gerarHTML(){
       
@@ -324,7 +324,7 @@ var PaginaCategoria = {
                         <div class="gird-listagem-customizada-conteudo grid-listagem-1">
                            <div class="grid-listagem-item">
                               <a href="/plafon-led-sobrepor?sort=mais_vendidos" onclick="ga('send', 'event', 'Grid banners Categoria', 'click', 'Promoções plafons')">
-                                    <img src="https://blog.iluminim.com.br/wp-content/uploads/2019/10/produto-grid-luminarias-first-18-10.gif" alt="Promoções plafons" title="Promoções plafons">
+                                    <img src="https://cdn.awsli.com.br/930/930730/arquivos/Banners_Promocoes-31-01-22.png" alt="Promoções plafons" title="Promoções plafons">
                               </a>
                            </div>
 
@@ -336,19 +336,19 @@ var PaginaCategoria = {
                         <div class="gird-listagem-customizada-conteudo grid-listagem-2">
                            <div class="grid-listagem-item">
                               <a href="/arandela-led?sort=mais_vendidos" onclick="ga('send', 'event', 'Grid banners Categoria', 'click', 'Arandela LED')">
-                                    <img src="https://cdn.awsli.com.br/257/257163/arquivos/arandela-led--grid-banner-luminarias-29-10-19.png" alt="Arandela LED" title="Arandela LED">
+                                    <img src="https://cdn.awsli.com.br/930/930730/arquivos/Arandelas-31-01-22.png" alt="Arandela LED" title="Arandela LED">
                               </a>
                            </div>
 
                            <div class="grid-listagem-item">
                               <a href="/plafon-led?sort=mais_vendidos" onclick="ga('send', 'event', 'Grid banners Categoria', 'click', 'Plafon LED')">
-                                    <img src="https://cdn.awsli.com.br/257/257163/arquivos/plafon-led--grid-banner-luminarias-29-10-19.png" alt="Plafon LED" title="Plafon LED">
+                                    <img src="https://cdn.awsli.com.br/930/930730/arquivos/Plafons-31-01-22.png" alt="Plafon LED" title="Plafon LED">
                               </a>
                            </div>
 
                            <div class="grid-listagem-item">
-                              <a href="/pendente?sort=mais_vendidos" onclick="ga('send', 'event', 'Grid banners Categoria', 'click', 'Pendente LED')">
-                                    <img src="https://cdn.awsli.com.br/257/257163/arquivos/banner-pendente-wire-luminarias.png" alt="Pendente LED" title="Pendente LED">
+                              <a href="/pendente?sort=mais_vendidos" onclick="ga('send', 'event', 'Grid banners Categoria', 'click', 'Lustre LED')">
+                                    <img src="https://cdn.awsli.com.br/930/930730/arquivos/Lustres-31-01-22.png" alt="Lustre LED" title="Lustre LED">
                               </a>
                            </div>
                         </div>
