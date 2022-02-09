@@ -2028,7 +2028,7 @@ var PaginaCategoria = {
 
          console.log('entrou na cond', $('.pagina-categoria #corpo .conteudo > .componente:first-child'));
 
-         $('.pagina-categoria #corpo .conteudo > .componente:first-child').insertAfter('.avalicoes-categoria');
+         $('.pagina-categoria #corpo .conteudo > .componente:first-child').insertBefore('.avalicoes-categoria');
          return;
 
       } 
@@ -5270,7 +5270,7 @@ var PaginaCategoria = {
                return;
             }
 
-            $('.pagina-categoria #corpo > .conteiner .secao-principal > .conteudo.span9').append(html);
+            $('.pagina-categoria #corpo > .conteiner .secao-principal .avalicoes-categoria').before(html);
 
          }
 
