@@ -2021,6 +2021,17 @@ var PaginaCategoria = {
    },
 
    dropDownTextoCategoria(){
+
+      let desativarNasCategorias = ['/luminarias-plafons-led'];
+
+      if(desativarNasCategorias.includes(window.location.pathname)){
+
+         console.log('entrou na cond', $('.pagina-categoria #corpo .conteudo > .componente:first-child'));
+
+         $('.pagina-categoria #corpo .conteudo > .componente:first-child').insertAfter('.avalicoes-categoria');
+         return;
+
+      } 
       
       if ($(".new__description.in__block").length > 0) {
          
@@ -4614,9 +4625,9 @@ var PaginaCategoria = {
 
             let objeto = {
 
-               ['881697']: { //id do ambiente
+               ['3217072']: { //id do ambiente
                   html: `
-                     <b>Modelos de luminárias</b><br>
+                     <h2>Modelos de luminárias</h2>
                      A Iluminim possui a maior linha de <strong>luminária</strong> do país e conta com modelos de luminárias para as mais diversas ocasiões. Os <b>ambientes externos residenciais</b> necessitam de <a href="/arandela-led?sort=mais_vendidos">Arandelas</a> para efeitos decorativos e iluminação de passagem. Os <b>locais externos comerciais</b> já prezam por uma <a href="/luminarias-publicas-led?sort=mais_vendidos">Luminária Pública</a> de última tecnologia que atenda as expectativas e ilumine com autoridade o local. Os <b>ambientes internos</b> são bem atendidos com as <a href="/plafon-led?sort=mais_vendidos">Luminárias Plafon</a>, <a href="/lustre?sort=mais_vendidos">Lustres</a> e <a href="/pendente?sort=mais_vendidos">Pendentes</a>, por exemplo. Elevando o conceito de <b>iluminação principal e decorativa</b> a níveis pouco explorados no Brasil.<br><br>
                      Conheça também, nossa linha de <strong>luminárias</strong> para necessidades <b>específicas</b>, como: <a href="/luminarias-posto-led?sort=mais_vendidos">Luminária para Posto</a>, <a href="/luminaria-de-mesa?sort=mais_vendidos">Luminária de Mesa</a>, <a href="/luminaria-industrial?sort=mais_vendidos">Luminária High Bay Industrial</a> e <a href="/luminaria-solar-led?sort=mais_vendidos">Luminária Solar</a>. Todas com a tecnologia LED, garantindo o cumprimento das expectativas em economia, performance e preço baixo.<br><br>
                      Não perca tempo e adquira agora os melhores Plafons LED do mercado, obtendo economia, energia e qualidade incomparável. Fique atento: Todos os nossos Plafons de LED de embutir e sobrepor, possuem fator potência real, alto índice de reprodução de cor, nitidez máxima na geração de luz limpa e todos os itens para funcionamento imediato após a instalação. Ainda, todos os nossos produtos são testados antes do envio e possuem acondicionamento adequado, através de embalagens personalizadas e demais itens de segurança, garantindo uma entrega perfeita e uma experiência de compra amplamente satisfatória. Descubra agora mesmo a tecnologia LED na Iluminim e faça parte da maior loja de LEDs do País. Conheça tipos de iluminação LED ideais para cada ambiente, <a href="http://blog.iluminim.com.br/conheca-os-tipos-de-iluminacao-led-ideais-para-cada-tipo-de-ambiente/">Clique aqui!</a>
@@ -5244,7 +5255,7 @@ var PaginaCategoria = {
             return `
                <div class="componente texto-categoria-rodape">
                   <div class="interno has-view-more">
-                     <p>${html}</p>
+                     ${html}
                   </div>
                </div>
             `;

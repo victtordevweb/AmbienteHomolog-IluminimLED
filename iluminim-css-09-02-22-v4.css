@@ -3556,6 +3556,19 @@
                /*font-size: 13px;*/
            }
     
+            .componente.texto-categoria-rodape h2, .componente.texto-categoria-rodape h3, .componente.texto-categoria-rodape h4, .componente.texto-categoria-rodape h2, 
+            .texto-categoria-personalizado h3, .texto-categoria-personalizado h2, .texto-categoria-personalizado h4, .texto-categoria-personalizado h5, .texto-categoria-personalizado h6 {
+                color: #bc2e30;
+                font-size: 18px!important;
+                font-weight: 900!important;
+                line-height: initial!important;
+                margin: 20px 0 10px 0!important;
+                padding-bottom: 10px!important;
+            }
+
+            .componente.texto-categoria-rodape {
+                font-size: 14px;
+            }
     
     
            .pagina-categoria #corpo .conteudo > .componente.texto-categoria-rodape {
@@ -26808,6 +26821,32 @@
         font-size: 10px;
         font-weight: 600;
         margin: -4px 0 0 0;
+    }
+
+}
+
+@media screen {
+
+    .pagina-categoria.categoria-3217072 #corpo .conteudo > .componente .interno {
+        padding-left: 0;
+        padding-right: 0;
+        background: none !important;
+    }
+    
+    .pagina-categoria.categoria-3217072 #corpo .conteudo > .componente.texto-categoria-rodape .interno:after {
+        display: none;
+    }
+
+    .pagina-categoria.categoria-3217072 #corpo .conteudo > .componente:not(.texto-categoria-rodape) {
+        margin-bottom: 0 !important;
+    }
+    
+    .pagina-categoria.categoria-3217072 #corpo .conteudo > .componente.texto-categoria-rodape {
+        margin-top: 0;
+    }
+    
+    .pagina-categoria.categoria-3217072 #corpo .conteudo > .componente.texto-categoria-rodape .interno {
+        padding-top: 0;
     }
 
 }
