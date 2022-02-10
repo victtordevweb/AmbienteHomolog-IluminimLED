@@ -2653,7 +2653,8 @@ var PaginaInicial = {
       ILUMINIM_UTILS.renderizarBotaoVoltarAoTopo();
       //ILUMINIM_UTILS.newsletterFlutuante();
 
-      this.bannerChamadaDesktop();
+      //this.bannerChamadaDesktop();
+      
       //this.bannerChamadaDesktopChristmas(); //REMOVER APOS BLACK
       //this.bannerChamadaDesktopLedFriday(); //REMOVER APOS BLACK
 
