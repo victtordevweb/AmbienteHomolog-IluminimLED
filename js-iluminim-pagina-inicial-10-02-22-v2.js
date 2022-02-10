@@ -278,17 +278,17 @@ var PaginaInicial = {
                   bloco_1: [
                      {
                         nome: 'Fitas LED',
-                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/FITAS_VERTICAIS_HOME_13-01-2022-v1.png',
+                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-vertical-fita-led-10-02-2022.png',
                         link: '/fitas-de-led?sort=mais_vendidos',
                      },
                      {
                         nome: 'Lâmpadas LED',
-                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/LAMPADAS_VERTICAIS_HOME_13-01-2022-v1.png',
+                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-vertical-lampada-led-10-02-2022.png',
                         link: '/lampada-led?sort=mais_vendidos',
                      },
                      {
                         nome: 'Spots LED',
-                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/SPOTS_VERTICAIS_HOME_13-01-2022-v1.png',
+                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-vertical-spots-led-10-02-2022.png',
                         link: '/spots?sort=mais_vendidos',
                      },
                   ],
@@ -297,28 +297,46 @@ var PaginaInicial = {
                      {
                         nome: 'Frete Grátis',
                         //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner_vertical_frete_gratis_home_LED_FRIDAY_6.0-01-11-21.png',
-                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-vertical-frete-gratis-10-01-21.png',
+                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/10-02-2022-banner-vertical-frete-gratis.png',
                         link: '/frete-gratis?sort=mais_vendidos',
                      },
                      {
-                        nome: 'Frete Grátis Refletor',
-                        imagem: 'https://cdn.awsli.com.br/1234/1234739/arquivos/10-01-2022-banner-vertical-RSPM-200WBF-KIT10.png',
-                        link: '/kit-10-refletor-holofote-microled-slim-200w-branco-frio',
+                        nome: 'Frete Grátis RSPM-200WBF-KIT5',
+                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/10-02-2022-banner-vertical-RSPM-200WBF-KIT5.png',
+                        link: '',
                      },
                      {
-                        nome: 'Frete Grátis Luminária',
-                        imagem: 'https://cdn.awsli.com.br/1234/1234739/arquivos/10-01-2022-banner-vertical-PS-Q25WBF-KIT20.png',
-                        link: '/kit-20-luminaria-plafon-25w-led-embutir-branco-frio',
+                        nome: 'Frete Grátis RSPM-200WBF-KIT10',
+                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/10-02-2022-banner-vertical-RSPM-200WBF-KIT10.png',
+                        link: '',
                      },
                      {
-                        nome: 'Frete Grátis Tubular',
-                        imagem: 'https://cdn.awsli.com.br/1234/1234739/arquivos/10-01-2022-banner-vertical-LUM-120BF-KIT20.png',
-                        link: '/kit-20-tubular-led-sobrepor-completa-36w-120m-branco-frio',
+                        nome: 'Frete Grátis RSPM-300WBF-KIT10',
+                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/10-02-2022-banner-vertical-RSPM-300WBF-KIT10.png',
+                        link: '',
+                     },
+
+                     {
+                        nome: 'Frete Grátis PS-Q18WBF-KIT20',
+                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/10-02-2022-banner-vertical-PS-Q18WBF-KIT20.png',
+                        link: '',
                      },
                      {
-                        nome: 'Frete Grátis Luminária Emergência',
-                        imagem: 'https://cdn.awsli.com.br/1234/1234739/arquivos/10-01-2022-banner-vertical-23597-KIT50.png',
-                        link: '/kit-50-luminaria-de-emergencia-30-leds-slim',
+                        nome: 'Frete Grátis PS-Q25WBF-KIT20',
+                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/10-02-2022-banner-vertical-PS-Q25WBF-KIT20.png',
+                        link: '',
+                     },
+                     
+
+                     {
+                        nome: 'Frete Grátis LUM-120BF-KIT20',
+                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/10-02-2022-banner-vertical-LUM-120BF-KIT20.png',
+                        link: '',
+                     },
+                     {
+                        nome: 'Frete Grátis 23597-KIT50',
+                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/10-02-2022-banner-vertical-23597-KIT50.png',
+                        link: '',
                      },
                   ]
 
@@ -449,12 +467,12 @@ var PaginaInicial = {
                let objeto = [
                   {
                      nome: 'Refletores LED com até 83% de desconto com até 12x sem juros',
-                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/refletores_wide_wire_24-12-21.png',
+                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-horizontal-refletor-led-10-02-2022.png',
                      link: '/refletores-de-led?sort=mais_vendidos',
                   },
                   {
                      nome: 'Luminárias LED a partir de R$ 8,09',
-                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/luminarias_wide_wire_24-12-21.png',
+                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-horizontal-luminarias-led-10-02-2022.png',
                      link: '/luminarias-led?sort=mais_vendidos',
                   },
                ]
