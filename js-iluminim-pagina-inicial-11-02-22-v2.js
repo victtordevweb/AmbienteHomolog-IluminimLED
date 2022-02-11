@@ -706,7 +706,7 @@ var PaginaInicial = {
                   },
                   {
                      nome: 'Lançamentos LED com até 64% de desconto!',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/LANCAMENTOS_plafon-14-01-21.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-lancamentos-led-11-02-2022.png',
                      //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/mini-banner-lancamentos-led-12-01-21.png',
                      link: '/lancamentos-led?sort=ultimos_produtos',
                   },
