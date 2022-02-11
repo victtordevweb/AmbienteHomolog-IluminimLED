@@ -10,7 +10,7 @@ var PaginaInicial = {
 
       if(target.length > 0){
 
-         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2022/02/banner-chamada-desktop-08-02-2022.gif';
+         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2022/02/banner-chamada-dekstop-11-02-2022.gif';
          target.attr('src', bannerChamada);
 
       }
@@ -701,7 +701,7 @@ var PaginaInicial = {
                   {
                      nome: 'Refletores LED com até 84% de desconto!',
                      //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/mini-banner-refletores-led-12-01-21.png',
-                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/refletores_wire_v2_24-12-21.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-refletores-led-11-02-2022.png',
                      link: '/refletores-de-led?sort=mais_vendidos',
                   },
                   {
@@ -712,7 +712,7 @@ var PaginaInicial = {
                   },
                   {
                      nome: 'Oferta da Semana com até 78% de desconto',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/OFERTAS_DA_SEMANA_kit10-14-01.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-oferta-da-semana-11-02-2022.png',
                      //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/mini-banner-ofertas-da-semana-12-01-21.png',
                      link: '/ofertadasemana?sort=mais_vendidos',
                   }
@@ -2671,7 +2671,7 @@ var PaginaInicial = {
       ILUMINIM_UTILS.renderizarBotaoVoltarAoTopo();
       //ILUMINIM_UTILS.newsletterFlutuante();
 
-      //this.bannerChamadaDesktop();
+      this.bannerChamadaDesktop();
       
       //this.bannerChamadaDesktopChristmas(); //REMOVER APOS BLACK
       //this.bannerChamadaDesktopLedFriday(); //REMOVER APOS BLACK
