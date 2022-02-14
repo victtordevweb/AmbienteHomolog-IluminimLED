@@ -1524,7 +1524,7 @@ var TodasAsPaginas = {
          <div id="tarja_topo">
             <div class="container">
                <a href="/ofertadasemana?sort=mais_vendidos">
-                  <img src="https://blog.iluminim.com.br/wp-content/uploads/2021/12/tarja-topo-ofertas-imbativeis-black.gif">
+                  <img src="https://blog.iluminim.com.br/wp-content/uploads/2022/02/git-topo-14-02-2022.gif">
                </a>
             </div>
          </div>
