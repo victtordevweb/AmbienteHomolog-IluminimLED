@@ -937,7 +937,7 @@ var TodasAsPaginas = {
                   <div class="conteudo-superior-item atendimento">
                      <div class="conteudo-superior-titulo">
                            ${ILUMINIM_UTILS.icones.atendimento_2}
-                           <span class="atendimento__texto">Central de atendimento</span>
+                           <span class="atendimento__texto">Central Atendimento</span>
                            <i class="icon-angle-down"></i>
                      </div>
                   </div>
