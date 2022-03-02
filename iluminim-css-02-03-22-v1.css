@@ -18899,10 +18899,10 @@
             }
      
              div#cabecalho .conteudo-superior-item.atendimento:not(.central-atendimento-flutuante) {
-                 padding: 4px 8px;
-                 background: var(--cor-principal);
-                 border-radius: 3px;
-                 margin: 0 0 0 12px;
+                padding: 7px 18px 8px 17px;
+                background: var(--cor-principal);
+                border-radius: 3px;
+                margin: 0 0 0 12px;
              }
      
              div#cabecalho .conteudo-superior-item.atendimento:not(.central-atendimento-flutuante):hover {
