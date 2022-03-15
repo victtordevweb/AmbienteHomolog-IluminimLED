@@ -3624,6 +3624,192 @@ var PaginaProduto = {
       PessoasInteressadasAgora.iniciar();
    },
 
+   produtoCarrinhoLateral(){
+
+      var produtoCarrinhoLateral = {
+
+         async obterHTMLProdutosCarrinho(){
+     
+            let fetchCarrinho = await fetch('/carrinho/mini');
+            let carrinhoHTML = await fetchCarrinho.text();
+            
+            return carrinhoHTML;
+             
+         },
+         
+         async atualizarProdutosAoExecutarEvento(event){
+
+            event.preventDefault();
+
+            this.mostrarLoadingInterno();
+
+            let link = $(event.currentTarget).attr('href');
+
+            this.abrirCarrinhoLateral();
+
+            await fetch(link);
+
+            let HTMLProdutosCarrinho = await this.obterHTMLProdutosCarrinho();
+
+            $('.carrinho-lateral .carrinho-lateral-produtos').html(HTMLProdutosCarrinho);
+
+            this.ocultarLoadingInterno();
+
+         },
+
+         abrirCarrinhoLateral(){
+
+            $('body').addClass('carrinho-lateral-ativo');
+
+         },
+
+         fecharCarrinhoLateral(){
+
+            $('body').removeClass('carrinho-lateral-ativo');
+
+         },
+
+         mostrarLoadingInterno(){
+
+            $('.carrinho-lateral').addClass('carrinho-acao-loading');
+
+         },
+
+         ocultarLoadingInterno(){
+
+            $('.carrinho-lateral').removeClass('carrinho-acao-loading');
+
+         },
+
+         aoClicarBotaoComprar(){
+
+            $(document).on('click', '.acoes-produto .comprar .botao-comprar', async event => {
+
+               return await this.atualizarProdutosAoExecutarEvento(event);
+
+            });
+
+         },
+
+         aoClicarFecharOuContinuar(){
+
+            $(document).on('click', '.carrinho-lateral .carrinho-lateral-botao-fechar, .carrinho-lateral a.btn-custom.carrinho-lateral-botao-continuar', () => {
+
+               this.fecharCarrinhoLateral();
+
+            });
+
+         },
+
+         inserirHTMLCarrinhoLateral(){
+
+            $('body').append(`
+               <div class="carrinho-lateral">
+                  <div class="carrinho-lateral-conteudo">
+
+                     <div class="iluminim-loading">${ ILUMINIM_UTILS.icones.loading }</div>
+
+                     <div class="carrinho-lateral-topo">
+                           <strong>Meu Carrinho</strong>
+                           <span class="carrinho-lateral-botao-fechar">✕</span>
+                     </div>
+
+                     <div class="carrinho-lateral-produtos">
+                        
+                     </div>
+
+                     <div class="carrinho-lateral-botoes">
+                        <a class="btn-custom carrinho-lateral-botao-continuar" rel="noopener" href="javascript:void(0);">Continuar Comprando</a>
+                        <a class="btn-custom carrinho-lateral-botao-finalizar" href="/checkout">Finalizar Compra</a>
+                     </div>
+
+                  </div>
+               </div>
+            `);
+
+         },
+
+         aoClicarRemoverProduto(){
+
+            $(document).on('click', '.carrinho-lateral .excluir a', async event => {
+
+               return await this.atualizarProdutosAoExecutarEvento(event);
+
+            });
+
+         },
+
+         aoClicarBotoesQuantidade(){
+
+            $(document).on('click', '.carrinho-lateral .quantidade a', async event => {
+
+               return await this.atualizarProdutosAoExecutarEvento(event);
+
+            });
+
+         },
+
+         aoAtualizarPeloInputComEnter(){
+
+            $(document).on('submit', '.carrinho-lateral td.clearfix form', event => {
+
+               event.preventDefault();
+
+               let quantidade = parseInt($(event.currentTarget).find('input.input-mini').val());
+               let action = $(event.currentTarget).attr('action');
+
+               this.mostrarLoadingInterno();
+
+               $.post(action, { quantidade }, () => {
+
+                  this.obterHTMLProdutosCarrinho().then(HTMLProdutosCarrinho => {
+
+                     $('.carrinho-lateral .carrinho-lateral-produtos').html(HTMLProdutosCarrinho);
+
+                     this.ocultarLoadingInterno();
+
+                  });
+
+               });
+
+            });
+
+         },
+
+         aoClicarBackdrop(){
+
+            $(document).on('click', '.carrinho-lateral', event => {
+
+               if($(event.target).hasClass('carrinho-lateral')){
+           
+                  this.fecharCarrinhoLateral();
+                   
+               }
+               
+           });
+
+         },
+
+         renderizar(){
+
+            if(!ILUMINIM_UTILS.screen.isDesktop()) return;
+
+            this.inserirHTMLCarrinhoLateral();
+            this.aoClicarBotaoComprar();
+            this.aoClicarFecharOuContinuar();
+            this.aoClicarRemoverProduto();
+            this.aoClicarBotoesQuantidade();
+            this.aoAtualizarPeloInputComEnter();
+            this.aoClicarBackdrop();
+
+         }
+         
+      }
+      
+      produtoCarrinhoLateral.renderizar();
+
+   },
+
    modalContinuarComprando(){
 
       if(!ILUMINIM_UTILS.screen.isDesktop()){
@@ -3918,7 +4104,8 @@ var PaginaProduto = {
          this.alertaPessoasInteressadas();
          this.botaoNaoSeiMeuCEP();
          this.autoPreencherCEP();
-         this.modalContinuarComprando();
+         //this.modalContinuarComprando();
+         this.produtoCarrinhoLateral();
          this.adaptacoesProdutoFlutuante();
          this.botaoComprarFlutuanteMobile();
          this.adaptacaoAcoesProduto();
