@@ -9706,7 +9706,7 @@
             }
     
            div#menu .menu__nivel-um > ul > li.menu__item--todos-os-departamentos {
-               min-width: 220px;
+               min-width: 190px;
                border-radius: 15px;
            }
     
@@ -27220,7 +27220,7 @@
             width: 26px;
             height: 26px;
             display: block;
-            margin: 0 5px 0 -2px;
+            margin: 0px 5px 0 -6px;
         }
 
         div#menu .menu__nivel-um > ul > li.menu__item.menu__item--refletores-led > a:before {
@@ -27283,6 +27283,10 @@
         
         div#menu .menu__nivel-um > ul > li.menu__item.menu__item--fitas-led {
             max-width: 100px !important;
+        }
+
+        div#menu .menu__nivel-um > ul > li.menu__item.menu__item--lustre-led {
+            max-width: 100px;
         }
 
         div#menu .menu__nivel-um .menu__item--oferta-da-semana > a svg {
