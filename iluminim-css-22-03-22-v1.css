@@ -9706,7 +9706,7 @@
             }
     
            div#menu .menu__nivel-um > ul > li.menu__item--todos-os-departamentos {
-               min-width: 190px;
+               min-width: 220px;
                border-radius: 15px;
            }
     
@@ -27198,7 +27198,7 @@
 
 
 /* AJUSTES PARA ICONES NO MENU */
-@media screen {
+/*@media screen {
 
     @media (min-width: 767px){
 
@@ -27295,4 +27295,4 @@
 
     }
 
-}
+}*/
