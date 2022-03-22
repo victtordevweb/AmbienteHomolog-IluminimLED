@@ -511,7 +511,7 @@ var PaginaInicial = {
       
                let html = this.gerarHTML();
       
-               $('.bloco-triplo-personalizado').after(html);
+               $('#listagemProdutos').append(html);
 
                this.ativarCarousel();
       
@@ -751,7 +751,7 @@ var PaginaInicial = {
 
             let html = this.gerarHTML();
 
-            $('.banners-personalizados').after(html);
+            $('#listagemProdutos').append(html);
       
          }
       
@@ -2585,26 +2585,30 @@ var PaginaInicial = {
          .titulo-categoria.borda-principal.cor-principal.vitrine-mas-vendido
       `).appendTo('div#listagemProdutos');
 
+      this.carrouselBannersPersonalizados(); //MANTER ORDEM
+
       //KITS ESPECIAIS
       $(`
-         a.titulo-categoria.borda-principal.cor-principal.vitrine-1355586+ul, 
-         a.titulo-categoria.borda-principal.cor-principal.vitrine-1355586
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-3217133+ul, 
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-3217133
       `).appendTo('div#listagemProdutos');
 
 
       //REFLETORES LED
       $(`
-         a.titulo-categoria.borda-principal.cor-principal.vitrine-877731+ul, 
-         a.titulo-categoria.borda-principal.cor-principal.vitrine-877731
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-3874806+ul, 
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-3874806
       `).appendTo('div#listagemProdutos');
 
-      this.cronometroLEDOfertas();
+      this.miniBanners();
+
+      //this.cronometroLEDOfertas();
       //this.cronometroLEDOfertasChristmas();
 
       //LUMINÁRIAS LED
       $(`
-         a.titulo-categoria.borda-principal.cor-principal.vitrine-881697+ul, 
-         a.titulo-categoria.borda-principal.cor-principal.vitrine-881697
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-3217072+ul, 
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-3217072
       `).appendTo('div#listagemProdutos');
 
       //this.bannersDesconto();
@@ -2620,12 +2624,12 @@ var PaginaInicial = {
       `).appendTo('div#listagemProdutos');
       
       //this.videosNaHome();
-      this.duploBlocoVitrine();
+      //this.duploBlocoVitrine();
 
       //SPOT LED
       $(`
-         a.titulo-categoria.borda-principal.cor-principal.vitrine-881062+ul, 
-         a.titulo-categoria.borda-principal.cor-principal.vitrine-881062
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-3874696+ul, 
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-3874696
       `).appendTo('div#listagemProdutos');
 
       //this.blocoUsuarioComProdutos();
@@ -2650,7 +2654,12 @@ var PaginaInicial = {
          a.titulo-categoria.borda-principal.cor-principal.vitrine-2756184+ul, 
          a.titulo-categoria.borda-principal.cor-principal.vitrine-2756184
       `).appendTo('div#listagemProdutos');
-
+  
+      //EMERGENCIA LED
+      $(`
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-16397775+ul, 
+         a.titulo-categoria.borda-principal.cor-principal.vitrine-16397775
+      `).appendTo('div#listagemProdutos');
 
    },
 
@@ -2661,21 +2670,12 @@ var PaginaInicial = {
       this.blocoTriplo(); //MANTER ORDEM
       this.loginMobileVitrine(); //MANTER ORDEM
 
-      this.carrouselBannersPersonalizados(); //MANTER ORDEM
-      //this.carrouselBannersPersonalizadosChristmas();
-
-      this.miniBanners(); //VOLTAR APOS BLACK //MANTER ORDEM
-      //this.miniBannersChristmas(); //REMOVER APOS CHRISTMAS //MANTER ORDEM
-
       //ILUMINIM_UTILS.renderizarCategoriasFlutuante();
       ILUMINIM_UTILS.renderizarBotaoVoltarAoTopo();
       //ILUMINIM_UTILS.newsletterFlutuante();
 
       this.bannerChamadaDesktop();
       
-      //this.bannerChamadaDesktopChristmas(); //REMOVER APOS BLACK
-      //this.bannerChamadaDesktopLedFriday(); //REMOVER APOS BLACK
-
       //this.bannerChamadaMobile();
 
       this.cronometroBannerHome();
