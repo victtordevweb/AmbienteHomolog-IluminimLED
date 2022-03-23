@@ -4055,6 +4055,27 @@ var PaginaProduto = {
 
    },
 
+   novoBotaoAddCarrinho(){
+
+      if(!ILUMINIM_UTILS.screen.isMobile()) return;
+
+      $('.produto-thumbs.thumbs-horizontal').after(`
+         <div class="botao-add-carrinho-custom">
+            <i class="icon-shopping-cart"></i>
+            <span>ADICIONAR AO CARRINHO</span>
+         </div>
+      `);
+
+      $('.botao-add-carrinho-custom').click(function(){
+
+         let hrefToRedirect = $('.produto .span6 > .principal .acoes-produto.disponivel a.botao.botao-comprar').attr('href');
+
+         window.location.href = hrefToRedirect;
+
+      });
+
+   },
+
    iniciar(){ //INICIAR SCRIPTS DA PÁGINA;
 
          ILUMINIM_UTILS.adicionaTextoModalCompraSegura();
@@ -4064,6 +4085,7 @@ var PaginaProduto = {
          //TodasAsPaginas.oucaDica();
          
          //this.bannerOfertaRelampago();
+         this.novoBotaoAddCarrinho();
          this.moverBreadcrumbs();
          //this.adicionarIconeBoletoNoValorDoBoleto();
          this.adicionarBandeirasPagamentoBlocoParcelas();

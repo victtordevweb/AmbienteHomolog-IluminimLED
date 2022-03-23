@@ -22120,24 +22120,11 @@
            }
     
            .produto .acoes-produto .comprar a.botao-comprar {
-            width: 100%;
-            /* background: #00b22d; */
-            box-sizing: border-box;
-            padding: 7px 0 0 0 !important;
-            font-size: 0;
-            line-height: 32px;
+               width: 100%;
+               box-sizing: border-box;
+               padding: 3px 0 0 0 !important;
            }
     
-           .produto .acoes-produto .comprar a.botao-comprar i {
-                font-size: 18px;
-                margin: 0 7px 0px 0;
-            }
-
-            .produto .acoes-produto .comprar a.botao-comprar:after {
-                content: "ADICIONAR AO CARRINHO";
-                font-size: 16px;
-            }
-           
            .produto .parcelas-produto .desconto-boleto {
                display: none;
            }
@@ -27308,3 +27295,38 @@
     }
 
 }*/
+
+/* NOVO BOTÃO ADD CARRINHO */
+@media screen {
+
+    @media (max-width: 767px){
+
+        .pagina-produto .botao-add-carrinho-custom {
+            max-width: 100%;
+            font-weight: 600;
+            width: 100%;
+            font-size: 18px;
+            padding: 13px 10px 13px 10px;
+            text-transform: uppercase;
+            border-radius: 7px;
+            margin-left: 0;
+            border: none;
+            text-shadow: none;
+            background: #34AF6F;
+            transition: all 0.3s;
+            border-bottom: 3px solid #25945B;
+            box-sizing: border-box;
+            text-align: center;
+            color: #fff;
+            letter-spacing: -0.5px;
+            margin: 0 0 22px 0;
+        }
+        
+        .pagina-produto .botao-add-carrinho-custom i {
+            margin: 0px 5px 0 0;
+            position: relative;
+        }
+
+    }
+
+}
