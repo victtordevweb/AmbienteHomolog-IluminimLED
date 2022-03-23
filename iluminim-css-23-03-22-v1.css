@@ -22120,12 +22120,24 @@
            }
     
            .produto .acoes-produto .comprar a.botao-comprar {
-               width: 100%;
-               background: #00b22d;
-               box-sizing: border-box;
-               padding: 3px 0 0 0 !important;
+            width: 100%;
+            /* background: #00b22d; */
+            box-sizing: border-box;
+            padding: 7px 0 0 0 !important;
+            font-size: 0;
+            line-height: 32px;
            }
     
+           .produto .acoes-produto .comprar a.botao-comprar i {
+                font-size: 18px;
+                margin: 0 7px 0px 0;
+            }
+
+            .produto .acoes-produto .comprar a.botao-comprar:after {
+                content: "ADICIONAR AO CARRINHO";
+                font-size: 16px;
+            }
+           
            .produto .parcelas-produto .desconto-boleto {
                display: none;
            }
