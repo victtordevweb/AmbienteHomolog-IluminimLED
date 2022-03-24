@@ -10,7 +10,7 @@ var PaginaInicial = {
 
       if(target.length > 0){
 
-         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2022/03/MEGA-PRECO-LED-OFERTAS-2022-22-03-2022-v2.gif';
+         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2022/03/chamada-mega-preco-24-03-2022.gif';
          target.attr('src', bannerChamada);
 
       }
@@ -700,20 +700,17 @@ var PaginaInicial = {
                let banners = [
                   {
                      nome: 'Refletores LED com até 84% de desconto!',
-                     //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/mini-banner-refletores-led-12-01-21.png',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-refletores-led-11-02-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-refletores-led-24-03-2022.png',
                      link: '/refletores-de-led?sort=mais_vendidos',
                   },
                   {
                      nome: 'Lançamentos LED com até 64% de desconto!',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-lancamentos-led-11-02-2022.png',
-                     //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/mini-banner-lancamentos-led-12-01-21.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-lancamentos-led-24-03-2022.png',
                      link: '/lancamentos-led?sort=ultimos_produtos',
                   },
                   {
                      nome: 'Oferta da Semana com até 78% de desconto',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-oferta-da-semana-11-02-2022.png',
-                     //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/mini-banner-ofertas-da-semana-12-01-21.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-oferta-da-semana-24-03-2022.png',
                      link: '/ofertadasemana?sort=mais_vendidos',
                   }
                ]
