@@ -9147,7 +9147,7 @@
            width: 800px !important;
            position: static !important;
            margin: -50px auto 0 auto;
-           background: url(https://cdn.awsli.com.br/930/930730/arquivos/mega-preco-popup-newsletter-24-03-2022.png) center center no-repeat !important;
+           background: url(https://cdn.awsli.com.br/930/930730/arquivos/bg-newsletter-megapreco-24-03-2022.png) center center no-repeat !important;
            height: 280px !important;
            border-radius: 3px;
            box-shadow: 0px 0px 14px 0px rgb(0 0 0 / 43%);
@@ -9214,7 +9214,7 @@
            transition: all 0.3s !important;
            border-radius: 2px !important;
            border: 1px solid #fff7d6 !important;
-           box-shadow: 0px 0px 8px 3px #c08e00, inset 0px 0px 8px 3px #773b00;
+           box-shadow: 0px 0px 6px 2px rgb(255 1 1), inset 0px 0px 6px 1px rgb(255 0 0);
        }
        
        .fancybox-lock .fancybox-overlay .fancybox-wrap.modal-modalNewsletter .fancybox-inner button.newsletter-assinar:before {
@@ -9228,7 +9228,7 @@
        }
        
        .fancybox-lock .fancybox-overlay .fancybox-wrap.modal-modalNewsletter .fancybox-inner button.newsletter-assinar:hover {
-           background: #572a00;
+           background: #570000;
        }
     
        .fancybox-lock .fancybox-overlay .fancybox-wrap.modal-modalNewsletter a.fancybox-item.fancybox-close {
