@@ -278,7 +278,7 @@ var PaginaInicial = {
                   bloco_1: [
                      {
                         nome: 'Fitas LED',
-                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-vertical-fita-led-10-02-2022.png',
+                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/kit-fitas-24-03-2022.gif',
                         link: '/fitas-de-led?sort=mais_vendidos',
                      },
                      {
