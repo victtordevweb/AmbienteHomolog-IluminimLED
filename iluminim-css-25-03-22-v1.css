@@ -10714,9 +10714,9 @@
            padding: 10px 0 15px 0;
        }
 
-       .bloco-triplo-personalizado .bloco-personalizado.bloco-produtos-peronalizados .topo-bloco-produtos-peronalizados {
+       /*.bloco-triplo-personalizado .bloco-personalizado.bloco-produtos-peronalizados .topo-bloco-produtos-peronalizados {
            background: url(https://cdn.awsli.com.br/257/257163/arquivos/bg-produtos-bloco-2-10-02-2022.png);
-       }
+       }*/
     
        .bloco-triplo-personalizado .bloco-personalizado.bloco-produtos-peronalizados div#smartfront__app+.lista-produtos-bloco-personalizado {
            display: none;
