@@ -475,6 +475,16 @@ var PaginaInicial = {
                      imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-horizontal-luminarias-led-25-03-2022.png',
                      link: '/luminarias-led?sort=mais_vendidos',
                   },
+                  {
+                     nome: 'Arandela LED',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-horizontal-arandelaled-25-03-2022.png',
+                     link: '/arandela-led?sort=mais_vendidos',
+                  },
+                  {
+                     nome: 'Spots LED',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-horizontal-spots-led-25-03-2022.png',
+                     link: '/spot-led?sort=mais_vendidos',
+                  },
                ]
 
                return objeto;
@@ -705,7 +715,7 @@ var PaginaInicial = {
                   },
                   {
                      nome: 'Lançamentos LED com até 64% de desconto!',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-lancamentos-led-24-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-lancamentos-led-25-03-2022.png',
                      link: '/lancamentos-led?sort=ultimos_produtos',
                   },
                   {
