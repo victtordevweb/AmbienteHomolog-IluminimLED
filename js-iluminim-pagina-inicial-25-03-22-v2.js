@@ -278,7 +278,7 @@ var PaginaInicial = {
                   bloco_1: [
                      {
                         nome: 'Fitas LED',
-                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/kit-fitas-24-03-2022.gif',
+                        imagem: 'https://blog.iluminim.com.br/wp-content/uploads/2022/03/kit-fitas-24-03-2022.gif',
                         link: '/fitas-de-led?sort=mais_vendidos',
                      },
                      {
@@ -467,12 +467,12 @@ var PaginaInicial = {
                let objeto = [
                   {
                      nome: 'Refletores LED com até 83% de desconto com até 12x sem juros',
-                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-horizontal-refletor-led-10-02-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-horizontal-refletores-led-25-03-2022.png',
                      link: '/refletores-de-led?sort=mais_vendidos',
                   },
                   {
                      nome: 'Luminárias LED a partir de R$ 8,09',
-                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-horizontal-luminarias-led-10-02-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-horizontal-luminarias-led-25-03-2022.png',
                      link: '/luminarias-led?sort=mais_vendidos',
                   },
                ]
