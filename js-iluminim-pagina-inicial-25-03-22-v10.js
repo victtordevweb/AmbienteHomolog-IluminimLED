@@ -10,24 +10,7 @@ var PaginaInicial = {
 
       if(target.length > 0){
 
-         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2022/03/chamada-mega-preco-24-03-2022-v2.gif';
-         target.attr('src', bannerChamada);
-
-      }
-      
-   },
-
-   bannerChamadaDesktopChristmas(){ //REMOVERO APS BLACK
-
-      if(!ILUMINIM_UTILS.screen.isDesktop()){
-         return;
-      }
-
-      let target = $('.secao-banners .banner.cheio img[alt="Full Banner Home LED Christmas - CHAMADA"]');
-
-      if(target.length > 0){
-
-         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2021/12/LED-CHRISTMAS-BANNER-PRINCIPAL-10-12-21.gif';
+         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2022/03/LED-OFERTAS-MEGA-PRECO-2022-1.gif';
          target.attr('src', bannerChamada);
 
       }
@@ -296,46 +279,42 @@ var PaginaInicial = {
                   bloco_3: [
                      {
                         nome: 'Frete Grátis',
-                        //imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner_vertical_frete_gratis_home_LED_FRIDAY_6.0-01-11-21.png',
-                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/10-02-2022-banner-vertical-frete-gratis.png',
+                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Banners_Verticais_Frete_Gratis-25-03-2022.png',
                         link: '/frete-gratis?sort=mais_vendidos',
                      },
                      {
                         nome: 'Frete Grátis RSPM-200WBF-KIT5',
-                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/10-02-2022-banner-vertical-RSPM-200WBF-KIT5.png',
+                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Banners_Verticais_Frete_Gratis_RSPM-200WBF-KIT5-25-03-2022.png',
                         link: '',
                      },
                      {
                         nome: 'Frete Grátis RSPM-200WBF-KIT10',
-                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/10-02-2022-banner-vertical-RSPM-200WBF-KIT10.png',
+                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Banners_Verticais_Frete_Gratis_RSPM-200WBF-KIT10-25-03-2022.png',
                         link: '',
                      },
                      {
                         nome: 'Frete Grátis RSPM-300WBF-KIT10',
-                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/10-02-2022-banner-vertical-RSPM-300WBF-KIT10.png',
+                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Banners_Verticais_Frete_Gratis_RSPM-300WBF-KIT10-25-03-2022.png',
                         link: '',
                      },
-
                      {
                         nome: 'Frete Grátis PS-Q18WBF-KIT20',
-                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/10-02-2022-banner-vertical-PS-Q18WBF-KIT20.png',
+                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Banners_Verticais_Frete_Gratis_PS-Q18WBF-KIT20-25-03-2022.png',
                         link: '',
                      },
                      {
                         nome: 'Frete Grátis PS-Q25WBF-KIT20',
-                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/10-02-2022-banner-vertical-PS-Q25WBF-KIT20.png',
+                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Banners_Verticais_Frete_Gratis_PS-Q25WBF-KIT20-25-03-2022.png',
                         link: '',
                      },
-                     
-
                      {
                         nome: 'Frete Grátis LUM-120BF-KIT20',
-                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/10-02-2022-banner-vertical-LUM-120BF-KIT20.png',
+                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Banners_Verticais_Frete_Gratis_LUM-120BF-KIT20-25-03-2022.png',
                         link: '',
                      },
                      {
                         nome: 'Frete Grátis 23597-KIT50',
-                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/10-02-2022-banner-vertical-23597-KIT50.png',
+                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Banners_Verticais_Frete_Gratis_23597-KIT50-25-03-2022.png',
                         link: '',
                      },
                   ]
@@ -521,103 +500,6 @@ var PaginaInicial = {
       
                let html = this.gerarHTML();
       
-               $('#listagemProdutos').append(html);
-
-               this.ativarCarousel();
-      
-         }
-      
-      }
-      
-      BannersPersonalizados.renderizar();
-
-   },
-
-   carrouselBannersPersonalizadosChristmas(){
-
-      if(ILUMINIM_UTILS.screen.isMobile()){
-         return;
-      }
-
-      const BannersPersonalizados = {
-
-         ativarCarousel(){
-
-               $('.banners-personalizados .carousel-target').owlCarousel({
-                  loop:false,
-                  margin:0,
-                  autoHeight: false,
-                  nav:true,
-                  dots: false,
-                  navText: ['<i class="icon-angle-left"></i>', '<i class="icon-angle-right"></i>'],
-                  responsive:{
-                     0: {
-                           items:1
-                     }
-                  }
-               });
-
-         },
-      
-         gerarObjeto(){
-      
-            let objeto = [
-               {
-                  nome: 'Refletores LED',
-                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-personalizado-refletores-led-10-12-21.png',
-                  link: '/refletor-led-friday?sort=mais_vendidos',
-               },
-               {
-                  nome: 'Luminárias LED',
-                  imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-personalizado-luminarias-led-10-12-21.png',
-                  link: '/plafon-led-friday?sort=mais_vendidos',
-               },
-               /*{
-                  nome: 'Spots LED com até 83% de desconto com até 12x sem juros',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/SPOTS_ATE_xx_OFF-09-11-21.png',
-                  link: '/spot-led-friday?sort=mais_vendidos',
-               },
-               {
-                  nome: 'Fitas LED com até 83% de desconto com até 12x sem juros',
-                  imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/FITAS_LED_A_PARTIR_DE-09-11-21.png',
-                  link: '/fita-led-friday?sort=mais_vendidos',
-               },*/
-            ]
-
-            return objeto;
-      
-         },
-      
-         gerarHTML(){
-      
-               let objeto = this.gerarObjeto();
-      
-               let htmlList = objeto.map(item=> {
-      
-                  return `
-                     <div>
-                           <a href="${item.link}" onclick="ga('send', 'event', 'Wire Mini Home', 'click', '${item.nome}')">
-                              <img alt="${item.nome}" title="${item.nome}" src="${item.imagem}" width="1280" height="325">
-                           </a>
-                     </div>
-                  `;
-      
-               }).join('');
-      
-               return `
-                  <div class="banners-personalizados">
-                     <div class="lista-banners-personalizados carousel-target">
-                           ${htmlList}
-                     </div>
-                  </div>
-               `;
-      
-         },
-      
-         renderizar(){
-      
-               let html = this.gerarHTML();
-      
                $('.bloco-triplo-personalizado').after(html);
 
                this.ativarCarousel();
@@ -629,6 +511,7 @@ var PaginaInicial = {
       BannersPersonalizados.renderizar();
 
    },
+
 
    cronometroLEDOfertas(){
 
@@ -710,17 +593,17 @@ var PaginaInicial = {
                let banners = [
                   {
                      nome: 'Refletores LED com até 84% de desconto!',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-refletores-led-24-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/minibanner-refletores-25-03-2022.png',
                      link: '/refletores-de-led?sort=mais_vendidos',
                   },
                   {
                      nome: 'Lançamentos LED com até 64% de desconto!',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-lancamentos-led-25-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/minibanner-lancamentos-led-25-03-2022.png',
                      link: '/lancamentos-led?sort=ultimos_produtos',
                   },
                   {
                      nome: 'Oferta da Semana com até 78% de desconto',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-oferta-da-semana-24-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/minibanner-ofertasdasemana-25-03-2022.png',
                      link: '/ofertadasemana?sort=mais_vendidos',
                   }
                ]
@@ -758,7 +641,7 @@ var PaginaInicial = {
 
             let html = this.gerarHTML();
 
-            $('#listagemProdutos').append(html);
+            $('.banners-personalizados').after(html);
       
          }
       
