@@ -261,17 +261,22 @@ var PaginaInicial = {
                   bloco_1: [
                      {
                         nome: 'Fitas LED',
-                        imagem: 'https://blog.iluminim.com.br/wp-content/uploads/2022/03/kit-fitas-24-03-2022.gif',
+                        imagem: 'https://blog.iluminim.com.br/wp-content/uploads/2022/03/Bloco1-Fitas-LED-28-03-2022.gif',
                         link: '/fitas-de-led?sort=mais_vendidos',
                      },
                      {
                         nome: 'Lâmpadas LED',
-                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-vertical-lampada-led-10-02-2022.png',
+                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Bloco1-Lampadas-LED-28-03-2022.png',
                         link: '/lampada-led?sort=mais_vendidos',
                      },
                      {
                         nome: 'Spots LED',
-                        imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-vertical-spots-led-10-02-2022.png',
+                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Bloco1-Spots-LED-28-03-2022.png',
+                        link: '/spots?sort=mais_vendidos',
+                     },
+                     {
+                        nome: 'Arandelas LED',
+                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Bloco1-Arandelas-LED-28-03-2022.png',
                         link: '/spots?sort=mais_vendidos',
                      },
                   ],
@@ -461,7 +466,7 @@ var PaginaInicial = {
                   },
                   {
                      nome: 'Spots LED',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-horizontal-spots-led-25-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-horizontal-spots-led-28-03-2022.png',
                      link: '/spot-led?sort=mais_vendidos',
                   },
                ]
