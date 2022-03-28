@@ -282,7 +282,7 @@ var PaginaInicial = {
                         imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Banners_Verticais_Frete_Gratis-25-03-2022.png',
                         link: '/frete-gratis?sort=mais_vendidos',
                      },
-                     {
+                     /*{
                         nome: 'Frete Grátis RSPM-200WBF-KIT5',
                         imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Banners_Verticais_Frete_Gratis_RSPM-200WBF-KIT5-25-03-2022.png',
                         link: '',
@@ -316,7 +316,7 @@ var PaginaInicial = {
                         nome: 'Frete Grátis 23597-KIT50',
                         imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Banners_Verticais_Frete_Gratis_23597-KIT50-25-03-2022.png',
                         link: '',
-                     },
+                     },*/
                   ]
 
                }
