@@ -266,17 +266,17 @@ var PaginaInicial = {
                      },
                      {
                         nome: 'Lâmpadas LED',
-                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Bloco1-Lampadas-LED-28-03-2022.png',
+                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Bloco1-Lampadas-LED-29-03-2022.png',
                         link: '/lampada-led?sort=mais_vendidos',
                      },
                      {
                         nome: 'Spots LED',
-                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Bloco1-Spots-LED-28-03-2022.png',
+                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Bloco1-Spots-LED-29-03-2022.png',
                         link: '/spots?sort=mais_vendidos',
                      },
                      {
                         nome: 'Arandelas LED',
-                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Bloco1-Arandelas-LED-28-03-2022.png',
+                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Bloco1-Arandelas-LED-29-03-2022.png',
                         link: '/spots?sort=mais_vendidos',
                      },
                   ],
