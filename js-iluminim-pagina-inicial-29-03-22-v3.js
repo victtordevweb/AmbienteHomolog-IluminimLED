@@ -10,7 +10,7 @@ var PaginaInicial = {
 
       if(target.length > 0){
 
-         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2022/03/LED-OFERTAS-MEGA-PRECO-2022-1.gif';
+         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2022/03/LED-OFERTAS-MEGA-PRECO-29-03-2022.gif';
          target.attr('src', bannerChamada);
 
       }
@@ -261,7 +261,7 @@ var PaginaInicial = {
                   bloco_1: [
                      {
                         nome: 'Fitas LED',
-                        imagem: 'https://blog.iluminim.com.br/wp-content/uploads/2022/03/Bloco1-Fitas-LED-28-03-2022.gif',
+                        imagem: 'https://blog.iluminim.com.br/wp-content/uploads/2022/03/Bloco1-Fitas-LED-29-03-2022.gif',
                         link: '/fitas-de-led?sort=mais_vendidos',
                      },
                      {
@@ -451,22 +451,22 @@ var PaginaInicial = {
                let objeto = [
                   {
                      nome: 'Refletores LED com até 83% de desconto com até 12x sem juros',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-horizontal-refletores-led-25-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-horizontal-refletores-led-29-03-2022.png',
                      link: '/refletores-de-led?sort=mais_vendidos',
                   },
                   {
                      nome: 'Luminárias LED a partir de R$ 8,09',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-horizontal-luminarias-led-25-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-horizontal-luminarias-led-29-03-2022.png',
                      link: '/luminarias-led?sort=mais_vendidos',
                   },
                   {
                      nome: 'Arandela LED',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-horizontal-arandelaled-25-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-horizontal-arandelaled-29-03-2022-v2.png',
                      link: '/arandela-led?sort=mais_vendidos',
                   },
                   {
                      nome: 'Spots LED',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-horizontal-spots-led-28-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-horizontal-spots-led-29-03-2022.png',
                      link: '/spot-led?sort=mais_vendidos',
                   },
                ]
@@ -598,17 +598,17 @@ var PaginaInicial = {
                let banners = [
                   {
                      nome: 'Refletores LED com até 84% de desconto!',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/minibanner-refletores-25-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-refletores-led-29-03-2022.png',
                      link: '/refletores-de-led?sort=mais_vendidos',
                   },
                   {
                      nome: 'Lançamentos LED com até 64% de desconto!',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/minibanner-lancamentos-led-25-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-oferta-da-semana-29-03-2022.png',
                      link: '/lancamentos-led?sort=ultimos_produtos',
                   },
                   {
                      nome: 'Oferta da Semana com até 78% de desconto',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/minibanner-ofertasdasemana-25-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-lancamentos-led-29-03-2022.png',
                      link: '/ofertadasemana?sort=mais_vendidos',
                   }
                ]
