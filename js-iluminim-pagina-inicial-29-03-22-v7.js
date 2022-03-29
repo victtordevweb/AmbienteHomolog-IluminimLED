@@ -451,22 +451,22 @@ var PaginaInicial = {
                let objeto = [
                   {
                      nome: 'Refletores LED com até 83% de desconto com até 12x sem juros',
-                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-horizontal-refletores-led-29-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/29-03-2022-banner-horizontal-refletores-led.png',
                      link: '/refletores-de-led?sort=mais_vendidos',
                   },
                   {
                      nome: 'Luminárias LED a partir de R$ 8,09',
-                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-horizontal-luminarias-led-29-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/29-03-2022-banner-horizontal-luminarias-led.png',
                      link: '/luminarias-led?sort=mais_vendidos',
                   },
                   {
                      nome: 'Arandela LED',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-horizontal-arandelaled-29-03-2022-v2.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/29-03-2022-banner-horizontal-arandelas-led.png',
                      link: '/arandela-led?sort=mais_vendidos',
                   },
                   {
                      nome: 'Spots LED',
-                     imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/banner-horizontal-spots-led-29-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/29-03-2022-banner-horizontal-spots-led.png',
                      link: '/spot-led?sort=mais_vendidos',
                   },
                ]
@@ -603,12 +603,12 @@ var PaginaInicial = {
                   },
                   {
                      nome: 'Lançamentos LED com até 64% de desconto!',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-oferta-da-semana-29-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-lancamentos-led-29-03-2022.png',
                      link: '/lancamentos-led?sort=ultimos_produtos',
                   },
                   {
                      nome: 'Oferta da Semana com até 78% de desconto',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-lancamentos-led-29-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-oferta-da-semana-29-03-2022-v2.png',
                      link: '/ofertadasemana?sort=mais_vendidos',
                   }
                ]
