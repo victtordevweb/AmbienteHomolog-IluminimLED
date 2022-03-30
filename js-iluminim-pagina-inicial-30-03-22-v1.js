@@ -608,7 +608,7 @@ var PaginaInicial = {
                   },
                   {
                      nome: 'Oferta da Semana com até 78% de desconto',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-oferta-da-semana-29-03-2022-v2.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-oferta-da-semana-30-03-2022.png',
                      link: '/ofertadasemana?sort=mais_vendidos',
                   }
                ]
