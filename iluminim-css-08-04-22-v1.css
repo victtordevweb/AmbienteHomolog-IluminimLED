@@ -12419,7 +12419,7 @@
             .listagem-item.produto-adicionar-direto-carrinho .adicionar-direto-carrinho {
                 position: static !important;
                 opacity: 1;
-                background: #a2373a;
+                /*background: #a2373a;*/
                 padding: 0px 0 14px 0;
             }
 
@@ -20034,10 +20034,10 @@
                font-weight: 900;
            }
     
-           body:not(.pagina-categoria):not(.pagina-busca) .listagem-item .preco-produto .preco-promocional,
+           /*body:not(.pagina-categoria):not(.pagina-busca) .listagem-item .preco-produto .preco-promocional,
            body:not(.pagina-categoria):not(.pagina-busca) .listagem-item .preco-produto .preco-a-partir .preco-venda {
                color: #fff;
-           }
+           }*/
     
            .listagem-item .preco-produto .preco-venda {
                font-size: 16px;
@@ -20050,17 +20050,17 @@
                font-weight: 700;
            }
     
-           body:not(.pagina-categoria):not(.pagina-busca) .listagem-item .preco-produto .preco-venda {
+           /*body:not(.pagina-categoria):not(.pagina-busca) .listagem-item .preco-produto .preco-venda {
                color: #bfbcbc;
            }
     
            body:not(.pagina-categoria):not(.pagina-busca) .listagem-item .preco-produto span.preco-parcela {
                color: #bfbcbc;
-           }
+           }*/
     
-           body:not(.pagina-categoria):not(.pagina-busca) .listagem-item span.preco-parcela .cor-secundaria {
+           /*body:not(.pagina-categoria):not(.pagina-busca) .listagem-item span.preco-parcela .cor-secundaria {
                color: #fff;
-           }
+           }*/
     
            .listagem-item .info-produto a.nome-produto {
                margin-top: 20px !important;
@@ -20073,7 +20073,7 @@
            .listagem-item .info-produto > div {
                padding-bottom: 14px;
                overflow: hidden;
-               padding-top: 12px !important;
+               /*padding-top: 12px !important;*/
            }
 
            .listagem-item .info-produto .hide.trustvox-stars {
@@ -20085,7 +20085,7 @@
             }
             
             .listagem-item .info-produto .hide.trustvox-stars+div {
-                margin-top: 8px;
+                /*margin-top: 8px;*/
             }
     
            .pagina-busca .listagem-item .info-produto > div,
@@ -20101,7 +20101,7 @@
     
            body:not(.pagina-categoria):not(.pagina-busca) .listagem-item .info-produto > div {
                /*background: var(--cor-principal);*/
-               background: #a2373a;
+              /* background: #a2373a;*/
            }
     
            body:not(.pagina-categoria):not(.pagina-busca) .listagem-item .preco-produto .preco-a-partir > span {
@@ -24429,7 +24429,7 @@
         }
         
         body div#smartfront__app:not(.smartfront_model_compre-junto):not(.smartfront__smartfrontapps-oferta-limitada-na-categoria) .content--product-application .product-application--prices-product {
-            background: #a2373a;
+            /*background: #a2373a;*/
             padding: 15px 0;
         }
 
@@ -24445,11 +24445,11 @@
         body div#smartfront__app:not(.smartfront_model_compre-junto):not(.smartfront__smartfrontapps-oferta-limitada-na-categoria) .content--product-application .product-application--prices-product .prices-product--price {
             display: block;
             font-size: 16px;
-            color: #bfbcbc !important;
+            /*color: #bfbcbc !important;*/
         }
 
         body div#smartfront__app:not(.smartfront_model_compre-junto):not(.smartfront__smartfrontapps-oferta-limitada-na-categoria) .content--product-application .product-application--prices-product .prices-product--price.prices-product--only-this-price {
-            color: #fff !important;
+            /*color: #fff !important;*/
             font-size: 25px !important;
         }
         
@@ -24458,17 +24458,17 @@
             font-size: 15px;
         }
 
-        body div#smartfront__app:not(.smartfront_model_compre-junto):not(.smartfront__smartfrontapps-oferta-limitada-na-categoria) .content--product-application .product-application--prices-product .prices-product--installments-product .installments-product--quantity,
+        /*body div#smartfront__app:not(.smartfront_model_compre-junto):not(.smartfront__smartfrontapps-oferta-limitada-na-categoria) .content--product-application .product-application--prices-product .prices-product--installments-product .installments-product--quantity,
         body div#smartfront__app:not(.smartfront_model_compre-junto):not(.smartfront__smartfrontapps-oferta-limitada-na-categoria) .prices-product--installments-product .installments-product--price {
             color: #fff !important;
-        }
+        }*/
         
-        body div#smartfront__app:not(.smartfront__smartfrontapps-listagens-personalizadas-home.smartfront__615c17d316217511b5243700):not(.smartfront_model_compre-junto):not(.smartfront__smartfrontapps-oferta-limitada-na-categoria) .content--product-application .product-application--prices-product span.installments-product--text-fees,
+        /*body div#smartfront__app:not(.smartfront__smartfrontapps-listagens-personalizadas-home.smartfront__615c17d316217511b5243700):not(.smartfront_model_compre-junto):not(.smartfront__smartfrontapps-oferta-limitada-na-categoria) .content--product-application .product-application--prices-product span.installments-product--text-fees,
         body div#smartfront__app:not(.smartfront__smartfrontapps-listagens-personalizadas-home.smartfront__615c17d316217511b5243700):not(.smartfront_model_compre-junto):not(.smartfront__smartfrontapps-oferta-limitada-na-categoria) .content--product-application .product-application--prices-product span.installments-product--separator,
         body div#smartfront__app:not(.smartfront__smartfrontapps-listagens-personalizadas-home.smartfront__615c17d316217511b5243700):not(.smartfront_model_compre-junto):not(.smartfront__smartfrontapps-oferta-limitada-na-categoria) .content--product-application .product-application--prices-product .prices-product--installments-product span.installments-product--quantity:before,
         body div#smartfront__app:not(.smartfront__smartfrontapps-listagens-personalizadas-home.smartfront__615c17d316217511b5243700):not(.smartfront_model_compre-junto):not(.smartfront__smartfrontapps-oferta-limitada-na-categoria) .content--product-application .product-application--prices-product .prices-product--installments-product .installments-product--price:after {
             color: #bfbcbc !important;
-        }
+        }*/
         
         body div#smartfront__app.smartfront_model_compre-junto .smartfront__app--content-app:not(.smartfront__app--not-title) .content-app--body-app {
             border: 1px solid #ddd !important;
@@ -24989,7 +24989,7 @@
         }
         
         .prices-product--price {
-            color: #444 !important;
+            /*color: #444 !important;*/
             font-size: 14px !important;
         }
         
@@ -27327,6 +27327,10 @@
             margin: 0px 5px 0 0;
             position: relative;
         }
+
+		.bloco-triplo-personalizado {
+			display: none !important;
+		}
 
     }
 
