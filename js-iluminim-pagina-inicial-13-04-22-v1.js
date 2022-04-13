@@ -10,7 +10,7 @@ var PaginaInicial = {
 
       if(target.length > 0){
 
-         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2022/04/Banner-frete-gratis-06-04-2022.gif';
+         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2022/04/banner-chamada-13-04-2022.gif';
          target.attr('src', bannerChamada);
 
       }
