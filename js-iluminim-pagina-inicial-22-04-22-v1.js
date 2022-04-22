@@ -104,7 +104,7 @@ var PaginaInicial = {
                   </a>
                   <div class="item-tarja-dropdown">
                         <div class="conteudo-dropdown-tarja">
-                           As compras podem ser parceladas em até 12x sem juros e para pagamento via boleto é concedido um desconto de 10%.
+                           As compras podem ser parceladas em até 12x sem juros e para pagamento via boleto é concedido um desconto de 5%.
                         </div>
                   </div>
       

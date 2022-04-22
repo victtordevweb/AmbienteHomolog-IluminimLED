@@ -74,7 +74,7 @@ var PaginaProduto = {
 
                   <div class="conteudo-comprando-iluminim">
                      <b class="titulo-conteudo">Forma de Pagamento</b>
-                     <p class="conteudo-texto">Sua compra pode ser realizada por cartão de crédito em até 12x sem juros, com parcelas mínimas de R$ 15, ou através de boleto bancário com 10% de desconto extra no valor total.</p>
+                     <p class="conteudo-texto">Sua compra pode ser realizada por cartão de crédito em até 12x sem juros, com parcelas mínimas de R$ 15, ou através de boleto bancário com 5% de desconto extra no valor total.</p>
                   </div>
 
                   <div class="conteudo-comprando-iluminim">
@@ -363,7 +363,7 @@ var PaginaProduto = {
                   <div class="desconto-boleto-icone"><span>${ILUMINIM_UTILS.icones.bandeira.boleto}</span></div>
                   <div class="desconto-boleto-texto-negrito"><strong>Só hoje!</strong></div>
                   <div>Ganhe</div>
-                  <div class="desconto-boleto-texto-negrito texto-desconto"><strong>10% de desconto</strong></div>
+                  <div class="desconto-boleto-texto-negrito texto-desconto"><strong>5% extra de desconto</strong></div>
                   <div>no boleto ou pix</div>
                </div>
 

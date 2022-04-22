@@ -6923,6 +6923,7 @@
            .produto .acoes-produto .comprar .informacoes-produto {
                width: 100%;
                float: none;
+			   display: none;
            }
 
            .selos-seguranca-produto .garantia-produto .garantia-produto-texto {
@@ -22117,7 +22118,7 @@
            
            .produto .acoes-produto .comprar {
                padding-top: 15px;
-               margin-bottom: 20px;
+               margin-bottom: 12px;
            }
     
            .produto .acoes-produto .comprar a.botao-comprar {
@@ -22127,8 +22128,18 @@
            }
     
            .produto .parcelas-produto .desconto-boleto {
-               display: none;
+               /*display: none;*/
+			   font-size: 12.2px;
+			   letter-spacing: -0.2px;
+			   align-items: center;
+			   padding: 10px 0 10px 0;
+			   margin-bottom: 30px;
            }
+
+		   .produto .parcelas-produto .desconto-boleto svg {
+			width: 26px;
+			height: 16px;
+			}
     
            .parcelas-produto .parcelas-sem-juros {
                background: none;
@@ -22295,6 +22306,13 @@
     
            }
     
+		   @media (min-width: 320px) and (max-width: 365px){
+		
+				.produto .parcelas-produto .desconto-boleto {
+					font-size: 11px;
+				}
+
+			}
            
        }
     
