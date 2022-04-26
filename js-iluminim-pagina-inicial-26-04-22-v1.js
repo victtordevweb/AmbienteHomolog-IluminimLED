@@ -17,6 +17,18 @@ var PaginaInicial = {
       
    },
 
+   tarjaAbaixoMenu(){
+
+	if(!ILUMINIM_UTILS.screen.isDesktop()){
+		return;
+	 }
+
+	$('.secao-banners > .conteiner').prepend(`
+		<div class="tarja-banner"><a href=""><img src="https://blog.iluminim.com.br/wp-content/uploads/2022/04/tarja-frete-gratis-26-04-2022.gif"></a></div>
+	`);
+
+   },
+
 
    bannerChamadaMobile(){
 
@@ -2570,6 +2582,7 @@ var PaginaInicial = {
       //ILUMINIM_UTILS.newsletterFlutuante();
 
       this.bannerChamadaDesktop();
+	  this.tarjaAbaixoMenu();
       
       //this.bannerChamadaMobile();
 
