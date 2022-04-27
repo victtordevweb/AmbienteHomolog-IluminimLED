@@ -2582,7 +2582,7 @@ var PaginaInicial = {
       //ILUMINIM_UTILS.newsletterFlutuante();
 
       this.bannerChamadaDesktop();
-	  this.tarjaAbaixoMenu();
+	  //this.tarjaAbaixoMenu();
       
       //this.bannerChamadaMobile();
 
