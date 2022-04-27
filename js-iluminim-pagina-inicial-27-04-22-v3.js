@@ -10,7 +10,7 @@ var PaginaInicial = {
 
       if(target.length > 0){
 
-         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2022/04/banner-chamada-desktop-14-04-2022.gif';
+         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2022/03/LED-OFERTAS-MEGA-PRECO-29-03-2022-v2.gif';
          target.attr('src', bannerChamada);
 
       }
