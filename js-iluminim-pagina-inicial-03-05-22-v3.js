@@ -610,17 +610,17 @@ var PaginaInicial = {
                let banners = [
                   {
                      nome: 'Refletores LED com até 84% de desconto!',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banners-refletores-led-11-04-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/minibanner1-03-05-2022.png',
                      link: '/refletores-de-led?sort=mais_vendidos',
                   },
-                  {
+                  /*{
                      nome: 'Lançamentos LED com até 64% de desconto!',
                      imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banners-lancamentos-led-11-04-2022.png',
                      link: '/lancamentos-led?sort=ultimos_produtos',
-                  },
+                  },*/
                   {
                      nome: 'Oferta da Semana com até 78% de desconto',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banners-ofertas-da-semana-11-04-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/minibanner2-03-05-2022.png',
                      link: '/ofertadasemana?sort=mais_vendidos',
                   }
                ]
@@ -637,7 +637,7 @@ var PaginaInicial = {
                   return `
                      <li>
                            <a href="${banner.link}" onclick="ga('send', 'event', 'Wire Mini Home', 'click', 'Mini Banner ${banner.nome}')">
-                              <img class="lazyload" alt="${banner.nome}" title="${banner.nome}" src="${banner.imagem}" width="407" height="279">
+                              <img class="lazyload" alt="${banner.nome}" title="${banner.nome}" src="${banner.imagem}">
                            </a>
                      </li>
                   `; 
