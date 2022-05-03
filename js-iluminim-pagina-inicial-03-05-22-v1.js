@@ -273,7 +273,7 @@ var PaginaInicial = {
                   bloco_1: [
                      {
                         nome: 'Fitas LED',
-                        imagem: 'https://blog.iluminim.com.br/wp-content/uploads/2022/03/Bloco1-Fitas-LED-29-03-2022.gif',
+                        imagem: 'https://blog.iluminim.com.br/wp-content/uploads/2022/05/Banner-vertical-fita-led-03-05-2022.gif',
                         link: '/fitas-de-led?sort=mais_vendidos',
                      },
                      {
