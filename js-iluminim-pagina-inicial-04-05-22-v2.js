@@ -1205,6 +1205,133 @@ var PaginaInicial = {
 
    },
 
+   blocosDescontosProgressivos(){ //ATIVAR APOS BLACK
+      
+	if(ILUMINIM_UTILS.screen.isMobile()){
+	   return;
+	}
+
+	const blocosDescontosProgressivos = {
+
+	   gerarObjeto(){
+
+		  let banners = [
+			 {
+				nome: 'KIT 5',
+				link: 'https://abt-ilm-manutencao.lojaintegrada.com.br/kit-led-5-unidades?sort=mais_vendidos',
+				imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/box-kit-5-04-05-2022.png',
+				desconto: '40',
+			 },
+			 {
+				nome: 'KIT 10',
+				link: 'https://abt-ilm-manutencao.lojaintegrada.com.br/kit-led-10-unidades?sort=mais_vendidos',
+				imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/box-kit-10-04-05-2022.png',
+				desconto: '50',
+			 },
+			 {
+				nome: "KIT 12",
+				link: 'https://abt-ilm-manutencao.lojaintegrada.com.br/kit-led-12-unidades?sort=mais_vendidos',
+				imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/box-kit-12-04-05-2022.png',
+				desconto: '60',
+			 },
+			 {
+				nome: 'KIT 20',
+				link: 'https://abt-ilm-manutencao.lojaintegrada.com.br/kit-led-20-unidades?sort=mais_vendidos',
+				imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/box-kit-20-04-05-2022.png',
+				desconto: '70',
+			 },
+			 {
+				nome: 'KIT 50',
+				link: 'https://abt-ilm-manutencao.lojaintegrada.com.br/kit-led-50-unidades?sort=mais_vendidos',
+				imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/box-kit-50-04-05-2022.png',
+				desconto: '80',
+			 },
+		  ];
+
+		  return banners;
+
+	   },
+
+	   ativarCarousel(){
+
+		  $('.blocos-descontos-progressivos .carousel-target').owlCarousel({
+			 loop:false,
+			 margin:25,
+			 autoHeight: false,
+			 nav:true,
+			 dots: false,
+			 navText: ['<i class="icon-angle-left"></i>', '<i class="icon-angle-right"></i>'],
+			 responsive:{
+				0: {
+				   items:2
+				},
+				
+				767: {
+				   items:5
+				},
+				1024: {
+				   items: 5
+				}
+			 }
+		  });
+
+	   },
+
+	   gerarHTML(){
+
+		  let objeto = this.gerarObjeto();
+
+		  let html = objeto.map(bloco => {
+			 return `
+				<li class="bloco-desconto-progressivo">
+					<a href="${bloco.link}">
+						<div class="bloco-desconto-progressivos-texto-desconto">
+							<span>${bloco.desconto}</span>
+							<span>
+								<span>%</span>
+								<span>OFF</span>
+							</span>
+						</div>
+						<div class="bloco-desconto-progressivos-imagem-btn">
+							<div class="bloco-desconto-progressivos-imagem">
+								<img alt="${bloco.nome}" title="${bloco.nome}" src="${bloco.imagem}">
+							</div>
+							<div class="bloco-desconto-progressivos-btn">Confira agora!</div>
+						</div>
+					</a>
+				</li>
+			 `;
+		  }).join('');
+
+		  return`
+			 <div class="blocos-descontos-progressivos">
+				<div class="blocos-descontos-progressivos-titulo">
+				   <strong>Navegue por mais departamentos</strong>
+				</div>
+				<ul class="lista-blocos-descontos-progressivos carousel-target">
+				   ${html}
+				</ul>
+			 </div>
+		  `;
+
+	   },
+
+	   renderizar(){
+
+		  let html = this.gerarHTML();
+
+		  $('#listagemProdutos').append(html);
+
+		  this.ativarCarousel();
+
+	   }
+
+	}
+	
+	blocosDescontosProgressivos.renderizar();
+
+   },
+
    bannersKitsDescontoBlack(){ //REMOVER APOS BLACK
       
       if(ILUMINIM_UTILS.screen.isMobile()){
@@ -2521,9 +2648,8 @@ var PaginaInicial = {
       //this.bannersDesconto();
       //this.bannersDescontoBlack(); //REMOVER APOS BLACK
 
-      this.bannersKitsDesconto();
-      //this.bannersKitsDescontoBlack();
-
+      //this.bannersKitsDesconto();
+	  this.blocosDescontosProgressivos();
       //LANÇAMENTOS LED
       $(`
          .titulo-categoria.borda-principal.cor-principal.vitrine-lancamento+ul, 
