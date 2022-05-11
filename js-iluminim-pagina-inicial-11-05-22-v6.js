@@ -301,7 +301,7 @@ var PaginaInicial = {
                      },*/
 					 {
                         nome: 'Frete Grátis',
-                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-vertical-frete-gratis-14-04-2022.png',
+                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Banners_Verticais_Frete_Gratis-28-03-2022.png',
                         link: '/frete-gratis?sort=mais_vendidos',
                      },
 					 
