@@ -10,7 +10,7 @@ var PaginaInicial = {
 
       if(target.length > 0){
 
-         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2022/03/LED-OFERTAS-MEGA-PRECO-29-03-2022-v2.gif';
+         let bannerChamada = 'https://blog.iluminim.com.br/wp-content/uploads/2022/05/BANNER-CHAMADA-LED-OFERTAS-FRETE-GRATIS-11-05-2022.gif';
          target.attr('src', bannerChamada);
 
       }
@@ -296,9 +296,15 @@ var PaginaInicial = {
                   bloco_3: [
                      {
                         nome: 'Frete Grátis',
-                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-vertical-frete-gratis-14-04-2022.png',
+                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Banners_Vertical_Frete_Gratis-11-05-2022.png',
                         link: '/frete-gratis?sort=mais_vendidos',
                      },
+					 {
+                        nome: 'Frete Grátis',
+                        imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Banners_Vertical_Frete_Gratis-11-05-2022.png',
+                        link: '/frete-gratis?sort=mais_vendidos',
+                     },
+					 
                      /*{
                         nome: 'Frete Grátis RSPM-200WBF-KIT5',
                         imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Banners_Verticais_Frete_Gratis_RSPM-200WBF-KIT5-25-03-2022.png',
@@ -609,8 +615,8 @@ var PaginaInicial = {
       
                let banners = [
                   {
-                     nome: 'Refletores LED com até 84% de desconto!',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/minibanner1-03-05-2022.png',
+                     nome: '1',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-BAIXARAM_OS_PRECOS-11-05-2022.png',
                      link: '/refletores-de-led?sort=mais_vendidos',
                   },
                   /*{
@@ -619,8 +625,8 @@ var PaginaInicial = {
                      link: '/lancamentos-led?sort=ultimos_produtos',
                   },*/
                   {
-                     nome: 'Oferta da Semana com até 78% de desconto',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/minibanner2-03-05-2022.png',
+                     nome: '3',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-ofertas_da_semana-11-05-2022.png',
                      link: '/ofertadasemana?sort=mais_vendidos',
                   }
                ]
