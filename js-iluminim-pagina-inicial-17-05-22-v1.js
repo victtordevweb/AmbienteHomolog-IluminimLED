@@ -616,17 +616,17 @@ var PaginaInicial = {
                let banners = [
                   {
                      nome: '1',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-BAIXARAM_OS_PRECOS-11-05-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-refletores-led-29-03-2022.png',
                      link: '/refletores-de-led?sort=mais_vendidos',
                   },
-                  /*{
+                  	{
                      nome: 'Lançamentos LED com até 64% de desconto!',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banners-lancamentos-led-11-04-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-lancamentos-led-29-03-2022.png',
                      link: '/lancamentos-led?sort=ultimos_produtos',
-                  },*/
+                  	},
                   {
                      nome: '3',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-ofertas_da_semana-11-05-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-oferta-da-semana-30-03-2022.png',
                      link: '/ofertadasemana?sort=mais_vendidos',
                   }
                ]
@@ -1708,28 +1708,40 @@ var PaginaInicial = {
       const OportunidadesEspeciais = {
       
          gerarObjeto(){
+
+			let objeto = [
+				{
+					nome: '1',
+					imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-BAIXARAM_OS_PRECOS-11-05-2022.png',
+					link: '/refletores-de-led?sort=mais_vendidos',
+				},
+				/*{
+					nome: 'Lançamentos LED com até 64% de desconto!',
+					imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banners-lancamentos-led-11-04-2022.png',
+					link: '/lancamentos-led?sort=ultimos_produtos',
+				},*/
+				{
+					nome: '3',
+					imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-ofertas_da_semana-11-05-2022.png',
+					link: '/ofertadasemana?sort=mais_vendidos',
+				}
+			]
       
-               let objeto = [
+               /*let objeto = [
                   {
                      nome: 'Refletores Micro LED Super Oferta!',
                      imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/carrossel-banners-home-pequenos-refletores-24-05-21.png',
                      link: '/refletor-micro-led-slim?sort=mais_vendidos',
-                     width: '300',
-                     height: '237'
                   },
                   {
                      nome: 'Decoração Lâmpada Vintage',
                      imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/decoracao_vintage-25-05-21-v2.png',
                      link: '/led-retro?sort=mais_vendidos',
-                     width: '300',
-                     height: '237'
                   },
                   {
                      nome: 'Plafons LED Até 65% OFF',
                      imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/carrossel-banners-home-pequenos-plafon-24-05-21.png',
                      link: '/plafon-led?sort=mais_vendidos',
-                     width: '300',
-                     height: '237'
                   },
                   {
                      nome: 'Spot LED Melhores Ofertas!',
@@ -1737,10 +1749,8 @@ var PaginaInicial = {
                      imagem: 'https://cdn.awsli.com.br/257/257163/arquivos/compre_por_ambiente-29-12-21.png',
                      //link: '/spots?sort=mais_vendidos',
                      link: '/compre-por-ambiente?sort=mais_vendidos',
-                     width: '300',
-                     height: '237'
                   }
-               ]
+               ]*/
 
                return objeto;
       
@@ -1755,7 +1765,7 @@ var PaginaInicial = {
                   return `
                      <li>
                            <a href="${banner.link}" onclick="ga('send', 'event', 'Oportunidades Especiais Home','click', '${banner.nome}')">
-                              <img alt="${banner.nome}" title="${banner.nome}" src="${banner.imagem}" width="${banner.width}" height="${banner.height}">
+                              <img alt="${banner.nome}" title="${banner.nome}" src="${banner.imagem}">
                            </a>
                      </li>
                   `;
