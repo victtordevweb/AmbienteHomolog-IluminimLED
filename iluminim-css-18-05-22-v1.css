@@ -17740,7 +17740,7 @@
              #cabecalho {
                  transition: all 0.3s;
                  position: sticky;
-                 top: -43px; 
+                 top: -60px; 
                  z-index: 999999;
                  border-bottom: 1px solid transparent;
              }
