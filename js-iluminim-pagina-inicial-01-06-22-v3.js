@@ -616,17 +616,17 @@ var PaginaInicial = {
                let banners = [
                   {
                      nome: '1',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-refletores-led-29-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-refletores-led-01-06-2022-v2.png',
                      link: '/refletores-de-led?sort=mais_vendidos',
                   },
                   	{
                      nome: 'Lançamentos LED com até 64% de desconto!',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-lancamentos-led-29-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-lancamentos-led-01-06-2022-v2.png',
                      link: '/lancamentos-led?sort=ultimos_produtos',
                   	},
                   {
                      nome: '3',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-mega-preco-oferta-da-semana-30-03-2022.png',
+                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-ofertas-da-semana-01-06-2022.png',
                      link: '/ofertadasemana?sort=mais_vendidos',
                   }
                ]
