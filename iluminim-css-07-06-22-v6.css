@@ -27369,7 +27369,7 @@
 	.tarja-desconto-cupom .tarja-desconto-cupom-conteudo {
 		display: flex;
 		align-items: center;
-		gap: 30px;
+		gap: 0px;
 	}
 	
 	.tarja-desconto-cupom .tarja-desconto-cupom-conteudo > * {
@@ -27377,7 +27377,8 @@
 	}
 	
 	.tarja-desconto-cupom .tarja-desconto-cupom-textos {
-		text-align: right;
+		text-align: center;
+		margin: 0 0 0 70px;
 	}
 	
 	.tarja-desconto-cupom .tarja-desconto-cupom-textos p {
@@ -27425,6 +27426,7 @@
 		color: #fff;
 		cursor: pointer;
 		transition: all 0.3s;
+		position: relative;
 	}
 	
 	.tarja-desconto-cupom .tarja-desconto-cupom-box-codigo .tarja-desconto-cupom-btn-copiar:hover {
@@ -27435,6 +27437,41 @@
 		font-weight: 800;
 		color: #d00b11;
 		font-size: 16px;
+	}
+
+	.tarja-desconto-cupom .tarja-desconto-cupom-copiado {
+		position: absolute;
+		right: -80px;
+		width: 68px;
+		height: 26px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #d00b11;
+		border-radius: 5px;
+		font-size: 12px;
+		padding: 0 0 2px 0;
+		top: 3px;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s;
+	}
+
+	.tarja-desconto-cupom-btn-copiar.copiado .tarja-desconto-cupom-copiado {
+		opacity: 1;
+		visibility: visible;
+	}
+	
+	.tarja-desconto-cupom .tarja-desconto-cupom-copiado:before {
+		width: 0;
+		height: 0;
+		border-top: 6px solid transparent;
+		border-bottom: 10px solid transparent;
+		border-right: 6px solid #d00b11;
+		content: "";
+		position: absolute;
+		left: -5px;
+		top: 6px;
 	}
 
 }
@@ -27487,8 +27524,8 @@
 }
 
 .video-com-produtos .video-com-produtos-corpo .video-com-produtos-corpo-produtos {
-    max-width: 375px;
-    min-width: 320px;
+	max-width: 375px;
+    min-width: 375px;
 }
 
 .video-com-produtos .video-com-produtos-corpo .video-com-produtos-corpo-video {

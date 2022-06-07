@@ -5309,15 +5309,20 @@ var PaginaCategoria = {
 						</div>
 						<div class="tarja-desconto-cupom-btn-copiar">
 							COPIAR
+							<div class="tarja-desconto-cupom-copiado">Copiado!</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		`);
 
-		$(document).on('click', '.tarja-desconto-cupom-btn-copiar', () => {
+		$(document).on('click', '.tarja-desconto-cupom-btn-copiar', function(){
 			copyToClipboard(cupom);
-			alert('Cupom copiado com sucesso!')
+			$(this).addClass('copiado');
+
+			setTimeout(() => {
+				$(this).removeClass('copiado');
+			}, 3000);
 		});
 	},
 

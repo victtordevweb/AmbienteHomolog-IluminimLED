@@ -2650,7 +2650,7 @@ var PaginaInicial = {
 
 							<div class="video-com-produtos-corpo">
 								<div class="video-com-produtos-corpo-video">
-									<iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="550" src="https://www.youtube.com/embed/PUOc_s-QXP4" width="100%"></iframe>
+									<iframe width="890" height="500" src="https://www.youtube.com/embed/PUOc_s-QXP4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								</div>
 								<div class="video-com-produtos-corpo-produtos">
 									<div class="video-com-produtos-corpo-produtos-titulo">Indicações do Vídeo</div>
