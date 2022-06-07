@@ -2658,6 +2658,7 @@ var PaginaInicial = {
 										<div class="video-com-produtos-corpo-produtos-lista-target">${ ILUMINIM_UTILS.icones.loading }</div>
 									</div>
 									<div class="video-com-produtos-corpo-produtos-btn-comprar">Compre todos</div>
+									<div class="video-com-produtos-corpo-produtos-adicionados"><span>Produtos adicionados!</span><a href="/carrinho/index">Ir para o carrinho</a></div>
 								</div>
 							</div>
 						</div>

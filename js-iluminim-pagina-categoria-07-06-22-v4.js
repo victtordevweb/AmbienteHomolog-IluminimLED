@@ -5291,8 +5291,6 @@ var PaginaCategoria = {
 			document.body.removeChild(elem);
 		 }
 
-		if(!ILUMINIM_UTILS.screen.isDesktop()) return;
-
 		let cupom = 'LED20OFF';
 		
 		$('#corpo .conteiner > .breadcrumbs').after(`

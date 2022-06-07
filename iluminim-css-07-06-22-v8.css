@@ -27474,6 +27474,64 @@
 		top: 6px;
 	}
 
+	@media (max-width: 767px){
+
+		.tarja-desconto-cupom .tarja-desconto-cupom-box-codigo .tarja-desconto-cupom-btn-copiar {
+			background: var(--cor-secundaria) !important;
+		}
+		
+		.tarja-desconto-cupom .tarja-desconto-cupom-conteudo {
+			display: block;
+		}
+		
+		.tarja-desconto-cupom .tarja-desconto-cupom-textos {
+			margin: 0 0 20px 0;
+			padding: 0 10px;
+			box-sizing: border-box;
+		}
+		
+		.tarja-desconto-cupom .tarja-desconto-cupom-textos strong {
+			font-size: 20px;
+		}
+		
+		.tarja-desconto-cupom .tarja-desconto-cupom-textos p {
+			font-size: 14px;
+		}
+		
+		.tarja-desconto-cupom {
+			background: #fff;
+			box-shadow: 0px 1px 12px -2px rgb(0 0 0 / 9%);
+		}
+		
+		.tarja-desconto-cupom .tarja-desconto-cupom-box-codigo {
+			justify-content: center;
+			padding: 0 20px;
+			box-sizing: border-box;
+		}
+		
+		.tarja-desconto-cupom .tarja-desconto-cupom-box-codigo .tarja-desconto-cupom-codigo {
+			padding: 0;
+			width: 100%;
+			max-width: 190px;
+		}
+		
+		.tarja-desconto-cupom .tarja-desconto-cupom-copiado {
+			bottom: -40px;
+			top: unset;
+			right: 0;
+		}
+		
+		.tarja-desconto-cupom .tarja-desconto-cupom-copiado:before {
+			left: unset;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			border-bottom: 8px solid #d00b11;
+			right: 8px;
+			top: -12px;
+		}
+
+	}
+
 }
 
 
@@ -27544,6 +27602,15 @@
 
 .video-com-produtos .video-com-produtos-corpo-produtos-lista {
     height: 417px;
+	position: relative;
+}
+
+.video-com-produtos .video-com-produtos-corpo-produtos-lista .video-com-produtos-corpo-produtos-lista-target {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background: rgb(255 255 255 / 70%);
 }
 
 .video-com-produtos-corpo-produtos-btn-comprar {
@@ -27583,6 +27650,17 @@
 }
 
 
+.video-com-produtos.adicionando-produtos .video-com-produtos-corpo-produtos-lista .video-com-produtos-corpo-produtos-lista-target {
+    display: flex !important;
+}
+
+.video-com-produtos.produtos-adicionados .video-com-produtos-corpo-produtos-btn-comprar {
+    display: none !important;
+}
+
+.video-com-produtos.produtos-adicionados .video-com-produtos-corpo-produtos-adicionados {
+    display: flex !important;
+}
 
 .video-com-produtos div#smartfront__app .body-app--product-listing .content--product-application .product-application--image {
     width: 100px;
@@ -27600,6 +27678,42 @@
 
 .video-com-produtos div#smartfront__app+.video-com-produtos-corpo-produtos-lista-target {
     display: none;
+}
+
+.video-com-produtos .video-com-produtos-corpo-produtos-adicionados span {
+    font-size: 17px;
+    letter-spacing: -0.5px;
+    color: #000;
+}
+
+.video-com-produtos .video-com-produtos-corpo-produtos-adicionados {
+    /*display: flex;*/
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 0 0;
+	display: none;
+}
+
+.video-com-produtos .video-com-produtos-corpo-produtos-adicionados a {
+    font-weight: 600;
+    font-size: 13px;
+    padding: 6px 12px 5px 12px !important;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-left: 0;
+    text-shadow: none;
+    background: #34af6f;
+    transition: all .3s;
+    border-bottom: 3px solid #25945b !important;
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+}
+
+.video-com-produtos .video-com-produtos-corpo-produtos-adicionados a:hover {
+    background: #31c176;
 }
 
 body .video-com-produtos div#smartfront__app .content--product-application .product-application--prices-product .prices-product--price {
