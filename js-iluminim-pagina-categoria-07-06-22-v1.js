@@ -5280,6 +5280,47 @@ var PaginaCategoria = {
 
    },
 
+	tarjaDescontoCupom(){
+
+		function copyToClipboard(text) {
+			const elem = document.createElement('textarea');
+			elem.value = text;
+			document.body.appendChild(elem);
+			elem.select();
+			document.execCommand('copy');
+			document.body.removeChild(elem);
+		 }
+
+		if(!ILUMINIM_UTILS.screen.isDesktop()) return;
+
+		let cupom = 'LED20OFF';
+		
+		$('#corpo .conteiner > .breadcrumbs').after(`
+			<div class="tarja-desconto-cupom">
+				<div class="tarja-desconto-cupom-conteudo">
+					<div class="tarja-desconto-cupom-textos">
+						<strong>Você ganhou R$ 20,00 OFF</strong>
+						<p>nas compras acima de R$ 199,90. Válido somente para você!</p>
+					</div>
+					<div class="tarja-desconto-cupom-box-codigo">
+						<div class="tarja-desconto-cupom-codigo">
+							<span>CUPOM:</span>
+							<span>${cupom}</span>
+						</div>
+						<div class="tarja-desconto-cupom-btn-copiar">
+							COPIAR
+						</div>
+					</div>
+				</div>
+			</div>
+		`);
+
+		$(document).on('click', '.tarja-desconto-cupom-btn-copiar', () => {
+			copyToClipboard(cupom);
+			alert('Cupom copiado com sucesso!')
+		});
+	},
+
    iniciar(){ //INICIAR SCRIPTS DA PÁGINA;
 
       //ILUMINIM_UTILS.renderizarCategoriasFlutuante();
@@ -5304,6 +5345,7 @@ var PaginaCategoria = {
       this.navegacaoCategoria();
       this.dropDownTextoCategoria();
       this.textosRodapeCategoria();
+	  this.tarjaDescontoCupom();
 
       this.paginasPersonalizadas(); //MANTER NO FINAL.
 

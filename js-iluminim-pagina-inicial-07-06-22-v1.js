@@ -2627,6 +2627,54 @@ var PaginaInicial = {
 
    },
 
+   blocoVideoComProdutos(){
+		const blocoVideoComProdutos = {
+			gerarHTML(){
+				return `
+					<div class="video-com-produtos">
+						<div class="video-com-produtos-conteudo">
+							<div class="video-com-produtos-topo">
+								<div class="video-com-produto-topo-logo">
+									<img src="https://cdn.awsli.com.br/400x300/930/930730/logo/bec59c3475.png">
+								</div>
+								
+								<div class="video-com-produto-topo-textos">
+									<strong>Título da sessão</strong>
+									<p>Subtítulo da sessão de vídeo com produtos</p>
+								</div>
+
+								<div class="video-com-produto-topo-link">
+									<a href="#!">Mais Vídeos<i class="icon-angle-right"></i></a>
+								</div>
+							</div>
+
+							<div class="video-com-produtos-corpo">
+								<div class="video-com-produtos-corpo-video">
+									<iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="550" src="https://www.youtube.com/embed/PUOc_s-QXP4" width="100%"></iframe>
+								</div>
+								<div class="video-com-produtos-corpo-produtos">
+									<div class="video-com-produtos-corpo-produtos-titulo">Indicações do Vídeo</div>
+									<div class="video-com-produtos-corpo-produtos-lista">
+										<div class="video-com-produtos-corpo-produtos-lista-target">${ ILUMINIM_UTILS.icones.loading }</div>
+									</div>
+									<div class="video-com-produtos-corpo-produtos-btn-comprar">Compre todos</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				`;
+			},
+
+			renderizar(){
+				let html = this.gerarHTML();
+
+				$('#listagemProdutos').append(html);
+			}
+		}
+
+		blocoVideoComProdutos.renderizar();
+	},
+
    reposicionarListagens(){
 
       //MAIS VENDIDOS
@@ -2689,8 +2737,8 @@ var PaginaInicial = {
          a.titulo-categoria.borda-principal.cor-principal.vitrine-881065
       `).appendTo('div#listagemProdutos');
    
-      this.oportunidadesEspeciais(); //ATIVAR APOS BLACK
-      //this.oportunidadesEspeciaisBlack(); //REMOVER APOS BLACK
+      //this.oportunidadesEspeciais();
+	  this.blocoVideoComProdutos();
 
       //FITAS LED
       $(`
