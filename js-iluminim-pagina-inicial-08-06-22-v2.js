@@ -2666,10 +2666,38 @@ var PaginaInicial = {
 				`;
 			},
 
+			timeAwait(time){
+				return new Promise((resolve, reject) => {
+					setTimeout(resolve, time);
+				});
+			},
+
+			onClickBtnComprarProdutos(){
+
+				$(document).on('click', '.video-com-produtos-corpo-produtos-btn-comprar', async () => {
+					$('.video-com-produtos').addClass('adicionando-produtos');
+
+					let promises = [];
+					let productsIDS = Array.from($('.video-com-produtos div#smartfront__app .body-app--product-listing .content--product-application')).map(item => $(item).attr('data-id'));
+					
+					for(let i = 0; i < productsIDS.length; i++){
+						await this.timeAwait(1000);
+						promises.push(fetch(`/carrinho/produto/${productsIDS[i]}/adicionar/1`));
+					}
+
+					await Promise.all(promises);
+					
+					$('.video-com-produtos').removeClass('adicionando-produtos').addClass('produtos-adicionados');
+				});
+
+			},
+
 			renderizar(){
 				let html = this.gerarHTML();
 
 				$('#listagemProdutos').append(html);
+
+				this.onClickBtnComprarProdutos();
 			}
 		}
 

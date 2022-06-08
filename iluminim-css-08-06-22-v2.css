@@ -27716,6 +27716,10 @@
     background: #31c176;
 }
 
+.video-com-produtos.adicionando-produtos .video-com-produtos-corpo-produtos-btn-comprar {
+    pointer-events: none !important;
+}
+
 body .video-com-produtos div#smartfront__app .content--product-application .product-application--prices-product .prices-product--price {
     display: none;
 }
