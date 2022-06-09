@@ -1338,6 +1338,128 @@ var PaginaInicial = {
 
    },
 
+   gridDiferenciais(){
+		if(!ILUMINIM_UTILS.screen.isDesktop()) return;
+
+		let html = `
+			<div class="grid-diferenciais-iluminim">	
+				<div class="grid-diferenciais-iluminim-conteudo">
+					
+					<div class="grid-diferenciais-iluminim-item">
+						<div class="grid-diferenciais-iluminim-item-divisao-1">
+							<div class="grid-diferenciais-iluminim-item-imagem">
+								<img src="https://cdn.awsli.com.br/257/257163/arquivos/icone-frete-gratis-brasil-09-06-2022.png">
+							</div>
+							<div class="grid-diferenciais-iluminim-item-imagem-titulo">
+								<span>frete grátis</span>
+								<span>brasil</span>
+							</div>
+						</div>
+						<div class="grid-diferenciais-iluminim-item-divisao-2">
+							<div class="grid-diferenciais-iluminim-item-titulo">
+								<span>expresso para compras</span>
+								<span>a partir de R$299,00</span>
+							</div>
+						</div>
+					</div>
+			
+					<div class="grid-diferenciais-iluminim-item">
+						<div class="grid-diferenciais-iluminim-item-divisao-1">
+							<div class="grid-diferenciais-iluminim-item-imagem">
+								<img src="https://cdn.awsli.com.br/257/257163/arquivos/icone-entrega-a-jato-09-06-2022.png">
+							</div>
+							<div class="grid-diferenciais-iluminim-item-imagem-titulo">
+								<span>entrega a</span>
+								<span>jato</span>
+							</div>
+						</div>
+						<div class="grid-diferenciais-iluminim-item-divisao-2">
+							<div class="grid-diferenciais-iluminim-item-titulo">
+								<span>garantimos a entrega</span>
+								<span>rápida do seu produto</span>
+							</div>
+						</div>
+					</div>
+			
+					<div class="grid-diferenciais-iluminim-item">
+						<div class="grid-diferenciais-iluminim-item-divisao-1">
+							<div class="grid-diferenciais-iluminim-item-imagem">
+								<img src="https://cdn.awsli.com.br/257/257163/arquivos/icone-12x-sem-juros-09-06-2022.png">
+							</div>
+							<div class="grid-diferenciais-iluminim-item-imagem-titulo">
+								<span>12x sem</span>
+								<span>juros</span>
+							</div>
+						</div>
+						<div class="grid-diferenciais-iluminim-item-divisao-2">
+							<div class="grid-diferenciais-iluminim-item-titulo">
+								<span>parcele sem juros no</span>
+								<span>cartão de crédito</span>
+							</div>
+						</div>
+					</div>
+			
+					<div class="grid-diferenciais-iluminim-item">
+						<div class="grid-diferenciais-iluminim-item-divisao-1">
+							<div class="grid-diferenciais-iluminim-item-imagem">
+								<img src="https://cdn.awsli.com.br/257/257163/arquivos/icone-o-menor-preco-09-06-2022.png">
+							</div>
+							<div class="grid-diferenciais-iluminim-item-imagem-titulo">
+								<span>O menor</span>
+								<span>preço</span>
+							</div>
+						</div>
+						<div class="grid-diferenciais-iluminim-item-divisao-2">
+							<div class="grid-diferenciais-iluminim-item-titulo">
+								<span>garantimos os melhores</span>
+								<span>preços do mercado</span>
+							</div>
+						</div>
+					</div>
+			
+					<div class="grid-diferenciais-iluminim-item">
+						<div class="grid-diferenciais-iluminim-item-divisao-1">
+							<div class="grid-diferenciais-iluminim-item-imagem">
+								<img src="https://cdn.awsli.com.br/257/257163/arquivos/icone-a-maior-do-brasil-09-06-2022.png">
+							</div>
+							<div class="grid-diferenciais-iluminim-item-imagem-titulo">
+								<span>A maior</span>
+								<span>do brasil</span>
+							</div>
+						</div>
+						<div class="grid-diferenciais-iluminim-item-divisao-2">
+							<div class="grid-diferenciais-iluminim-item-titulo">
+								<span>em 10 anos são mais de 1</span>
+								<span>milhão de clientes satisfeitos</span>
+							</div>
+						</div>
+					</div>
+			
+					<div class="grid-diferenciais-iluminim-item">
+						<div class="grid-diferenciais-iluminim-item-divisao-1">
+							<div class="grid-diferenciais-iluminim-item-imagem">
+								<img src="https://cdn.awsli.com.br/257/257163/arquivos/icone-encontre-a-iluminim-09-06-2022.png">
+							</div>
+							<div class="grid-diferenciais-iluminim-item-imagem-titulo">
+								<span>encontre</span>
+								<span>a iluminim</span>
+							</div>
+						</div>
+						<div class="grid-diferenciais-iluminim-item-divisao-2">
+							<div class="grid-diferenciais-iluminim-item-titulo">
+								<span>lojas físicas e pontos de</span>
+								<span>retirada por todo brasil</span>
+							</div>
+						</div>
+					</div>
+			
+				</div>
+			</div>
+		`;
+
+		$('#listagemProdutos').append(html);
+   },
+
    bannersKitsDescontoBlack(){ //REMOVER APOS BLACK
       
       if(ILUMINIM_UTILS.screen.isMobile()){
@@ -2742,7 +2864,8 @@ var PaginaInicial = {
       //this.bannersDescontoBlack(); //REMOVER APOS BLACK
 
       //this.bannersKitsDesconto();
-	  this.blocosDescontosProgressivos();
+	  //this.blocosDescontosProgressivos();
+	  this.gridDiferenciais();
       //LANÇAMENTOS LED
       $(`
          .titulo-categoria.borda-principal.cor-principal.vitrine-lancamento+ul, 

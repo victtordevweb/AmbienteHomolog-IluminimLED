@@ -27774,3 +27774,79 @@ body .video-com-produtos div#smartfront__app .content--product-application .prod
 }
 
 }
+
+/* GRID DIFERENCIAIS */
+ @media screen {
+
+	.grid-diferenciais-iluminim .grid-diferenciais-iluminim-conteudo {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 40px;
+	}
+	
+	.grid-diferenciais-iluminim .grid-diferenciais-iluminim-item-divisao-1 {
+		padding: 15px 20px 15px 20px;
+		border-radius: 20px;
+		background: var(--cor-secundaria);
+		text-align: center;
+		margin: 0 0 12px 0;
+		transition: all 0.3s;
+	}
+	
+	.grid-diferenciais-iluminim .grid-diferenciais-iluminim-item-divisao-1 .grid-diferenciais-iluminim-item-imagem {
+		height: 70px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 0 10px 0;
+	}
+	
+	.grid-diferenciais-iluminim .grid-diferenciais-iluminim-item-divisao-1 span {
+		color: #fff;
+		font-size: 13px;
+	}
+	
+	.grid-diferenciais-iluminim .grid-diferenciais-iluminim-item-divisao-2 span, .grid-diferenciais-iluminim .grid-diferenciais-iluminim-item-divisao-1 span {
+		font-family: 'Roboto' !important;
+		/*font-weight: 100;*/
+		text-transform: uppercase;
+		letter-spacing: -0.5px;
+		display: block;
+	}
+	
+	.grid-diferenciais-iluminim .grid-diferenciais-iluminim-item {
+		width: 100%;
+		cursor: pointer;
+	}
+	
+	.grid-diferenciais-iluminim .grid-diferenciais-iluminim-item-divisao-1 .grid-diferenciais-iluminim-item-imagem img {
+		filter: grayscale(1) brightness(1.5);
+		height: 62px;
+		transition: all 0.3s;
+	}
+	
+	.grid-diferenciais-iluminim .grid-diferenciais-iluminim-item-divisao-2 {
+		text-align: center;
+	}
+	
+	.grid-diferenciais-iluminim .grid-diferenciais-iluminim-item-divisao-2 span {
+		font-size: 11.3px;
+		font-weight: 400;
+		line-height: 16px;
+		letter-spacing: -0.3px;
+	}
+	
+	.grid-diferenciais-iluminim {
+		margin: 40px 0 0 0;
+	}
+	
+	.grid-diferenciais-iluminim .grid-diferenciais-iluminim-item:hover .grid-diferenciais-iluminim-item-divisao-1 {
+		background: var(--cor-secundaria-hover);
+	}
+	
+	.grid-diferenciais-iluminim .grid-diferenciais-iluminim-item:hover .grid-diferenciais-iluminim-item-divisao-1 img {
+		transform: scale(1.05);
+	}
+
+ }
