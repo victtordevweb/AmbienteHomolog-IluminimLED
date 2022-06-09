@@ -2755,21 +2755,6 @@ var PaginaInicial = {
 				return `
 					<div class="video-com-produtos">
 						<div class="video-com-produtos-conteudo">
-							<div class="video-com-produtos-topo">
-								<div class="video-com-produto-topo-logo">
-									<img src="https://cdn.awsli.com.br/400x300/930/930730/logo/bec59c3475.png">
-								</div>
-								
-								<div class="video-com-produto-topo-textos">
-									<strong>Título da sessão</strong>
-									<p>Subtítulo da sessão de vídeo com produtos</p>
-								</div>
-
-								<div class="video-com-produto-topo-link">
-									<a href="#!">Mais Vídeos<i class="icon-angle-right"></i></a>
-								</div>
-							</div>
-
 							<div class="video-com-produtos-corpo">
 								<div class="video-com-produtos-corpo-video">
 									<iframe width="890" height="500" src="https://www.youtube.com/embed/PUOc_s-QXP4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

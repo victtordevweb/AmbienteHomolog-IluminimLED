@@ -27539,39 +27539,6 @@
 /* BLOCO VÍDEO COM PRODUTOS */
 @media screen {
 
-.video-com-produtos .video-com-produtos-topo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.video-com-produtos .video-com-produtos-topo .video-com-produto-topo-logo, .video-com-produtos .video-com-produtos-topo .video-com-produto-topo-link {
-    max-width: 150px;
-    min-width: 150px;
-}
-
-.video-com-produtos .video-com-produtos-topo .video-com-produto-topo-link a {
-    display: block;
-    text-align: right;
-    color: var(--cor-secundaria);
-}
-
-.video-com-produtos .video-com-produto-topo-textos p {
-    margin: 0;
-    font-size: 16px;
-}
-
-.video-com-produtos .video-com-produto-topo-textos {
-    text-align: center;
-    letter-spacing: -0.5px;
-}
-
-.video-com-produtos .video-com-produto-topo-textos strong {
-    font-size: 36px;
-    line-height: 32px;
-}
-
 .video-com-produtos {
     margin: 40px 0 0 0;
 }
@@ -27589,15 +27556,6 @@
 .video-com-produtos .video-com-produtos-corpo .video-com-produtos-corpo-video {
     width: 100%;
     display: flex;
-}
-
-.video-com-produtos .video-com-produtos-topo .video-com-produto-topo-link {
-    font-size: 14px;
-    letter-spacing: -0.5px;
-}
-
-.video-com-produtos .video-com-produtos-topo .video-com-produto-topo-link i {
-    margin: 0 0 0 5px;
 }
 
 .video-com-produtos .video-com-produtos-corpo-produtos-lista {
