@@ -614,21 +614,21 @@ var PaginaInicial = {
          gerarObjeto(){
       
                let banners = [
-                  {
-                     nome: '1',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-refletores-led-01-06-2022-v2.png',
-                     link: '/refletores-de-led?sort=mais_vendidos',
-                  },
-                  	{
-                     nome: 'Lançamentos LED com até 64% de desconto!',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-lancamentos-led-01-06-2022-v2.png',
-                     link: '/lancamentos-led?sort=ultimos_produtos',
-                  	},
-                  {
-                     nome: '3',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-ofertas-da-semana-01-06-2022.png',
-                     link: '/ofertadasemana?sort=mais_vendidos',
-                  }
+					{
+						nome: '1',
+						imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-refletores-led-01-06-2022-v2.png',
+						link: '/refletores-de-led?sort=mais_vendidos',
+					},
+						{
+						nome: 'Lançamentos LED com até 64% de desconto!',
+						imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-lancamentos-led-01-06-2022-v2.png',
+						link: '/lancamentos-led?sort=ultimos_produtos',
+						},
+					{
+						nome: '3',
+						imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-ofertas-da-semana-01-06-2022.png',
+						link: '/ofertadasemana?sort=mais_vendidos',
+					}
                ]
 
                return banners;
@@ -1847,17 +1847,22 @@ var PaginaInicial = {
 			let objeto = [
 				{
 					nome: '1',
-					imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-BAIXARAM_OS_PRECOS-11-05-2022.png',
+					imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-leve-mais-pague-menos-14-06-2022-v2.png',
 					link: '/refletores-de-led?sort=mais_vendidos',
 				},
-				/*{
+				{
 					nome: 'Lançamentos LED com até 64% de desconto!',
-					imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banners-lancamentos-led-11-04-2022.png',
+					imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-oferta-relampago-14-06-2022.png',
 					link: '/lancamentos-led?sort=ultimos_produtos',
-				},*/
+				},
 				{
 					nome: '3',
-					imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-ofertas_da_semana-11-05-2022.png',
+					imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-frete-gratis-14-06-2022-v2.png',
+					link: '/ofertadasemana?sort=mais_vendidos',
+				},
+				{
+					nome: '3',
+					imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-compre-por-ambiente-14-06-2022.png',
 					link: '/ofertadasemana?sort=mais_vendidos',
 				}
 			]
@@ -1901,92 +1906,6 @@ var PaginaInicial = {
                      <li>
                            <a href="${banner.link}" onclick="ga('send', 'event', 'Oportunidades Especiais Home','click', '${banner.nome}')">
                               <img alt="${banner.nome}" title="${banner.nome}" src="${banner.imagem}">
-                           </a>
-                     </li>
-                  `;
-      
-               }).join('');
-      
-               return `
-                  <div class="banners-oportunidades-especiais">
-                     <ul class="lista-banners-oportunidades-especiais">
-                        ${htmlList}
-                     </ul>
-                  </div>
-               `;
-      
-         },
-      
-         renderizar(){
-      
-               let html = this.gerarHTML();
-      
-               $('#listagemProdutos').append(html);
-      
-         }
-      
-      }
-      
-      OportunidadesEspeciais.renderizar();
-
-
-   },
-
-   oportunidadesEspeciaisBlack(){
-
-      if(ILUMINIM_UTILS.screen.isMobile()){
-         return;
-      }
-
-      const OportunidadesEspeciais = {
-      
-         gerarObjeto(){
-      
-               let objeto = [
-                  {
-                     nome: 'Refletores Micro LED Super Oferta!',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Refletores_Black-21-10-21.png',
-                     link: '/refletor-micro-led-slim?sort=mais_vendidos',
-                     width: '300',
-                     height: '237'
-                  },
-                  {
-                     nome: 'Decoração Lâmpada Vintage',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Decoracao_Vintage_Black-21-10-21.png',
-                     link: '/led-retro?sort=mais_vendidos',
-                     width: '300',
-                     height: '237'
-                  },
-                  {
-                     nome: 'Plafons LED Até 65% OFF',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Plafons_Black-21-10-21.png',
-                     link: '/plafon-led?sort=mais_vendidos',
-                     width: '300',
-                     height: '237'
-                  },
-                  {
-                     nome: 'Spot LED Melhores Ofertas!',
-                     imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/Spots_Black-21-10-21.png',
-                     link: '/spots?sort=mais_vendidos',
-                     width: '300',
-                     height: '237'
-                  }
-               ]
-
-               return objeto;
-      
-         },
-      
-         gerarHTML(){
-      
-               let objeto = this.gerarObjeto();
-      
-               let htmlList = objeto.map(banner=> {
-      
-                  return `
-                     <li>
-                           <a href="${banner.link}" onclick="ga('send', 'event', 'Oportunidades Especiais Home','click', '${banner.nome}')">
-                              <img alt="${banner.nome}" title="${banner.nome}" src="${banner.imagem}" width="${banner.width}" height="${banner.height}">
                            </a>
                      </li>
                   `;
@@ -2872,6 +2791,7 @@ var PaginaInicial = {
       
       //this.videosNaHome();
       //this.duploBlocoVitrine();
+	  this.oportunidadesEspeciais();
 
       //SPOT LED
       $(`
@@ -2887,7 +2807,6 @@ var PaginaInicial = {
          a.titulo-categoria.borda-principal.cor-principal.vitrine-881065
       `).appendTo('div#listagemProdutos');
    
-      //this.oportunidadesEspeciais();
 	  this.blocoVideoComProdutos();
 
       //FITAS LED
