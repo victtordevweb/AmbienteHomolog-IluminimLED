@@ -27740,20 +27740,20 @@ body .video-com-produtos div#smartfront__app .content--product-application .prod
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 50px;
+		gap: 65px;
 	}
 	
 	.grid-diferenciais-iluminim .grid-diferenciais-iluminim-item-divisao-1 {
-		padding: 0px 20px 7px 20px;
+		padding: 0px 20px 5px 20px;
 		border-radius: 10px;
 		background: var(--cor-secundaria);
 		text-align: center;
-		margin: 0 0 6px 0;
+		margin: 0 0 4px 0;
 		transition: all 0.3s;
 	}
 	
 	.grid-diferenciais-iluminim .grid-diferenciais-iluminim-item-divisao-1 .grid-diferenciais-iluminim-item-imagem {
-		height: 46px;
+		height: 40px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -27784,7 +27784,7 @@ body .video-com-produtos div#smartfront__app .content--product-application .prod
 	
 	.grid-diferenciais-iluminim .grid-diferenciais-iluminim-item-divisao-1 .grid-diferenciais-iluminim-item-imagem img {
 		transition: all 0.3s;
-		height: 30px;
+		height: 25px;
 	}
 	
 	.grid-diferenciais-iluminim .grid-diferenciais-iluminim-item-divisao-2 {
@@ -27794,7 +27794,7 @@ body .video-com-produtos div#smartfront__app .content--product-application .prod
 	.grid-diferenciais-iluminim .grid-diferenciais-iluminim-item-divisao-2 span {
 		font-size: 10px;
 		font-weight: 400;
-		line-height: 13px;
+		line-height: 12px;
 		letter-spacing: -0.2px;
 		color: #444;
 	}

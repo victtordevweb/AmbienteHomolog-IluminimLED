@@ -1847,22 +1847,22 @@ var PaginaInicial = {
 			let objeto = [
 				{
 					nome: '1',
-					imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-leve-mais-pague-menos-14-06-2022-v2.png',
+					imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-leve-mais-pague-menos-15-06-2022-v2.png',
 					link: '/refletores-de-led?sort=mais_vendidos',
 				},
 				{
 					nome: 'Lançamentos LED com até 64% de desconto!',
-					imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-oferta-relampago-14-06-2022.png',
+					imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-oferta-relampago-15-06-2022.png',
 					link: '/lancamentos-led?sort=ultimos_produtos',
 				},
 				{
 					nome: '3',
-					imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-frete-gratis-14-06-2022-v2.png',
+					imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-frete-gratis-15-06-2022-v2.png',
 					link: '/ofertadasemana?sort=mais_vendidos',
 				},
 				{
 					nome: '3',
-					imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/mini-banner-compre-por-ambiente-14-06-2022.png',
+					imagem: 'https://cdn.awsli.com.br/930/930730/arquivos/banner-compre-por-ambiente-15-06-2022.png',
 					link: '/ofertadasemana?sort=mais_vendidos',
 				}
 			]
